@@ -1,0 +1,85 @@
+{
+    "id": "com.popp",
+    "name": {
+        "en": "POPP Outdoor Siren"
+    },
+    "description": {
+	    "en": "POPP Outdoor Siren (and in the future maybee more POPP devices) for Homey"
+    },
+    "category": [ "appliances", "security" ],
+    "images": {
+	    "large": "/assets/images/large.jpg",
+	    "small": "/assets/images/small.jpg"
+    },	    
+    "version": "1.0.0",
+    "compatibility": ">=0.9.1",
+    "author": {
+        "name": "Marco Ruiter",
+        "email": "mruiter@tuxweb.nl"
+    },
+    "drivers": [
+	    {
+		    "id": "schreeuwer",
+		    "name": {
+			    "en": "Siren",
+				"nl": "Sirene"
+		    },
+		    "zwave": {
+			    "manufacturerId": 154,
+			    "productTypeId": 4,
+			    "productId": 2,
+			    "learnmode": {
+				    "image": "/drivers/schreeuwer/assets/wakeup.svg",
+				    "instruction": {
+					    "en": "Once turned on with the switch wait 5 seconds and push the button next to the switch once for inclusion",
+					    "nl": "Nadat de sirene is aangezet met de schuif schakelaar wacht 5 seconden en druk op de tiptoets"
+				    }
+				},
+			    "associationGroups": [ 1 ]
+		    },
+		    "class": "sensor",
+		    "capabilities": [ "alarm_contact", "measure_battery" ],
+		    "images": {
+			    "large": "/drivers/schreeuwer/assets/images/large.jpg",
+			    "small": "/drivers/schreeuwer/assets/images/small.jpg"
+		    },
+		    "settings": [
+			    {
+				    "id": "report_type",
+				    "type": "dropdown",
+				    "values": [
+					    {
+						    "id": "0",
+						    "label": {
+							    "en": "Binary Sensor",
+								"nl": "Binary Sensor"
+						    }
+					    }
+				    ],
+				    "value": "0",
+				    "label": {
+					    "en": "Report type",
+						"nl": "Rapportagetype"
+				    },
+				    "hint": {
+					    "en": "Notification type. Only binary sensor is currently supported.",
+						"nl": "Notificatietype. Enkel binary sensor wordt momenteel ondersteund."
+				    }
+			    },
+			    {
+				    "id": "led_indication",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "LED indication",
+						"nl": "led-indicatie"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "When enabled, the LED on Strips will flash shortly when the door/window is opened.",
+						"nl": "Wanneer ingeschakeld zal de led op Strips kort oplichten als de deur of het raam wordt geopened."
+				    }
+			    }
+			]			
+	    }
+    ]
+}
