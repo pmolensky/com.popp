@@ -16,5 +16,7 @@ Temperature and Battery status reports are also implemented.
 ## ToDo:
 
 Make Temperature adjustment setting available
+
 Make the default report in of 1 hour changeable tru settings
+
 Auto Off now at default 5 minutes. Make setting adjustable
