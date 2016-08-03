@@ -10,7 +10,7 @@
     "images": {
 	    "large": "/assets/images/large.jpg",
 	    "small": "/assets/images/small.jpg"
-    },	    
+    },
     "version": "1.0.0",
     "compatibility": ">=0.9.1",
     "author": {
@@ -38,48 +38,85 @@
 			    "associationGroups": [ 1 ]
 		    },
 		    "class": "sensor",
-		    "capabilities": [ "alarm_contact", "measure_battery" ],
+		    "capabilities": [ "onoff" ],
 		    "images": {
 			    "large": "/drivers/schreeuwer/assets/images/large.jpg",
 			    "small": "/drivers/schreeuwer/assets/images/small.jpg"
 		    },
 		    "settings": [
 			    {
-				    "id": "report_type",
+				    "id": "siren_trigger_mode",
 				    "type": "dropdown",
 				    "values": [
 					    {
 						    "id": "0",
 						    "label": {
-							    "en": "Binary Sensor",
-								"nl": "Binary Sensor"
+							  "en": "Siren triggers when removed from holster. Must be turned off",
+								"nl": "Sirene gaat af zondra uit holster wordt genomen. Moet handmatig worden uitgezet"
 						    }
-					    }
+					    },
+              {
+                "id": "1",
+                "label": {
+                "en": "Siren triggers when removed from holster. Turns off when placed back",
+                "nl": "Sirene gaat af zodra uit holster wordt genomen. Gaat uit bij terugplaatsing"
+                }
+              },
+              {
+  						  "id": "2",
+  						  "label": {
+  							"en": "Siren does not triggers when removed from holster. (Service Mode)",
+  							"nl": "Sirene gaat niet af wanneer uit holster genomen. (Service Mode)"
+                }
+  						}
 				    ],
 				    "value": "0",
 				    "label": {
-					    "en": "Report type",
-						"nl": "Rapportagetype"
+					  "en": "Sabotage alarm setting",
+						"nl": "Sabotage alarm setting"
 				    },
 				    "hint": {
-					    "en": "Notification type. Only binary sensor is currently supported.",
-						"nl": "Notificatietype. Enkel binary sensor wordt momenteel ondersteund."
+					  "en": "Change the way how the siren reacts when pulled of the wall",
+						"nl": "Aanpassen hoe de sirene reageerd als hij uit zijn holster wordt gehaald"
 				    }
 			    },
 			    {
-				    "id": "led_indication",
-				    "type": "checkbox",
+				    "id": "siren_alarm_mode",
+				    "type": "dropdown",
+            "values": [
+					    {
+						    "id": "0",
+						    "label": {
+							  "en": "When Alarm only make sound",
+								"nl": "Bij Alarm alleen geluid"
+						    }
+					    },
+              {
+                "id": "1",
+                "label": {
+                "en": "When Alarm only blink lights",
+                "nl": "Bij Alarm alleen licht signalering"
+                }
+              },
+              {
+  						  "id": "2",
+  						  "label": {
+  							"en": "When Alarm make sound an light",
+  							"nl": "Bij Alarm zowel geluid als licht signalering"
+                }
+  						}
+				    ],
 				    "label": {
-					    "en": "LED indication",
-						"nl": "led-indicatie"
+					  "en": "Alarm mode",
+						"nl": "Alarm mode"
 				    },
-				    "value": true,
+				    "value": "2",
 				    "hint": {
-					    "en": "When enabled, the LED on Strips will flash shortly when the door/window is opened.",
+					  "en": "When enabled, the LED on Strips will flash shortly when the door/window is opened.",
 						"nl": "Wanneer ingeschakeld zal de led op Strips kort oplichten als de deur of het raam wordt geopened."
 				    }
 			    }
-			]			
+			]
 	    }
     ]
 }
