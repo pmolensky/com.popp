@@ -1,70 +1,20 @@
-# ZwaveDriver
-Generic class to map Z-Wave CommandClasses to Homey capabilities, for faster Z-Wave App development.
+# POPP Outdoor Siren Z-Wave App for Homey @ Athom.com
+First basic release thats being tested later this day
 
 ## Installation
 
-```
-cd /path/to/com.your.homeyapp/
-npm install --save https://github.com/athombv/node-homey-zwavedriver
-```
+For now with the athom-cli . When the app works correct it will be submitted to the Athom App Store
 
-## Example
+## Options Available
 
-File: `/drivers/mydriver/driver.js`
+You are able to set Tamper Trigger mode (2 Reactions and 1 service mode)
 
-```javascript
-"use strict";
+The ability to control the alarm response. Siren, Lights or both
 
-const ZwaveDriver = require('homey-zwavedriver');
+Temperature and Battery status reports are also implemented.
 
-module.exports = new ZwaveDriver('mydriver', {
-	debug: false, // set to true to view all incoming events
-	capabilities: {
-		'onoff': {
-			'command_class'				: 'COMMAND_CLASS_SWITCH_BINARY',
-			'command_get'				: 'SWITCH_BINARY_GET',
-			'command_set'				: 'SWITCH_BINARY_SET',
-			'command_set_parser'		: function( value ){
-				return {
-					'Switch Value': value
-				}
-			},
-			'command_report'			: 'SWITCH_BINARY_REPORT',
-			'command_report_parser'		: function( report ){
-				return report['Value'] === 'on/enable';
-			}
-		},
-		'measure_power': {
-			'command_class'				: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
-			'command_get'				: 'SENSOR_MULTILEVEL_GET',
-			'command_report'			: 'SENSOR_MULTILEVEL_REPORT',
-			'command_report_parser'		: function( report ){
-				return report['Sensor Value (Parsed)'];
-			}
-		}
-	},
-	settings: {
-		"always_on": {
-			"index": 1,
-			"size": 1,
-			"parser": function( input ) {
-				return new Buffer([ ( input === true ) ? 0 : 1 ]);
-			}
-		},
-		"led_ring_color_on": {
-			"index": 61,
-			"size": 1,
-			"parser": function( input ) {
-				return new Buffer([ parseInt(input) ]);
-			}
-		},
-		"led_ring_color_off": {
-			"index": 62,
-			"size": 1,
-			"parser": function( input ) {
-				return new Buffer([ parseInt(input) ]);
-			}
-		}
-	}
-});
-```
+## ToDo:
+
+Make Temperature adjustment setting available
+Make the default report in of 1 hour changeable tru settings
+Auto Off now at default 5 minutes. Make setting adjustable
