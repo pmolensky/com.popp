@@ -15,6 +15,8 @@ Temperature and Battery status reports are also implemented.
 
 ## ToDo:
 
+Flow support
+
 Make Temperature adjustment setting available
 
 Make the default report in of 1 hour changeable tru settings
