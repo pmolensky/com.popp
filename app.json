@@ -11,7 +11,7 @@
 	    "large": "/assets/images/large.jpg",
 	    "small": "/assets/images/small.jpg"
     },
-    "version": "1.0.0",
+    "version": "0.9.0",
     "compatibility": ">=0.9.1",
     "author": {
         "name": "Marco Ruiter",
