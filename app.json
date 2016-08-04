@@ -25,7 +25,7 @@
 				"nl": "Sirene"
 		    },
 		    "zwave": {
-			    "manufacturerId": 154,
+			    "manufacturerId": 340,
 			    "productTypeId": 4,
 			    "productId": 2,
 			    "learnmode": {
