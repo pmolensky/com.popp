@@ -1,5 +1,6 @@
 # POPP Outdoor Siren Z-Wave App for Homey @ Athom.com
-First basic release thats being tested later this day
+
+Still work in progress
 
 ## Installation
 
@@ -13,9 +14,17 @@ The ability to control the alarm response. Siren, Lights or both
 
 Temperature and Battery status reports are also implemented.
 
+## Flow Options
+
+You are able to fire and disarm the siren
+
 ## ToDo:
 
-Flow support
+Make Battery Level Charge Display Correct
+
+Make Tamper Alarm Work and report
+
+Make Temperature Value display correct in card
 
 Make Temperature adjustment setting available
 
