@@ -23,6 +23,10 @@
 		    
 			"mobile": {
 				"components":[
+				{ 
+                    "id": "icon", 
+                    "capabilities": [  ] 
+                }, 
 				{
 					"id": "toggle",
 					"capabilities": ["onoff" ],
@@ -40,10 +44,7 @@
 				}
 			 ]
 			},
-			
-			
-			
-			
+						
 			"name": {
 			    "en": "Siren",
 				"nl": "Sirene"
@@ -59,7 +60,7 @@
 					    "nl": "Nadat de sirene is aangezet met de schuif schakelaar wacht 5 seconden en druk op de tiptoets"
 				    }
 				},
-			    "associationGroups": [ 1, 2, 3]
+			    "associationGroups": [ 1 ]
 		    },
 		    "class": "other",
 		    "capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature" ],
@@ -175,7 +176,4 @@
 			}
 		]
 	}
-
-
-
 }

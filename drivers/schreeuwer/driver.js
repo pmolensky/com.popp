@@ -3,6 +3,7 @@
 const path          = require('path');
 const ZwaveDriver   = require('homey-zwavedriver');
 
+// http://www.popp.eu/wp-content/uploads/2015/11/Manual_Solar-Siren_POPP_En.pdf
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
     debug: true,
@@ -20,23 +21,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
     				return report['Value'] === 'on/enable';
     			}
     		},
-        'measure_battery': {
-		  	'command_class'				: 'COMMAND_CLASS_BATTERY',
-			  'command_get'				: 'BATTERY_GET',
-			  'command_report'			: 'BATTERY_REPORT',
-			  'command_report_parser'		: function( report ) {
-				  if( report['Battery Level'] === "battery low warning" ) return 1;
-				 return report['Battery Level (Raw)'][0];
-			      }
-		    },
-
-        'alarm_tamper': {
-			command_class: 'COMMAND_CLASS_SENSOR_BINARY',
-			command_get: 'SENSOR_BINARY_GET',
-			command_report: 'SENSOR_BINARY_REPORT',
-			command_report_parser: report => report['Sensor Value'] === 'detected an event'
-		},
-		'measure_temperature': {
+			
+			'measure_temperature': {
 			'command_class'				: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
 			'command_get'				: 'SENSOR_MULTILEVEL_GET',
 			'command_get_parser'		: function(){
@@ -54,6 +40,23 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 
 				return report['Sensor Value (Parsed)'];
 			}
+		},
+
+		'measure_battery': {
+		'command_class'				: 'COMMAND_CLASS_BATTERY',
+		'command_get'				: 'BATTERY_GET',
+		'command_report'			: 'BATTERY_REPORT',
+		'command_report_parser'		: function( report ) {
+			if( report['Battery Level'] === "battery low warning" ) return 1;
+			return report['Battery Level (Raw)'][0];
+			}
+		},
+
+		'alarm_tamper': {
+			command_class: 'COMMAND_CLASS_SENSOR_BINARY',
+			command_get: 'SENSOR_BINARY_GET',
+			command_report: 'SENSOR_BINARY_REPORT',
+			command_report_parser: report => report['Sensor Value'] === 'detected an event'
 		},
 
     	},
@@ -90,7 +93,7 @@ Homey.manager('flow').on('action.sound_alarm', function( callback, args ){
 		if (err) callback (err, false);
 	});
 
-	callback( null, true ); // we've fired successfully
+	callback( null, true );
 });
 
 Homey.manager('flow').on('action.silence_alarm', function( callback, args ){
@@ -106,5 +109,5 @@ Homey.manager('flow').on('action.silence_alarm', function( callback, args ){
 		if (err) callback (err, false);
 	});
 
-	callback( null, true ); // we've fired successfully
+	callback( null, true );
 });
