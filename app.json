@@ -28,10 +28,15 @@
 					"capabilities": ["onoff" ],
 					"options": { "showTitle": true }
 				},
+				{
+					"id": "battery",
+					"capabilities": ["measure_battery" ],
+					"options": { "showTitle": true }
+				},
 				{ 
 					"id": "sensor", 
 					"capabilities": [ "measure_temperature" ], 
-					"options": { "showTitle": true }                      } 
+					"options": { "showTitle": true }                      
 				}
 			 ]
 			},
