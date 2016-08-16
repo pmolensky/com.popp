@@ -37,28 +37,9 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report_parser'		: function( report ){
 				if( report['Sensor Type'] !== 'Temperature (version 1)' )
 					return null;
-				return report['Sensor Value (Parsed)'];
-			}
-		},
-		
-		'alarm_tamper': {
-			'command_class'			: 'COMMAND_CLASS_SENSOR_BINARY',
-			'command_get'			: 'SENSOR_BINARY_GET',
-			'command_get_parser'		: function(){
-				return {
-					'Sensor Type': 'Binary Sensor (version 1)',
-					'Properties1': {
-						'Scale': 0
-					}
-				}
-			},
-			'command_report'			: 'SENSOR_BINARY_REPORT',
-			'command_report_parser'		: function( report ){
-				if( report['Sensor Type'] !== 'Binary Sensor (version 1)' )
-					return report;
-				return report['Sensor Value (Parsed)'];
-			}
 
+				return report['Sensor Value (Parsed)'];
+			}
 		},
 
 		'measure_battery': {
@@ -71,7 +52,12 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 
-
+		'alarm_tamper': {
+			command_class: 'COMMAND_CLASS_SENSOR_BINARY',
+			command_get: 'SENSOR_BINARY_GET',
+			command_report: 'SENSOR_BINARY_REPORT',
+			command_report_parser: report => report['Sensor Value'] === 'detected an event'
+		},
 
     	},
     settings: {
