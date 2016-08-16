@@ -20,7 +20,26 @@
     "drivers": [
 	    {
 		    "id": "schreeuwer",
-		    "name": {
+		    
+			"mobile": {
+				"components":[
+				{
+					"id": "toggle",
+					"capabilities": ["onoff" ],
+					"options": { "showTitle": true }
+				},
+				{ 
+					"id": "sensor", 
+					"capabilities": [ "measure_temperature" ], 
+					"options": { "showTitle": true }                      } 
+				}
+			 ]
+			},
+			
+			
+			
+			
+			"name": {
 			    "en": "Siren",
 				"nl": "Sirene"
 		    },
@@ -38,7 +57,7 @@
 			    "associationGroups": [ 1, 2, 3]
 		    },
 		    "class": "other",
-		    "capabilities": [ "onoff","alarm_tamper","measure_battery" ],
+		    "capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature" ],
 		    "images": {
 			    "large": "/drivers/schreeuwer/assets/images/large.jpg",
 			    "small": "/drivers/schreeuwer/assets/images/small.jpg"
