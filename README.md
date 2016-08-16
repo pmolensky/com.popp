@@ -28,6 +28,6 @@ Make Temperature Value display correct in card
 
 Make Temperature adjustment setting available
 
-Make the default report in of 1 hour changeable tru settings
+Make the default report in of 1 hour changeable thru settings
 
-Auto Off now at default 5 minutes. Make setting adjustable
+Auto Off now at default 5 minutes. Make setting variable

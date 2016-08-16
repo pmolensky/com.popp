@@ -11,8 +11,8 @@
 	    "large": "/assets/images/large.jpg",
 	    "small": "/assets/images/small.jpg"
     },
-    "version": "0.9.0",
-    "compatibility": ">=0.9.1",
+    "version": "0.9.1",
+    "compatibility": ">=0.9.2",
     "author": {
         "name": "Marco Ruiter",
         "email": "mruiter@tuxweb.nl"
@@ -20,33 +20,8 @@
     "drivers": [
 	    {
 		    "id": "schreeuwer",
-		    
-			"mobile": {
-				"components":[
-				{ 
-                    "id": "icon", 
-                    "capabilities": [  ] 
-                }, 
-				{
-					"id": "toggle",
-					"capabilities": ["onoff" ],
-					"options": { "showTitle": true }
-				},
-				{
-					"id": "battery",
-					"capabilities": ["measure_battery" ],
-					"options": { "showTitle": true }
-				},
-				{ 
-					"id": "sensor", 
-					"capabilities": [ "measure_temperature" ], 
-					"options": { "showTitle": true }                      
-				}
-			 ]
-			},
-						
-			"name": {
-			    "en": "Siren",
+		   	"name": {
+				"en": "Siren",
 				"nl": "Sirene"
 		    },
 		    "zwave": {
@@ -62,12 +37,37 @@
 				},
 			    "associationGroups": [ 1 ]
 		    },
-		    "class": "other",
-		    "capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature" ],
+		    "class": "sensor",
+		    "capabilities": [ "onoff","measure_temperature","alarm_tamper","measure_battery"],
 		    "images": {
 			    "large": "/drivers/schreeuwer/assets/images/large.jpg",
 			    "small": "/drivers/schreeuwer/assets/images/small.jpg"
 		    },
+			
+			"mobile": {
+				"components":[
+				{ 
+                    "id": "icon", 
+                    "capabilities": [  ] 
+                }, 
+				{ 
+					"id": "sensor", 
+					"capabilities": [ "measure_temperature" ], 
+					"options": { "showTitle": true }                      
+				},
+				{
+					"id": "toggle",
+					"capabilities": ["onoff" ],
+					"options": { "showTitle": true }
+				},
+				{
+					"id": "battery",
+					"capabilities": ["measure_battery" ]
+				}
+			 ]
+			},
+			
+			
 		    "settings": [
 			    {
 				    "id": "siren_trigger_mode",
