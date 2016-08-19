@@ -20,13 +20,13 @@
     "drivers": [
 	    {
 		    "id": "schreeuwer",
-		    
+
 			"mobile": {
 				"components":[
-				{ 
-                    "id": "icon", 
-                    "capabilities": [  ] 
-                }, 
+				{
+          "id": "icon",
+          "capabilities": [  ]
+        },
 				{
 					"id": "toggle",
 					"capabilities": ["onoff" ],
@@ -37,14 +37,14 @@
 					"capabilities": ["measure_battery" ],
 					"options": { "showTitle": true }
 				},
-				{ 
-					"id": "sensor", 
-					"capabilities": [ "measure_temperature" ], 
-					"options": { "showTitle": true }                      
+				{
+					"id": "sensor",
+					"capabilities": [ "measure_temperature" ],
+					"options": { "showTitle": true }
 				}
 			 ]
 			},
-						
+
 			"name": {
 			    "en": "Siren",
 				"nl": "Sirene"
@@ -77,14 +77,14 @@
 						    "id": "0",
 						    "label": {
 							  "en": "Siren triggers when removed from holster. Must be turned off",
-								"nl": "Sirene gaat af zondra uit holster wordt genomen. Moet handmatig worden uitgezet"
+								"nl": "Sirene gaat af zodra deze uit holster wordt genomen. Moet handmatig worden uitgezet"
 						    }
 					    },
               {
                 "id": "1",
                 "label": {
                 "en": "Siren triggers when removed from holster. Turns off when placed back",
-                "nl": "Sirene gaat af zodra uit holster wordt genomen. Gaat uit bij terugplaatsing"
+                "nl": "Sirene gaat af zodra deze uit holster wordt genomen. Gaat uit bij terugplaatsing"
                 }
               },
               {
@@ -95,17 +95,17 @@
                 }
   						}
 				    ],
-				    "value": "0",
-				    "label": {
-					  "en": "Sabotage alarm setting",
-						"nl": "Sabotage alarm setting"
-				    },
-				    "hint": {
-					  "en": "Change the way how the siren reacts when pulled of the wall",
-						"nl": "Aanpassen hoe de sirene reageerd als hij uit zijn holster wordt gehaald"
-				    }
-			    },
-			    {
+            "value": "0",
+            "label": {
+              "en": "Sabotage alarm setting",
+              "nl": "Sabotage alarm setting"
+              },
+            "hint": {
+            "en": "Change the way how the siren reacts when pulled of the wall",
+            "nl": "Aanpassen hoe de sirene reageerd als hij uit zijn holster wordt gehaald"
+             }
+           },
+          {
 				    "id": "siren_alarm_mode",
 				    "type": "dropdown",
             "values": [
@@ -131,15 +131,15 @@
                 }
   						}
 				    ],
-				    "label": {
-					  "en": "Alarm mode",
-						"nl": "Alarm mode"
-				    },
-				    "value": "2",
-				    "hint": {
-					  "en": "When enabled, the LED on Strips will flash shortly when the door/window is opened.",
-						"nl": "Wanneer ingeschakeld zal de led op Strips kort oplichten als de deur of het raam wordt geopened."
-				    }
+            "label": {
+            "en": "Alarm mode",
+            "nl": "Alarm mode"
+                },
+            "value": "2",
+            "hint": {
+            "en": "Change the way the alarm will go off",
+            "nl": "Pas aan hoe het alarm af gaat"
+              }
 			    }
 			]
 	    }
