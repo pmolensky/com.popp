@@ -1,35 +1,40 @@
 {
-    "id": "com.popp",
-    "name": {
-        "en": "POPP Outdoor Siren"
-    },
-    "description": {
-	    "en": "POPP Outdoor Siren (and in the future maybee more POPP devices) for Homey"
-    },
-    "category": [ "security" ],
-    "images": {
-	    "large": "/assets/images/large.jpg",
-	    "small": "/assets/images/small.jpg"
-    },
-    "version": "0.9.2",
-    "compatibility": ">=0.9.2",
-    "author": {
-        "name": "Marco Ruiter",
-        "email": "mruiter@tuxweb.nl"
-    },
-    "drivers": [
-	    {
-		    "id": "schreeuwer",
+		"id": "com.popp",
+		"name": {
+				"en": "POPP Outdoor Siren"
+		},
+		"description": {
+			"en": "POPP Outdoor Siren (and in the future maybee more POPP devices) for Homey"
+		},
+		"category": [ "security" ],
+		"images": {
+			"large": "/assets/images/large.jpg",
+			"small": "/assets/images/small.jpg"
+		},
+		"version": "1.0.0",
+		"compatibility": ">=1.0.1",
+		"author": {
+				"name": "Marco Ruiter",
+				"email": "mruiter@tuxweb.nl"
+		},
+		"drivers": [
+			{
+				"id": "schreeuwer",
 
 			"mobile": {
 				"components":[
 				{
-          "id": "icon",
-          "capabilities": [  ]
-        },
+					"id": "icon",
+					"capabilities": [  ]
+				},
 				{
 					"id": "toggle",
 					"capabilities": ["onoff" ],
+					"options": { "showTitle": true }
+				},
+				{
+					"id": "alarm_tamper",
+					"capabilities": ["alarm_tamper" ],
 					"options": { "showTitle": true }
 				},
 				{
@@ -46,107 +51,107 @@
 			},
 
 			"name": {
-			    "en": "Siren",
+					"en": "Siren",
 				"nl": "Sirene"
-		    },
-		    "zwave": {
-			    "manufacturerId": 340,
-			    "productTypeId": 4,
-			    "productId": 2,
-			    "learnmode": {
-				    "image": "/drivers/schreeuwer/assets/wakeup.svg",
-				    "instruction": {
-					    "en": "Once turned on with the switch wait 5 seconds and push the button next to the switch once for inclusion",
-					    "nl": "Nadat de sirene is aangezet met de schuif schakelaar wacht 5 seconden en druk op de tiptoets"
-				    }
 				},
-			    "associationGroups": [ 1 ]
-		    },
-		    "class": "other",
-		    "capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature" ],
-		    "images": {
-			    "large": "/drivers/schreeuwer/assets/images/large.jpg",
-			    "small": "/drivers/schreeuwer/assets/images/small.jpg"
-		    },
-		    "settings": [
-			    {
-				    "id": "siren_trigger_mode",
-				    "type": "dropdown",
-				    "values": [
-					    {
-						    "id": "0",
-						    "label": {
-							  "en": "Siren triggers when removed from holster. Must be turned off",
+				"zwave": {
+					"manufacturerId": 340,
+					"productTypeId": 4,
+					"productId": 2,
+					"learnmode": {
+						"image": "/drivers/schreeuwer/assets/wakeup.svg",
+						"instruction": {
+							"en": "Once turned on with the switch wait 5 seconds and push the button next to the switch once for inclusion",
+							"nl": "Nadat de sirene is aangezet met de schuif schakelaar wacht 5 seconden en druk op de tiptoets"
+						}
+				},
+					"associationGroups": [ 1 ]
+				},
+				"class": "other",
+				"capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature" ],
+				"images": {
+					"large": "/drivers/schreeuwer/assets/images/large.jpg",
+					"small": "/drivers/schreeuwer/assets/images/small.jpg"
+				},
+				"settings": [
+					{
+						"id": "siren_trigger_mode",
+						"type": "dropdown",
+						"values": [
+							{
+								"id": "0",
+								"label": {
+								"en": "Siren triggers when removed from holster. Must be turned off",
 								"nl": "Sirene gaat af zodra deze uit holster wordt genomen. Moet handmatig worden uitgezet"
-						    }
-					    },
-              {
-                "id": "1",
-                "label": {
-                "en": "Siren triggers when removed from holster. Turns off when placed back",
-                "nl": "Sirene gaat af zodra deze uit holster wordt genomen. Gaat uit bij terugplaatsing"
-                }
-              },
-              {
-  						  "id": "2",
-  						  "label": {
-  							"en": "Siren does not triggers when removed from holster. (Service Mode)",
-  							"nl": "Sirene gaat niet af wanneer uit holster genomen. (Service Mode)"
-                }
-  						}
-				    ],
-            "value": "0",
-            "label": {
-              "en": "Sabotage alarm setting",
-              "nl": "Sabotage alarm setting"
-              },
-            "hint": {
-            "en": "Change the way how the siren reacts when pulled of the wall",
-            "nl": "Aanpassen hoe de sirene reageerd als hij uit zijn holster wordt gehaald"
-             }
-           },
-          {
-				    "id": "siren_alarm_mode",
-				    "type": "dropdown",
-            "values": [
-					    {
-						    "id": "0",
-						    "label": {
-							  "en": "When Alarm only make sound",
+								}
+							},
+							{
+								"id": "1",
+								"label": {
+								"en": "Siren triggers when removed from holster. Turns off when placed back",
+								"nl": "Sirene gaat af zodra deze uit holster wordt genomen. Gaat uit bij terugplaatsing"
+								}
+							},
+							{
+								"id": "2",
+								"label": {
+								"en": "Siren does not triggers when removed from holster. (Service Mode)",
+								"nl": "Sirene gaat niet af wanneer uit holster genomen. (Service Mode)"
+								}
+							}
+						],
+						"value": "0",
+						"label": {
+							"en": "Sabotage alarm setting",
+							"nl": "Sabotage alarm setting"
+							},
+						"hint": {
+						"en": "Change the way how the siren reacts when pulled of the wall",
+						"nl": "Aanpassen hoe de sirene reageerd als hij uit zijn holster wordt gehaald"
+						 }
+					 },
+					{
+						"id": "siren_alarm_mode",
+						"type": "dropdown",
+						"values": [
+							{
+								"id": "0",
+								"label": {
+								"en": "When Alarm only make sound",
 								"nl": "Bij Alarm alleen geluid"
-						    }
-					    },
-              {
-                "id": "1",
-                "label": {
-                "en": "When Alarm only blink lights",
-                "nl": "Bij Alarm alleen licht signalering"
-                }
-              },
-              {
-  						  "id": "2",
-  						  "label": {
-  							"en": "When Alarm make sound an light",
-  							"nl": "Bij Alarm zowel geluid als licht signalering"
-                }
-  						}
-				    ],
-            "label": {
-            "en": "Alarm mode",
-            "nl": "Alarm mode"
-                },
-            "value": "2",
-            "hint": {
-            "en": "Change the way the alarm will go off",
-            "nl": "Pas aan hoe het alarm af gaat"
-              }
-			    }
+								}
+							},
+							{
+								"id": "1",
+								"label": {
+								"en": "When Alarm only blink lights",
+								"nl": "Bij Alarm alleen licht signalering"
+								}
+							},
+							{
+								"id": "2",
+								"label": {
+								"en": "When Alarm make sound an light",
+								"nl": "Bij Alarm zowel geluid als licht signalering"
+								}
+							}
+						],
+						"label": {
+						"en": "Alarm mode",
+						"nl": "Alarm mode"
+								},
+						"value": "2",
+						"hint": {
+						"en": "Change the way the alarm will go off",
+						"nl": "Pas aan hoe het alarm af gaat"
+							}
+					}
 			]
-	    }
-    ],
-    "flow" : {
+			}
+		],
+		"flow" : {
 		"actions": [
-        	{
+					{
 				"id": "sound_alarm",
 				"title": {
 					"en": "Sound alarm",
@@ -160,7 +165,7 @@
 					}
 				]
 			},
-        	{
+					{
 				"id": "silence_alarm",
 				"title": {
 					"en": "Silence alarm",
