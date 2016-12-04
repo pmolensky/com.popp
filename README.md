@@ -1,6 +1,4 @@
-# POPP Outdoor Siren Z-Wave App for Homey @ Athom.com
-
-Alarm triggers and settings work
+# POPP Outdoor Siren and Thermostat Valve support for Homey @ Athom.com
 
 ## Options Available
 
