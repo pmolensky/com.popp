@@ -4,7 +4,7 @@
 				"en": "POPP Outdoor Siren / Thermostat Valve"
 		},
 		"description": {
-			"en": "POPP Outdoor Siren / Thermostat Valve for Homey"
+				"en": "POPP Outdoor Siren / Thermostat Valve for Homey"
 		},
 		"category": [ 
 					"security",
@@ -54,8 +54,8 @@
 			},
 
 			"name": {
-					"en": "Siren",
-				"nl": "Sirene"
+					"en": "Solar Outdoor Siren",
+					"nl": "Solar Buiten Sirene"
 				},
 				"zwave": {
 					"manufacturerId": 340,
@@ -155,7 +155,8 @@
 		{
 			"id": "thermovalve",
 			"name": {
-				"en": "POPP Wireless Thermo Valve"
+				"en": "Wireless Thermo Valve",
+				"nl": "Draadloze Thermostaat Kraan"
 			},
 			"zwave": {
 				"manufacturerId": 2,
