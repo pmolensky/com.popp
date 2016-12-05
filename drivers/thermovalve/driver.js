@@ -3,6 +3,11 @@
 const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
 
+// Get the driver object
+var driver = findWhere(Homey.manifest.drivers, { id: path.basename(__dirname) });
+// Get the wakeUpInterval from the driver object (in order to set the pollInterval to the same value)
+var wakeUpInterval = driver.zwave.wakeUpInterval * 1000;
+Homey.log("Will set pollInterval to the same value as wakeUpInterval, which is: " + wakeUpInterval + " ms");
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
 	capabilities: {
