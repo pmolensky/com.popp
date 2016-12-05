@@ -96,3 +96,7 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 	},
 	settings: {}
 });
+
+function findWhere(array, criteria) {
+	return array.find(item => Object.keys(criteria).every(key => item[key] === criteria[key]));
+}
