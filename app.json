@@ -161,7 +161,6 @@
 			"zwave": {
 				"manufacturerId": 2,
 				"productTypeId": 277,
-				"wakeUpInterval": 300,
 				"productId": 40976,
 				"learnmode": {
 				"instruction": {
@@ -235,7 +234,7 @@
 					{
 						"name": "device",
 						"type": "device",
-						"filter": "driver_id=LC13"
+						"filter": "driver_id=thermovalve"
 					}
 				]
 			}
