@@ -4,6 +4,7 @@ const path = require('path');
 const ZwaveDriver = require('homey-zwavedriver');
 
 module.exports = new ZwaveDriver(path.basename(__dirname), {
+	debug: true,
 	capabilities: {
 		measure_battery: {
 			command_class: 'COMMAND_CLASS_BATTERY',
@@ -24,7 +25,19 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				return report['Battery Level (Raw)'][0];
 			}
 		},
-		
+		alarm_battery: {
+				'command_class': 'COMMAND_CLASS_BATTERY',
+				'command_get': 'BATTERY_GET',
+				'command_report': 'BATTERY_REPORT',
+				'command_report_parser': (report, node) => {
+					if(report.hasOwnProperty('Battery Level (Raw)')) {
+						if (report['Battery Level (Raw)'][0] == 255) {
+							return true
+							}
+						return false
+								}
+					}
+		},
 		measure_temperature: {
 			command_class: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
 			command_get: 'SENSOR_MULTILEVEL_GET',
@@ -41,8 +54,6 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				return Math.round (report['Sensor Value (Parsed)'] * 10) / 10;
 			},
 		},
-		
-		
 		target_temperature: {
 			command_class: 'COMMAND_CLASS_THERMOSTAT_SETPOINT',
 			command_get: 'THERMOSTAT_SETPOINT_GET',

@@ -6,7 +6,7 @@
 		"description": {
 				"en": "POPP Outdoor Siren / Thermostat Valve for Homey"
 		},
-		"category": [ 
+		"category": [
 					"security",
 					"climate"
 					],
@@ -14,44 +14,15 @@
 			"large": "/assets/images/large.jpg",
 			"small": "/assets/images/small.jpg"
 		},
-		"version": "1.0.2",
-		"compatibility": ">=1.0.1",
+		"version": "1.1.0",
+		"compatibility": ">=1.1.4",
 		"author": {
 				"name": "Marco Ruiter",
 				"email": "mruiter@tuxweb.nl"
 		},
 		"drivers": [
 			{
-				"id": "schreeuwer",
-
-			"mobile": {
-				"components":[
-				{
-					"id": "icon",
-					"capabilities": [  ]
-				},
-				{
-					"id": "toggle",
-					"capabilities": ["onoff" ],
-					"options": { "showTitle": true }
-				},
-				{
-					"id": "alarm_tamper",
-					"capabilities": ["alarm_tamper" ],
-					"options": { "showTitle": true }
-				},
-				{
-					"id": "battery",
-					"capabilities": ["measure_battery" ],
-					"options": { "showTitle": true }
-				},
-				{
-					"id": "sensor",
-					"capabilities": [ "measure_temperature" ],
-					"options": { "showTitle": true }
-				}
-			 ]
-			},
+				"id": "005107",
 
 			"name": {
 					"en": "Solar Outdoor Siren",
@@ -62,7 +33,7 @@
 					"productTypeId": 4,
 					"productId": 2,
 					"learnmode": {
-						"image": "/drivers/schreeuwer/assets/wakeup.svg",
+						"image": "/drivers/005107/assets/wakeup.svg",
 						"instruction": {
 							"en": "Once turned on with the switch wait 5 seconds and push the button next to the switch once for inclusion",
 							"nl": "Nadat de sirene is aangezet met de schuif schakelaar wacht 5 seconden en druk op de tiptoets"
@@ -71,10 +42,10 @@
 					"associationGroups": [ 1 ]
 				},
 				"class": "other",
-				"capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature" ],
+				"capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature","alarm_battery" ],
 				"images": {
-					"large": "/drivers/schreeuwer/assets/images/large.jpg",
-					"small": "/drivers/schreeuwer/assets/images/small.jpg"
+					"large": "/drivers/005107/assets/images/large.jpg",
+					"small": "/drivers/005107/assets/images/small.jpg"
 				},
 				"settings": [
 					{
@@ -153,7 +124,7 @@
 		},
 
 		{
-			"id": "thermovalve",
+			"id": "010101",
 			"name": {
 				"en": "Wireless Thermo Valve",
 				"nl": "Draadloze Thermostaat Kraan"
@@ -168,15 +139,14 @@
 						"nl": "Druk op de middelste knop van de POPP Thermostaatkraan"
 					}
 				},
-				"associationGroups": [
-					1
-				]
+				"associationGroups": [ 1 ]
 			},
 			"class": "thermostat",
 			"capabilities": [
 				"target_temperature",
 				"measure_temperature",
-				"measure_battery"
+				"measure_battery",
+				"alarm_battery"
 			],
 			"capabilitiesOptions": {
 				"target_temperature": {
@@ -185,8 +155,8 @@
 				}
 			},
 			"images": {
-				"large": "/drivers/thermovalve/assets/images/large.jpg",
-				"small": "/drivers/thermovalve/assets/images/small.jpg"
+				"large": "/drivers/010101/assets/images/large.jpg",
+				"small": "/drivers/010101/assets/images/small.jpg"
 			}
 		},
 
@@ -475,7 +445,7 @@
 					{
 						"name": "device",
 						"type": "device",
-						"filter": "driver_id=schreeuwer"
+						"filter": "driver_id=005107"
 					}
 				]
 			},
@@ -489,7 +459,7 @@
 					{
 						"name": "device",
 						"type": "device",
-						"filter": "driver_id=schreeuwer"
+						"filter": "driver_id=005107"
 					}
 				]
 			}
@@ -505,7 +475,21 @@
 					{
 						"name": "device",
 						"type": "device",
-						"filter": "driver_id=thermovalve"
+						"filter": "driver_id=010101"
+					}
+				]
+			},
+			{
+				"id": "battery_alarm",
+				"title": {
+					"en": "The battery alarm turned on",
+					"nl": "De batterijwaarschuwing gaat aan"
+				},
+				"args": [
+					{
+						"name": "device",
+						"type": "device",
+						"filter": "driver_id=005107"
 					}
 				]
 			}
