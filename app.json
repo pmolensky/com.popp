@@ -22,8 +22,30 @@
 		},
 		"drivers": [
 			{
-				"id": "005107",
-
+			"id": "005107",
+			"mobile": {
+				"components":[
+					{
+					"id": "icon",
+					"capabilities": ["onoff"]
+					},
+					{
+					"id": "toggle",
+					"capabilities": ["onoff"],
+					"options": { "showTitle": true }
+					},
+					{
+					"id": "battery",
+					"capabilities": ["measure_battery" ],
+					"options": { "showTitle": true }
+					},
+					{
+					"id": "sensor",
+					"capabilities": [ "measure_temperature" ],
+					"options": { "showTitle": true }
+					}
+				]
+			},
 			"name": {
 					"en": "Solar Outdoor Siren",
 					"nl": "Solar Buiten Sirene"
@@ -35,11 +57,23 @@
 					"learnmode": {
 						"image": "/drivers/005107/assets/wakeup.svg",
 						"instruction": {
-							"en": "Once turned on with the switch wait 5 seconds and push the button next to the switch once for inclusion",
-							"nl": "Nadat de sirene is aangezet met de schuif schakelaar wacht 5 seconden en druk op de tiptoets"
+							"en": "Once turned on with the switch immediately push the button next to the switch once for inclusion",
+							"nl": "Nadat de sirene is aangezet met de schuif schakelaar druk dan onmiddelijk op de tiptoets"
 						}
 				},
-					"associationGroups": [ 1 ]
+					"associationGroups": [ 1 ],
+					"defaultConfiguration": [
+					{
+						"id": 1,
+						"size": 1,
+						"value": 1
+					},
+					{
+						"id": 5,
+						"size": 1,
+						"value": 1
+					}
+				]
 				},
 				"class": "other",
 				"capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature","alarm_battery" ],
@@ -62,8 +96,8 @@
 							{
 								"id": "1",
 								"label": {
-								"en": "Siren triggers when removed from holster. Turns off when placed back",
-								"nl": "Sirene gaat af zodra deze uit holster wordt genomen. Gaat uit bij terugplaatsing"
+								"en": "Siren triggers when removed from holster. Turns off when placed back (standard)",
+								"nl": "Sirene gaat af zodra deze uit holster wordt genomen. Gaat uit bij terugplaatsing (standaard)"
 								}
 							},
 							{
@@ -98,8 +132,8 @@
 							{
 								"id": "1",
 								"label": {
-								"en": "When Alarm only blink lights",
-								"nl": "Bij Alarm alleen licht signalering"
+								"en": "When Alarm only blink lights (standard)",
+								"nl": "Bij Alarm alleen licht signalering (stanaard)"
 								}
 							},
 							{
