@@ -41,18 +41,11 @@
 					},
 					{
 					"id": "sensor",
-					"capabilities": [ "measure_temperature" ],
-					"options": { "showTitle": true }
-					},
-					{
-					"id": "sensor",
-					"capabilities": [ "alarm_tamper" ],
-					"options": { "showTitle": true }
-					},
-					{
-					"id": "sensor",
-					"capabilities": [ "alarm_battery" ],
-					"options": { "showTitle": true }
+					"capabilities": [ 
+						"measure_temperature",
+						"alarm_tamper",
+						"alarm_battery"
+						]
 					}
 				]
 			},
@@ -82,6 +75,11 @@
 						"id": 5,
 						"size": 1,
 						"value": 1
+					},
+					{
+						"id": 6,
+						"size": 1,
+						"value": 0
 					}
 				]
 				},
@@ -163,7 +161,24 @@
 						"en": "Change the way the alarm will go off",
 						"nl": "Pas aan hoe het alarm af gaat"
 							}
-					}
+					},
+					{
+						"id": "siren_auto_off",
+						"type": "number",
+						"attr": {
+							"min": 0,
+							"max": 30
+						},
+						"value": 0,
+						"label": {
+							"en": "Siren Auto Turnoff time",
+							"nl": "Automatische uitschakel tijd van sirene"
+						},
+						"hint": {
+							"en": "The amount of time before siren auto stops in minutes. (default: 0-UIT, range: 1 - 30)",
+							"nl": "De tijd dat de sirene afgaat in minuten voordat hij vanzelf uitgaat. (default: 0-UIT, range: 1 - 30)"
+						}
+					}					
 			]
 		},
 
@@ -177,6 +192,7 @@
 				"manufacturerId": 2,
 				"productTypeId": 277,
 				"productId": 40976,
+				"wakeUpInterval": 1800,
 				"learnmode": {
 				"instruction": {
 						"en": "Press the middle button on your POPP Valve",
@@ -520,6 +536,32 @@
 						"name": "device",
 						"type": "device",
 						"filter": "driver_id=010101"
+					}
+				]
+			},
+			{
+				"id": "measure_temperature",
+				"title": {
+					"en": "Temperature changed",
+					"nl": "Temperatuur is veranderd"
+				},
+				"args": [
+					{
+					"name": "device",
+					"type": "device",
+					"filter": "driver_id=005107"
+					}
+				],
+				"tokens": [
+					{
+					"name": "temp",
+					"title": {
+					"en": "Temperature",
+					"nl": "Temperatuur"
+					},
+					"example": {
+						"en": "18"
+						}
 					}
 				]
 			},

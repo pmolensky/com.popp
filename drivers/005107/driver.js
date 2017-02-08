@@ -21,9 +21,17 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'alarm_tamper': {
 				'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
 				'command_get': 'SENSOR_BINARY_GET',
-				'command_report': 'SENSOR_BINARY_REPORT',
-				'command_report_parser': report => report['Sensor Value'] === 'detected an event'
+				'command_get_parser': () => {
+					return {
+						'Sensor Type': 'Tamper'
+					};
 				},
+				'command_report': 'SENSOR_BINARY_REPORT',
+				'command_report_parser': report => {
+					if (report['Sensor Type'] === 'Tamper')
+						report['Sensor Value'] === 'detected an event'
+				}
+			},
 	        'measure_temperature': {
 				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
 				'command_get': 'SENSOR_MULTILEVEL_GET',
@@ -40,7 +48,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				if (report['Sensor Type'] === "Temperature (version 1)" &&
 					report.hasOwnProperty("Level") &&
 					report.Level.hasOwnProperty("Scale") &&
-					report.Level.Scale === 0)
+					report.Level.Scale === 0)					
 					return report['Sensor Value (Parsed)'];
 					return null;
 				}
@@ -73,24 +81,21 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
   settings: {
-                "siren_trigger_mode": {
-                "index": 1,
-                "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
-                },
-                "siren_alarm_mode": {
+            "siren_trigger_mode": {
+				"index": 1,
+				"size": 1,
+            },
+            "siren_alarm_mode": {
                 "index": 5,
                 "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
-                }
-              }
+            },
+			"siren_auto_off": {
+                "index": 6,
+                "size": 1,
+            }
         }
+	}
 );
-
 
 Homey.manager('flow').on('action.sound_alarm', function( callback, args ){
 	Homey.log('');
