@@ -85,6 +85,18 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				"index": 1,
 				"size": 1,
             },
+			"siren_temp_correction": {
+				"index": 2,
+				"size": 1,
+            },
+			"siren_report_unsolicited": {
+				"index": 3,
+				"size": 1,
+            },
+			"siren_unsolicited_time": {
+				"index": 4,
+				"size": 2,
+            },
             "siren_alarm_mode": {
                 "index": 5,
                 "size": 1,

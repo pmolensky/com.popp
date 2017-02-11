@@ -60,8 +60,8 @@
 					"learnmode": {
 						"image": "/drivers/005107/assets/wakeup.svg",
 						"instruction": {
-							"en": "Once turned on with the switch immediately push the button next to the switch once for inclusion",
-							"nl": "Nadat de sirene is aangezet met de schuif schakelaar druk dan onmiddelijk op de tiptoets"
+							"en": "1. Open the case and turn on the power switch 2. Remove the metal mounting plate from the device. 3. Turn your controller into inclusion mode with a short single click on the internal inclusion button.",
+							"nl": "1. Open de behuizing en zet de sirenen aan met de schakelaar 2. Verwijder de metalen montageplaat van het apparaat. 3. Zet uw controller in inclusion mode en geef een korte enkele klik op de interne knop bij de schakelaar voor inclusion."
 						}
 				},
 					"associationGroups": [ 1 ],
@@ -178,7 +178,58 @@
 							"en": "The amount of time before siren auto stops in minutes. (default: 0-UIT, range: 1 - 30)",
 							"nl": "De tijd dat de sirene afgaat in minuten voordat hij vanzelf uitgaat. (default: 0-UIT, range: 1 - 30)"
 						}
-					}					
+					},
+					{
+						"id": "siren_temp_correction",
+						"value": "0",
+						"label": {
+							"en": "Temperature Adjustment",
+							"nl": "Temperatuur Correctie"
+							},
+						"hint": {
+							"en": "Temperature correction. The given value changes the displayed temperature by 0.1C (-127 to 127)",
+							"nl": "Temperatuur correctie. De gegeven waarde verandert de weergegeven temperatuur met 0.1C (-127 tot 127)"
+							},
+						"type": "number",
+						"attr": {
+							"min": 0,
+							"max": 255
+							}
+					},
+					{
+						"id": "siren_report_unsolicited",
+						"value": "10",
+						"label": {
+							"en": "Send unsolicited Temperature Report",
+							"nl": "Het sturen van ongevraagde Temperatuur Report"
+						},
+						"hint": {
+							"en": "Temperature Threshold to send unsolicited Temperature Update. 10= 1 Celcius",
+							"nl": "Temperature Threshold om ongevraagde temperatuur update te sturen. 10 = 1 Celsius"
+						},
+						"type": "number",
+						"attr": {
+							"min": 0,
+							"max": 255
+							}
+					},
+					{
+						"id": "siren_unsolicited_time",
+						"value": "15",
+						"label": {
+							"en": "Send unsolicited Temperature Report periodically after (N) wake up",
+							"nl": "Het sturen van ongevraagde Temperatuur Rapport periodiek na (N) wakker worden"
+						},
+						"hint": {
+							"en": "If the value is set, after N wake up number (measurement is every 4 minutes) the temperature report will be sent. By default it is 15 = every 1 hour",
+							"nl": "Als de waarde is ingesteld, nadat N wake up nummer (meting elke 4 minuten) wordt het temperatuur rapport verzonden. Standaard is 15 = elk 1 uur"
+						},
+						"type": "number",
+						"attr": {
+							"min": 0,
+							"max": 65535
+							}
+					}
 			]
 		},
 
