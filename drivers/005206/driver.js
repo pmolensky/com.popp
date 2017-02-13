@@ -6,7 +6,28 @@ const ZwaveDriver   = require('homey-zwavedriver');
 module.exports = new ZwaveDriver( path.basename(__dirname), {
     debug: true,
     capabilities: {
-	        'measure_temperature': {
+   	        'measure_wind_strength': {
+				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+				'command_get': 'SENSOR_MULTILEVEL_GET',
+				'command_get_parser': () => {
+					return {
+				'Sensor Type': 'Velocity (version 2)',
+				'Properties1': {
+					'Scale': 0
+						}
+					};
+				},
+				'command_report': 'SENSOR_MULTILEVEL_REPORT',
+				'command_report_parser': report => {
+				if (report['Sensor Type'] === "Velocity (version 2)" &&
+					report.hasOwnProperty("Level") &&
+					report.Level.hasOwnProperty("Scale") &&
+					report.Level.Scale === 0)					
+					return report['Sensor Value (Parsed)'];
+					return null;
+				}
+			},
+			'measure_temperature': {
 				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
 				'command_get': 'SENSOR_MULTILEVEL_GET',
 				'command_get_parser': () => {
