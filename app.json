@@ -691,6 +691,16 @@
 			"en": "Z-Weather",
 			"nl": "Z-Weather"
 			},
+		"class" : "sensor",
+		"capabilities": [
+				"measure_wind_strength",
+				"measure_temperature",
+				"measure_humidity",
+				"measure_pressure",
+				"measure_dewpoint",
+				"measure_battery",
+				"alarm_battery"
+			],
 		"zwave": {
 		"manufacturerId": [ 340 ],
 		"productTypeId": [ 1024 ],
@@ -723,22 +733,12 @@
 					"en": "It is getting dark. Sends BASIC SET command in the evening when brightness reached trigger level (Default value: 37%)"
 				}
 			}
-		},
-		"class" : "sensor",
-		"capabilities": [
-				"measure_wind_strength",
-				"measure_temperature",
-				"measure_humidity",
-				"measure_pressure",
-				"measure_dewpoint",
-				"measure_battery",
-				"alarm_battery"
-			]
+			}
 		},
 		"settings": [
 			{
 			"id": "wind_threshold",
-			"value": "6",
+			"value": 6,
 			"label": {
 				"en": "Threshold for too much wind"
 			},
@@ -749,7 +749,7 @@
 			},
 			{
 			"id": "twilight_threshold",
-			"value": "37",
+			"value": 37,
 			"label": {
 				"en": "Threshold for twilight"
 			},
