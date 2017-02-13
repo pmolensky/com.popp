@@ -166,10 +166,10 @@
 						"id": "siren_auto_off",
 						"type": "number",
 						"attr": {
-							"min": 0,
-							"max": 30
+							"min": "0",
+							"max": "30"
 						},
-						"value": 0,
+						"value": "0",
 						"label": {
 							"en": "Siren Auto Turnoff time",
 							"nl": "Automatische uitschakel tijd van sirene"
@@ -192,8 +192,8 @@
 							},
 						"type": "number",
 						"attr": {
-							"min": 0,
-							"max": 255
+							"min": "0",
+							"max": "255"
 							}
 					},
 					{
@@ -209,8 +209,8 @@
 						},
 						"type": "number",
 						"attr": {
-							"min": 0,
-							"max": 255
+							"min": "0",
+							"max": "255"
 							}
 					},
 					{
@@ -226,8 +226,8 @@
 						},
 						"type": "number",
 						"attr": {
-							"min": 0,
-							"max": 65535
+							"min": "0",
+							"max": "65535"
 							}
 					}
 			]
