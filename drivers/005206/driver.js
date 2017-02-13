@@ -139,11 +139,11 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
   settings: {
-            "1": {
+            "wind_threshold": {
 				"index": 1,
 				"size": 1,
             },
-			"2": {
+			"twilight_threshold": {
 				"index": 2,
 				"size": 1,
             }
