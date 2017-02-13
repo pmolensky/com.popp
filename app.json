@@ -166,10 +166,10 @@
 						"id": "siren_auto_off",
 						"type": "number",
 						"attr": {
-							"min": "0",
-							"max": "30"
+							"min": 0,
+							"max": 30
 						},
-						"value": "0",
+						"value": 0,
 						"label": {
 							"en": "Siren Auto Turnoff time",
 							"nl": "Automatische uitschakel tijd van sirene"
@@ -181,7 +181,8 @@
 					},
 					{
 						"id": "siren_temp_correction",
-						"value": "0",
+						"value": 0,
+						"type": "number",
 						"label": {
 							"en": "Temperature Adjustment",
 							"nl": "Temperatuur Correctie"
@@ -192,13 +193,13 @@
 							},
 						"type": "number",
 						"attr": {
-							"min": "0",
-							"max": "255"
+							"min": 0,
+							"max": 255
 							}
 					},
 					{
 						"id": "siren_report_unsolicited",
-						"value": "10",
+						"value": 10,
 						"label": {
 							"en": "Send unsolicited Temperature Report",
 							"nl": "Het sturen van ongevraagde Temperatuur Report"
@@ -209,13 +210,13 @@
 						},
 						"type": "number",
 						"attr": {
-							"min": "0",
-							"max": "255"
+							"min": 0,
+							"max": 255
 							}
 					},
 					{
 						"id": "siren_unsolicited_time",
-						"value": "15",
+						"value": 15,
 						"label": {
 							"en": "Send unsolicited Temperature Report periodically after (N) wake up",
 							"nl": "Het sturen van ongevraagde Temperatuur Rapport periodiek na (N) wakker worden"
@@ -226,8 +227,8 @@
 						},
 						"type": "number",
 						"attr": {
-							"min": "0",
-							"max": "65535"
+							"min": 0,
+							"max": 65535
 							}
 					}
 			]
