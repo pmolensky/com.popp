@@ -5,6 +5,7 @@ More devices still need to be writen in the app
 * 005107 - PoPP Solar Outside Siren    
 * 010101 - PoPP Thermostat Valve    
 * 123580 - PoPP Dimmer 67G    
+* 123610 - PoPP Switch 68G    
     
 ## Unsupported devices ?    
 You are welcome to help , please send in you're git pull requests to add more devices to the list.    
@@ -36,6 +37,7 @@ Siren tamper and battery alarm.
 Siren trigger on temperature and battery alarm.    
 Thermostat Valve added wakeup report for temp.    
 Dimmer 67G support.    
+Switch 68G support.    
     
 **known issues:**    
 Thermo Valve E5 errors and lost of connection / high battery usage.    
