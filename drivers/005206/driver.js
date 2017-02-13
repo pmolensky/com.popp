@@ -27,6 +27,69 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 					return null;
 				}
 			},
+		   'measure_humidity': {
+				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+				'command_get': 'SENSOR_MULTILEVEL_GET',
+				'command_get_parser': () => {
+					return {
+				'Sensor Type': 'Relative humidity (version 2)',
+				'Properties1': {
+					'Scale': 0
+						}
+					};
+				},
+				'command_report': 'SENSOR_MULTILEVEL_REPORT',
+				'command_report_parser': report => {
+				if (report['Sensor Type'] === "Relative humidity (version 2)" &&
+					report.hasOwnProperty("Level") &&
+					report.Level.hasOwnProperty("Scale") &&
+					report.Level.Scale === 0)					
+					return report['Sensor Value (Parsed)'];
+					return null;
+				}
+			},
+			'measure_pressure': {
+				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+				'command_get': 'SENSOR_MULTILEVEL_GET',
+				'command_get_parser': () => {
+					return {
+				'Sensor Type': 'Atmospheric pressure (version 2)',
+				'Properties1': {
+					'Scale': 0
+						}
+					};
+				},
+				'command_report': 'SENSOR_MULTILEVEL_REPORT',
+				'command_report_parser': report => {
+				if (report['Sensor Type'] === "Atmospheric pressure (version 2)" &&
+					report.hasOwnProperty("Level") &&
+					report.Level.hasOwnProperty("Scale") &&
+					report.Level.Scale === 0)					
+					return report['Sensor Value (Parsed)'];
+					return null;
+				}
+			},
+			'measure_dewpoint': {
+				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+				'command_get': 'SENSOR_MULTILEVEL_GET',
+				'command_get_parser': () => {
+					return {
+				'Sensor Type': 'Dew point (version 2)',
+				'Properties1': {
+					'Scale': 0
+						}
+					};
+				},
+				'command_report': 'SENSOR_MULTILEVEL_REPORT',
+				'command_report_parser': report => {
+				if (report['Sensor Type'] === "Dew point (version 2)" &&
+					report.hasOwnProperty("Level") &&
+					report.Level.hasOwnProperty("Scale") &&
+					report.Level.Scale === 0)					
+					return report['Sensor Value (Parsed)'];
+					return null;
+				}
+			},			
 			'alarm_battery': { 
     			'command_class': 'COMMAND_CLASS_BATTERY',
 	    		'command_get': 'BATTERY_GET',
