@@ -78,7 +78,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 				"index": 1,
 				"size": 1,
             },
-			"2: {
+			"2": {
 				"index": 2,
 				"size": 1,
             },

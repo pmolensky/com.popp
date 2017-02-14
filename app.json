@@ -1,10 +1,12 @@
 {
 		"id": "com.popp",
 		"name": {
-				"en": "POPP Outdoor Siren / Thermostat Valve"
+				"en": "PoPP EU Z-Wave Products",
+				"nl": "PoPP EU Z-Wave Producten"
 		},
 		"description": {
-				"en": "POPP Outdoor Siren / Thermostat Valve for Homey"
+				"en": "PoPP EU Z-Wave products support for Homey @ Athom",
+				"nl": "PoPP EU Z-Wave product ondersteuning voor Homey @ Athom"
 		},
 		"category": [
 					"appliances",
