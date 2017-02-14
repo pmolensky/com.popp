@@ -6,6 +6,9 @@ More devices still need to be writen in the app
 * 010101 - PoPP Thermostat Valve    
 * 123580 - PoPP Dimmer 67G    
 * 123610 - PoPP Switch 68G    
+## Untested devices    
+* 004001 - PoPP Smoke Detector and Siren  
+* 005206 - PoPP Weather  
     
 ## Unsupported devices ?    
 You are welcome to help , please send in you're git pull requests to add more devices to the list.    
@@ -27,6 +30,15 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:    
+
+### v 1.1.1   
+**added:**    
+004001 - PoPP Smoke Detector and Siren  
+005206 - PoPP Weather  
+    
+These devices are added just by reading the documentation.    
+PoPP.Eu is known for its limited documantation , so please report to me if you    
+have one of these devices for testing.    
     
 ### v 1.1.0 - Warning - re-pair could be needed    
 **update:**    
