@@ -827,7 +827,7 @@
 			],
 		"zwave": {
 		"manufacturerId": [ 340 ],
-		"productTypeId": [ 1024 ],
+		"productTypeId": [ 256 ],
 		"productId": [ 1024 ],
 		"learnmode": {
 		"instruction": {
