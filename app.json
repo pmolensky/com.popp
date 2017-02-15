@@ -24,6 +24,26 @@
 				"name": "Marco Ruiter",
 				"email": "mruiter@tuxweb.nl"
 		},
+		"capabilities": {
+			"measure_dewpoint": {
+					"type": "number",
+					"title": {
+						"en": "DewPoint",
+						"nl": "Dauwpunt"
+						},
+					"units": {
+						"en": "C"
+						},
+					"desc": {
+						"en": "Celius (C)",
+						"nl": "Celius (C)"
+						},
+					"chartType": "stepLine",
+					"decimals": 2,
+					"getable": true,
+					"setable": false
+					}
+		},		
 		"drivers": [
 			{
 			"id": "005107",
@@ -238,6 +258,10 @@
 		},
 		{
 			"id": "004001",
+			"name": {
+				"en": "Smoke Detector and Siren",
+				"nl": "Rook Detector en Sirene"
+				},
 			"mobile": {
 				"components":[
 					{
@@ -256,18 +280,10 @@
 					},
 					{
 					"id": "sensor",
-					"capabilities": [ 
-						"alarm_smoke",
-						"alarm_tamper",
-						"alarm_battery"
-						]
+					"capabilities": [ "alarm_smoke", "alarm_tamper", "alarm_battery" ]
 					}
 				]
 			},
-			"name": {
-				"en": "Smoke Detector and Siren",
-				"nl": "Rook Detector en Sirene"
-				},
 			"zwave": {
 				"manufacturerId": [ 340 ],
 				"productTypeId": [ 256 ],
@@ -816,15 +832,12 @@
 			"nl": "Z-Weather"
 			},
 		"class" : "sensor",
-		"capabilities": [
-				"measure_wind_strength",
-				"measure_temperature",
-				"measure_humidity",
-				"measure_pressure",
-				"measure_dewpoint",
-				"measure_battery",
-				"alarm_battery"
-			],
+		"capabilities": [ "measure_wind_strength", "measure_temperature", "measure_humidity", "measure_pressure", "measure_dewpoint", "measure_battery", "alarm_battery" ],
+		"options": {
+    		"icons": {
+       			"measure_dewpoint": "/drivers/005206/assets/measure_dewpoint.svg"
+    				}
+            },
 		"zwave": {
 		"manufacturerId": [ 340 ],
 		"productTypeId": [ 256 ],
