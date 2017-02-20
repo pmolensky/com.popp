@@ -832,7 +832,7 @@
 			"nl": "Z-Weather"
 			},
 		"class" : "sensor",
-		"capabilities": [ "measure_wind_strength", "measure_temperature", "measure_humidity", "measure_pressure", "measure_dewpoint", "measure_battery", "alarm_battery" ],
+		"capabilities": [ "measure_wind_strength", "measure_temperature", "measure_humidity", "measure_luminance", "measure_pressure", "measure_dewpoint", "measure_battery", "alarm_battery" ],
 		"options": {
     		"icons": {
        			"measure_dewpoint": "/drivers/005206/assets/measure_dewpoint.svg"

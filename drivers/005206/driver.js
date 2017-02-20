@@ -48,7 +48,28 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 					return null;
 				}
 			},
-		   'measure_humidity': {
+			'measure_luminance': {
+				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+				'command_get': 'SENSOR_MULTILEVEL_GET',
+				'command_get_parser': () => {
+					return {
+				'Sensor Type': 'Luminance (version 1)',
+				'Properties1': {
+					'Scale': 1
+						}
+					};
+				},
+				'command_report': 'SENSOR_MULTILEVEL_REPORT',
+				'command_report_parser': report => {
+				if (report['Sensor Type'] === "Luminance (version 1)" &&
+					report.hasOwnProperty("Level") &&
+					report.Level.hasOwnProperty("Scale") &&
+					report.Level.Scale === 1)					
+					return report['Sensor Value (Parsed)'];
+					return null;
+				}
+			},
+			'measure_humidity': {
 				'command_class': 'COMMAND_CLASS_SENSOR_MULTILEVEL',
 				'command_get': 'SENSOR_MULTILEVEL_GET',
 				'command_get_parser': () => {
