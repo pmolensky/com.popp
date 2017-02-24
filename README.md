@@ -38,7 +38,11 @@ c. check if effective and retry to the desired value
     
 These devices are added just by reading the documentation.    
 PoPP.Eu is known for its limited documantation , so please report to me if you    
-have one of these devices for testing.    
+have one of these devices for testing.  
+    
+**update:**    
+Z-Wave driver updated to 1.1.6    
+  
     
 ### v 1.1.0 - Warning - re-pair could be needed    
 **update:**    
