@@ -841,6 +841,10 @@
 				"measure_dewpoint", 
 				"measure_battery", 
 				"alarm_battery" ],
+		"images": {
+				"large": "/drivers/005206/assets/images/large.jpg",
+				"small": "/drivers/005206/assets/images/small.jpg"
+				},
 		"mobile": {
             "components": [
                 {
