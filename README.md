@@ -5,10 +5,11 @@ More devices still need to be writen in the app
 * 005107 - PoPP Solar Outside Siren    
 * 010101 - PoPP Thermostat Valve    
 * 123580 - PoPP Dimmer 67G    
-* 123610 - PoPP Switch 68G    
-## Untested devices    
+* 123610 - PoPP Switch 68G   
 * 004001 - PoPP Smoke Detector and Siren  
+## Untested devices    
 * 005206 - PoPP Weather  
+* 012501 - PoPP Strike Lock Control  
     
 ## Unsupported devices ?    
 You are welcome to help , please send in you're git pull requests to add more devices to the list.    
@@ -30,7 +31,11 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:    
-
+  
+### v 1.1.2   
+**added:**    
+012501 - PoPP Strike Lock Control    
+  
 ### v 1.1.1   
 **added:**    
 004001 - PoPP Smoke Detector and Siren  

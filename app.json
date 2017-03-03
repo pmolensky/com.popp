@@ -18,7 +18,7 @@
 			"large": "/assets/images/large.jpg",
 			"small": "/assets/images/small.jpg"
 		},
-		"version": "1.1.1",
+		"version": "1.1.2",
 		"compatibility": ">=1.1.9",
 		"author": {
 				"name": "Marco Ruiter",
@@ -924,8 +924,64 @@
 			"type": "number"
 			}
 		]
-		}	
-	
+		},
+		{
+			"id": "012501",
+			"name": {
+				"en": "PoPP Strike Lock Control"
+			},
+			"images": {
+				"large": "/drivers/012501/assets/images/large.jpg",
+				"small": "/drivers/012501/assets/images/small.jpg"
+			},
+			"class": "lock",
+			"capabilities": [
+				"locked",
+				"measure_battery",
+				"alarm_battery"
+			],
+			"zwave": {
+				"manufacturerId": 340,
+				"productTypeId": 5,
+				"productId": 1,
+				"requireSecure": true,
+				"learnmode": {
+					"image": "/drivers/012501/assets/learnmode.svg",
+					"instruction": {
+						"en": "Push the z-wave button on your Strike Lock Board once.",
+						"nl": "Druk 1 keer op de z-wave knop op de Strike Lock print."
+					}
+				},
+				"associationGroups": [ 1 , 2]
+			},
+			"settings": [
+				{
+					"id": "ffm",
+					"type": "dropdown",
+					"label": {
+						"en": "Force FliRS Mode",
+						"nl": "Force FliRS Modus"
+					},
+					"value": "0",
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Depends on Power Status in Inclusion Moment",
+								"nl": "Afhankelijk van Power Status op moment van Inclusion"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "Force FLiRS Mode",
+								"nl": "Force FLiRS Modus"
+							}
+						}
+						]
+				}
+			]
+		}		
 		],
 		"flow" : {
 		"actions": [
