@@ -32,6 +32,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
   
+### v 1.1.3   
+**added:**    
+009402 - 10 Year Smoke Detector and Siren    
+  
 ### v 1.1.2   
 **added:**    
 012501 - PoPP Strike Lock Control    
