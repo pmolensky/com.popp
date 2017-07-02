@@ -18,69 +18,33 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 	            'command_report': 'SWITCH_BINARY_REPORT',
             	'command_report_parser': report => report['Value'] === 'on/enable'
 			},
-			'alarm_smoke': [
-						{
-						getOnWakeUp: true,
-						command_class: 'COMMAND_CLASS_SENSOR_ALARM',
-						command_get: 'SENSOR_ALARM_GET',
-						command_get_parser: node => {
-							if (node && typeof node.state.alarm_smoke === 'undefined') {
-							module.exports.realtime(node.device_data, 'alarm_smoke', false);
-							}
-							return {
-								'Sensor Type': 'Smoke Alarm',
-							}
-						},
-						command_report: 'SENSOR_ALARM_REPORT',
-						command_report_parser: report => {
-							if (report['Sensor Type'] !== 'Smoke Alarm') return null;
-							return report['Sensor State'] === 'alarm';
-						},
-					},
-					{
-						command_class: 'COMMAND_CLASS_NOTIFICATION',
-						command_report: 'NOTIFICATION_REPORT',
-						command_report_parser: report => {
-							if (report && report['Notification Type'] === 'Smoke') {
-								if (report['Event'] === 1 || report['Event'] === 2 || report['Event'] === 3) return true;
-								return false
-							}
-							return null;
-						},
-					},
-					{
-						command_class: 'COMMAND_CLASS_BASIC',
-						command_report: 'BASIC_SET',
-						command_report_parser: report => {
-							if (report && report.hasOwnProperty('Value')) return report.Value === 255;
-							return null;
-						},
-					},
-			],			
-			'alarm_tamper': {
-				command_class: 'COMMAND_CLASS_NOTIFICATION',
-				command_get: 'NOTIFICATION_GET',
-				command_get_parser: () => ({
-					'V1 Alarm Type': 0,
-					'Notification Type': 'Home Security',
-					Event: 3,
-				}),
-				command_report: 'NOTIFICATION_REPORT',
-				command_report_parser: report => {
-				if (report['Notification Type'] === 'Home Security' &&
-					report.hasOwnProperty('Event')) {
-						if (report['Event (Parsed)'] === 'Tampering, Product covering removed') {
-							return true;
-						}
-						if (report['Event (Parsed)'] === 'Event inactive' &&
-							report.hasOwnProperty('Event Parameter') &&
-							report['Event Parameter'][0] === 3) {
-						return false;
-						}
-	
-						return null;
-					}
+			'alarm_smoke': {
+				'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
+				'command_get': 'SENSOR_BINARY_GET',
+				'command_get_parser': () => {
+					return {
+						'Sensor Type': 'Smoke'
+					};
 				},
+				'command_report': 'SENSOR_BINARY_REPORT',
+				'command_report_parser': report => {
+					if (report['Sensor Type'] === 'Smoke')
+						report['Sensor Value'] === 'detected an event'
+				}
+			},
+			'alarm_tamper': {
+				'command_class': 'COMMAND_CLASS_SENSOR_BINARY',
+				'command_get': 'SENSOR_BINARY_GET',
+				'command_get_parser': () => {
+					return {
+						'Sensor Type': 'Tamper'
+					};
+				},
+				'command_report': 'SENSOR_BINARY_REPORT',
+				'command_report_parser': report => {
+					if (report['Sensor Type'] === 'Tamper')
+						report['Sensor Value'] === 'detected an event'
+				}
 			},
 			'alarm_battery': { 
     			'command_class': 'COMMAND_CLASS_BATTERY',
