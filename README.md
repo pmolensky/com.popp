@@ -7,9 +7,11 @@ More devices still need to be writen in the app
 * 123580 - PoPP Dimmer 67G    
 * 123610 - PoPP Switch 68G   
 * 004001 - PoPP Smoke Detector and Siren  
+* 009402 - 10 Year Smoke Detector and Siren  
+* 012501 - PoPP Strike Lock Control 
 ## Untested devices    
-* 005206 - PoPP Weather  
-* 012501 - PoPP Strike Lock Control  
+* 005206 - PoPP Weather - Need help some reports dont get in  
+
     
 ## Unsupported devices ?    
 You are welcome to help , please send in you're git pull requests to add more devices to the list.    
@@ -35,6 +37,8 @@ c. check if effective and retry to the desired value
 ### v 1.1.3   
 **added:**    
 009402 - 10 Year Smoke Detector and Siren    
+**update:**   
+Added new manufacturerId for Z-Weather, seems like PoPP doesnt even take the trouble to flash there own firmware in the rebranded stuff anymore   
   
 ### v 1.1.2   
 **added:**    
