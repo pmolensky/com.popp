@@ -681,7 +681,7 @@
             "id": "009105",
             "name": {
                 "en": "Wall Plug Switch Outdoor",
-                "nl": "Wall Plug Switch Indoor"
+                "nl": "Wall Plug Switch Outdoor"
             },
             "zwave": {
                 "manufacturerId": 100,
@@ -1311,8 +1311,8 @@
 		{
 		"id": "009204",
 		"name": {
-			"en": "Keyfob",
-			"nl": "Sleutelhanger afstandsbediening"
+			"en": "KFOB-C Remote Control",
+			"nl": "KFOB-C Remote Control"
 		},
 		"zwave": {
 			"manufacturerId": 277,

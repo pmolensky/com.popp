@@ -34,6 +34,12 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
   
+### v 1.1.4   
+**added:**    
+009006 - Wall Plug Switch Indoor    
+009105 - Wall Plug Switch Outdoor   
+009204 - KFOB-C Remote Control   
+    
 ### v 1.1.3   
 **added:**    
 009402 - 10 Year Smoke Detector and Siren    
