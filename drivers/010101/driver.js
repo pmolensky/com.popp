@@ -64,8 +64,6 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			pollInterval: wakeUpInterval
 		},
 		target_temperature: {
-			// http://z-wave.sigmadesigns.com/wp-content/uploads/2016/08/SDS12652-13-Z-Wave-Command-Class-Specification-N-Z.pdf, page 321
-			//
 			command_class: 'COMMAND_CLASS_THERMOSTAT_SETPOINT',
 			command_get: 'THERMOSTAT_SETPOINT_GET',
 			command_get_parser: () => {
