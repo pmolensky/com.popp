@@ -2,15 +2,18 @@
 More devices still need to be writen in the app    
     
 ## Supported devices    
-* 005107 - PoPP Solar Outside Siren    
-* 010101 - PoPP Thermostat Valve    
-* 123580 - PoPP Dimmer 67G    
-* 123610 - PoPP Switch 68G   
-* 004001 - PoPP Smoke Detector and Siren  
-* 009402 - 10 Year Smoke Detector and Siren  
-* 012501 - PoPP Strike Lock Control 
+* 005107 - Solar Outside Siren    
+* 004001 - Smoke Detector and Siren  
+* 009402 - 10 Year Smoke Detector and Siren 
+* 010101 - Thermostat Valve 
+* 009006 - Wall Plug Switch Indoor    
+* 009105 - Wall Plug Switch Outdoor   
+* 123580 - Dimmer 67G    
+* 123610 - Switch 68G   
+* 009204 - KFOB-C Remote Control     
+* 012501 - Strike Lock Control 
 ## Untested devices    
-* 005206 - PoPP Weather - Need help some reports dont get in  
+* 005206 - Weather - Need help some reports dont get in  
 
     
 ## Unsupported devices ?    
