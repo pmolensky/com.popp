@@ -580,11 +580,32 @@
                 "associationGroups": [1,1,1]
             },
             "class": "socket",
-            "capabilities": ["onoff"],
+			"capabilities": [ "onoff", "meter_power", "measure_power", "measure_current", "measure_voltage"],
             "images": {
                 "large": "/drivers/009006/assets/images/large.png",
                 "small": "/drivers/009006/assets/images/small.png"
             },
+			"mobile": {
+				"components": [
+					{
+						"id": "icon",
+						"capabilities": [ "onoff" ]
+					},
+					{
+						"id": "sensor",
+						"capabilities": [
+							"meter_power",
+							"measure_power",
+							"measure_current",
+							"measure_voltage"
+						]
+					},
+					{
+						"id": "toggle",
+						"capabilities": [ "onoff" ]
+					}
+				]
+			},
             "settings": [
                 {
                     "id": "auto_switch_off",
@@ -595,8 +616,8 @@
                     },
                     "value": 0,
                     "label": {
-                        "en": "Auto switch off after (1 - 65535 sec)",
-                        "nl": "Automatisch uitschakelen na (1 - 65535 sec)"
+                        "en": "Auto switch off after (0 - 65535 sec)",
+                        "nl": "Automatisch uitschakelen na (0 - 65535 sec)"
                     },
                     "hint": {
                         "en": "If not zero, automatically switch off after a user defined time in seconds.",
@@ -686,7 +707,7 @@
 						"en": "Color of Led when turned On",
 						"nl": "Kleur Led wanneer Ingeschakeld"
 					},
-					"value": "4",
+					"value": "3",
 					"hint": {
 						"en": "Choose youre On color",
 						"nl": "Kies u kleur wanneer Ingeschakeld"
@@ -728,23 +749,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": "energy_consumption",
-					"type": "number",
-					"attr": {
-						"min": 0,
-						"max": 1800
-					},
-					"value": 1,
-					"label": {
-						"en": "Specify the consumption of the load in watts,",
-						"nl": "Specificeer het verbruik van de lading in watt"
-					},
-					"hint": {
-						"en": "Specify the consumption of the load in watts, for the calculation of power consumption. Maximum load 1800 W.(default: 0, range: 0-1800)",
-						"nl": "Specificeer het verbruik van de belasting in Watt, voor de berekening van het stroomverbruik. Maximale belasting 1800 W (Standaard: 0, bereik: 0-1800)"
-					}
 				}
 			]
         },
@@ -769,11 +773,32 @@
                 "associationGroups": [1,1,1]
             },
             "class": "socket",
-            "capabilities": ["onoff"],
+			"capabilities": [ "onoff", "meter_power", "measure_power", "measure_current", "measure_voltage"],
             "images": {
                 "large": "/drivers/009105/assets/images/large.png",
                 "small": "/drivers/009105/assets/images/small.png"
             },
+			"mobile": {
+				"components": [
+					{
+						"id": "icon",
+						"capabilities": [ "onoff" ]
+					},
+					{
+						"id": "sensor",
+						"capabilities": [
+							"meter_power",
+							"measure_power",
+							"measure_current",
+							"measure_voltage"
+						]
+					},
+					{
+						"id": "toggle",
+						"capabilities": [ "onoff" ]
+					}
+				]
+			},
             "settings": [
                 {
                     "id": "auto_switch_off",
@@ -875,7 +900,7 @@
 						"en": "Color of Led when turned On",
 						"nl": "Kleur Led wanneer Ingeschakeld"
 					},
-					"value": "4",
+					"value": "3",
 					"hint": {
 						"en": "Choose youre On color",
 						"nl": "Kies u kleur wanneer Ingeschakeld"
@@ -917,23 +942,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": "energy_consumption",
-					"type": "number",
-					"attr": {
-						"min": 0,
-						"max": 1800
-					},
-					"value": 1,
-					"label": {
-						"en": "Specify the consumption of the load in watts,",
-						"nl": "Specificeer het verbruik van de lading in watt"
-					},
-					"hint": {
-						"en": "Specify the consumption of the load in watts, for the calculation of power consumption. Maximum load 1800 W.(default: 0, range: 0-1800)",
-						"nl": "Specificeer het verbruik van de belasting in Watt, voor de berekening van het stroomverbruik. Maximale belasting 1800 W (Standaard: 0, bereik: 0-1800)"
-					}
 				}
             ]
         },
