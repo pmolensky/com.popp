@@ -587,7 +587,7 @@
             },
             "settings": [
                 {
-                    "id": "switch_off_after",
+                    "id": "auto_switch_off",
                     "type": "number",
                     "attr": {
                         "min": 0,
@@ -595,89 +595,160 @@
                     },
                     "value": 0,
                     "label": {
-                        "en": "Auto switch off after",
-                        "nl": "Automatisch uitschakelen na"
+                        "en": "Auto switch off after (1 - 65535 sec)",
+                        "nl": "Automatisch uitschakelen na (1 - 65535 sec)"
                     },
                     "hint": {
                         "en": "If not zero, automatically switch off after a user defined time in seconds.",
                         "nl": "Indien niet nul, automatisch uitschakelen na de ingestelde tijd in seconden."
                     }
                 },
-                {
-                    "id": "switch_by_buttons",
-                    "type": "dropdown",
-                    "label": {
-                        "en": "Switch by buttons",
-                        "nl": "Schakel door knoppen"
-                    },
-                    "value": "1",
-                    "hint": {
-                        "en": "If disabled, the local operations by buttons will not switch the load, but only send commands to On/Off association group.",
-                        "nl": "Indien uitgeschakeld zullen de knoppen niet meer schakelen maar alleen een aan/uit commando versturen naar de associatie groep."
-                    },
-                    "values": [
-                        {
-                            "id": "0",
-                            "label": {
-                                "en": "No",
-                                "nl": "Nee"
-                            }
-                        },
-                        {
-                            "id": "1",
-                            "label": {
-                                "en": "By single press and hold",
-                                "nl": "Door enkel drukken en vasthouden"
-                            }
-                        },
-                        {
-                            "id": "2",
-                            "label": {
-                                "en": "By double press and press-hold",
-                                "nl": "Door dubbel drukken en vasthouden"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "button_down_press",
-                    "type": "dropdown",
-                    "label": {
-                        "en": "What to do on button Down press",
-                        "nl": "Wat te doen by drukken op uitschakelen"
-                    },
-                    "value": "0",
-                    "hint": {
-                        "en": "Defines how to interpret button Down press. Depends on 'Switch by buttons' parameter. If not Disabled this parameter will affect the action selected by the latter parameter.",
-                        "nl": "Bepaalt hoe het drukken op uitschakelen wordt afgehandeld. Is afhankelijk van 'Schakelen door knopppen' parameter. Indien deze niet is uitgeschakeld bepaald deze parameter welke actie wordt ondernomen bij het uitschakelen."
-                    },
-                    "values": [
-                        {
-                            "id": "0",
-                            "label": {
-                                "en": "Switch off",
-                                "nl": "Uitschakelen"
-                            }
-                        },
-                        {
-                            "id": "1",
-                            "label": {
-                                "en": "Switch On if load is Off, else switch Off",
-                                "nl": "Inschakelen indien uitgeschakeld, anders uitschakelen"
-                            }
-                        },
-                        {
-                            "id": "2",
-                            "label": {
-                                "en": "Switch on",
-                                "nl": "Inschakelen"
-                            }
-                        }
-                    ]
-                }
-            ]
+				{
+					"id": "led_indication_mode",
+					"type": "checkbox",
+					"label": {
+						"en": "LED Mode",
+						"nl": "LED Modus"
+					},
+					"value": true,
+					"hint": {
+						"en": "Led Switch Status indication. Default: enabled",
+						"nl": "Led Status Light indicatie. Standaard: ingeschakeld"
+					}
+				},
+				{
+					"id": "state_after_powerloss",
+					"type": "checkbox",
+					"label": {
+						"en": "Restore state after power loss",
+						"nl": "Herstel toestand bij spanningsuitval"
+					},
+					"value": true,
+					"hint": {
+						"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+					}
+				},
+				{
+					"id": "led_off_color",
+					"type": "dropdown",
+					"label": {
+						"en": "Color of Led when turned off",
+						"nl": "Kleur Led wanneer uitgeschakeld"
+					},
+					"value": "0",
+					"hint": {
+						"en": "Choose youre off color",
+						"nl": "Kies u kleur bij uitstand"
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Off (default)",
+								"nl": "Uit (standaard)"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "Red",
+								"nl": "Rood"
+							}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "Green",
+								"nl": "Groen"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "Blue",
+								"nl": "Blauw"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "Yellow",
+								"nl": "Geel"
+							}
+						}
+					]
+				},
+				{
+					"id": "led_on_color",
+					"type": "dropdown",
+					"label": {
+						"en": "Color of Led when turned On",
+						"nl": "Kleur Led wanneer Ingeschakeld"
+					},
+					"value": "4",
+					"hint": {
+						"en": "Choose youre On color",
+						"nl": "Kies u kleur wanneer Ingeschakeld"
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Off",
+								"nl": "Uit"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "Red",
+								"nl": "Rood"
+							}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "Green",
+								"nl": "Groen"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "Blue (default)",
+								"nl": "Blauw (standaard)"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "Yellow",
+								"nl": "Geel"
+							}
+						}
+					]
+				},
+				{
+					"id": "energy_consumption",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 1800
+					},
+					"value": 1,
+					"label": {
+						"en": "Specify the consumption of the load in watts,",
+						"nl": "Specificeer het verbruik van de lading in watt"
+					},
+					"hint": {
+						"en": "Specify the consumption of the load in watts, for the calculation of power consumption. Maximum load 1800 W.(default: 0, range: 0-1800)",
+						"nl": "Specificeer het verbruik van de belasting in Watt, voor de berekening van het stroomverbruik. Maximale belasting 1800 W (Standaard: 0, bereik: 0-1800)"
+					}
+				}
+			]
         },
-		        {
+		{
             "id": "009105",
             "name": {
                 "en": "Wall Plug Switch Outdoor",
@@ -705,7 +776,7 @@
             },
             "settings": [
                 {
-                    "id": "switch_off_after",
+                    "id": "auto_switch_off",
                     "type": "number",
                     "attr": {
                         "min": 0,
@@ -713,86 +784,157 @@
                     },
                     "value": 0,
                     "label": {
-                        "en": "Auto switch off after",
-                        "nl": "Automatisch uitschakelen na"
+                        "en": "Auto switch off after (1 - 65535 sec)",
+                        "nl": "Automatisch uitschakelen na (1 - 65535 sec)"
                     },
                     "hint": {
                         "en": "If not zero, automatically switch off after a user defined time in seconds.",
                         "nl": "Indien niet nul, automatisch uitschakelen na de ingestelde tijd in seconden."
                     }
                 },
-                {
-                    "id": "switch_by_buttons",
-                    "type": "dropdown",
-                    "label": {
-                        "en": "Switch by buttons",
-                        "nl": "Schakel door knoppen"
-                    },
-                    "value": "1",
-                    "hint": {
-                        "en": "If disabled, the local operations by buttons will not switch the load, but only send commands to On/Off association group.",
-                        "nl": "Indien uitgeschakeld zullen de knoppen niet meer schakelen maar alleen een aan/uit commando versturen naar de associatie groep."
-                    },
-                    "values": [
-                        {
-                            "id": "0",
-                            "label": {
-                                "en": "No",
-                                "nl": "Nee"
-                            }
-                        },
-                        {
-                            "id": "1",
-                            "label": {
-                                "en": "By single press and hold",
-                                "nl": "Door enkel drukken en vasthouden"
-                            }
-                        },
-                        {
-                            "id": "2",
-                            "label": {
-                                "en": "By double press and press-hold",
-                                "nl": "Door dubbel drukken en vasthouden"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "button_down_press",
-                    "type": "dropdown",
-                    "label": {
-                        "en": "What to do on button Down press",
-                        "nl": "Wat te doen by drukken op uitschakelen"
-                    },
-                    "value": "0",
-                    "hint": {
-                        "en": "Defines how to interpret button Down press. Depends on 'Switch by buttons' parameter. If not Disabled this parameter will affect the action selected by the latter parameter.",
-                        "nl": "Bepaalt hoe het drukken op uitschakelen wordt afgehandeld. Is afhankelijk van 'Schakelen door knopppen' parameter. Indien deze niet is uitgeschakeld bepaald deze parameter welke actie wordt ondernomen bij het uitschakelen."
-                    },
-                    "values": [
-                        {
-                            "id": "0",
-                            "label": {
-                                "en": "Switch off",
-                                "nl": "Uitschakelen"
-                            }
-                        },
-                        {
-                            "id": "1",
-                            "label": {
-                                "en": "Switch On if load is Off, else switch Off",
-                                "nl": "Inschakelen indien uitgeschakeld, anders uitschakelen"
-                            }
-                        },
-                        {
-                            "id": "2",
-                            "label": {
-                                "en": "Switch on",
-                                "nl": "Inschakelen"
-                            }
-                        }
-                    ]
-                }
+				{
+					"id": "led_indication_mode",
+					"type": "checkbox",
+					"label": {
+						"en": "LED Mode",
+						"nl": "LED Modus"
+					},
+					"value": true,
+					"hint": {
+						"en": "Led Switch Status indication. Default: enabled",
+						"nl": "Led Status Light indicatie. Standaard: ingeschakeld"
+					}
+				},
+				{
+					"id": "state_after_powerloss",
+					"type": "checkbox",
+					"label": {
+						"en": "Restore state after power loss",
+						"nl": "Herstel toestand bij spanningsuitval"
+					},
+					"value": true,
+					"hint": {
+						"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+					}
+				},
+				{
+					"id": "led_off_color",
+					"type": "dropdown",
+					"label": {
+						"en": "Color of Led when turned off",
+						"nl": "Kleur Led wanneer uitgeschakeld"
+					},
+					"value": "0",
+					"hint": {
+						"en": "Choose youre off color",
+						"nl": "Kies u kleur bij uitstand"
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Off (default)",
+								"nl": "Uit (standaard)"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "Red",
+								"nl": "Rood"
+							}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "Green",
+								"nl": "Groen"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "Blue",
+								"nl": "Blauw"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "Yellow",
+								"nl": "Geel"
+							}
+						}
+					]
+				},
+				{
+					"id": "led_on_color",
+					"type": "dropdown",
+					"label": {
+						"en": "Color of Led when turned On",
+						"nl": "Kleur Led wanneer Ingeschakeld"
+					},
+					"value": "4",
+					"hint": {
+						"en": "Choose youre On color",
+						"nl": "Kies u kleur wanneer Ingeschakeld"
+					},
+					"values": [
+						{
+							"id": "0",
+							"label": {
+								"en": "Off",
+								"nl": "Uit"
+							}
+						},
+						{
+							"id": "1",
+							"label": {
+								"en": "Red",
+								"nl": "Rood"
+							}
+						},
+						{
+							"id": "2",
+							"label": {
+								"en": "Green",
+								"nl": "Groen"
+							}
+						},
+						{
+							"id": "3",
+							"label": {
+								"en": "Blue (default)",
+								"nl": "Blauw (standaard)"
+							}
+						},
+						{
+							"id": "4",
+							"label": {
+								"en": "Yellow",
+								"nl": "Geel"
+							}
+						}
+					]
+				},
+				{
+					"id": "energy_consumption",
+					"type": "number",
+					"attr": {
+						"min": 0,
+						"max": 1800
+					},
+					"value": 1,
+					"label": {
+						"en": "Specify the consumption of the load in watts,",
+						"nl": "Specificeer het verbruik van de lading in watt"
+					},
+					"hint": {
+						"en": "Specify the consumption of the load in watts, for the calculation of power consumption. Maximum load 1800 W.(default: 0, range: 0-1800)",
+						"nl": "Specificeer het verbruik van de belasting in Watt, voor de berekening van het stroomverbruik. Maximale belasting 1800 W (Standaard: 0, bereik: 0-1800)"
+					}
+				}
             ]
         },
 		{
