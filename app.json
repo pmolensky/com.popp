@@ -580,32 +580,11 @@
                 "associationGroups": [1,1,1]
             },
             "class": "socket",
-			"capabilities": [ "onoff", "meter_power", "measure_power", "measure_current", "measure_voltage"],
+			"capabilities": [ "onoff", "meter_power", "measure_power"],
             "images": {
                 "large": "/drivers/009006/assets/images/large.png",
                 "small": "/drivers/009006/assets/images/small.png"
             },
-			"mobile": {
-				"components": [
-					{
-						"id": "icon",
-						"capabilities": [ "onoff" ]
-					},
-					{
-						"id": "sensor",
-						"capabilities": [
-							"meter_power",
-							"measure_power",
-							"measure_current",
-							"measure_voltage"
-						]
-					},
-					{
-						"id": "toggle",
-						"capabilities": [ "onoff" ]
-					}
-				]
-			},
             "settings": [
                 {
                     "id": "auto_switch_off",
@@ -773,32 +752,11 @@
                 "associationGroups": [1,1,1]
             },
             "class": "socket",
-			"capabilities": [ "onoff", "meter_power", "measure_power", "measure_current", "measure_voltage"],
+			"capabilities": [ "onoff", "meter_power", "measure_power"],
             "images": {
                 "large": "/drivers/009105/assets/images/large.png",
                 "small": "/drivers/009105/assets/images/small.png"
             },
-			"mobile": {
-				"components": [
-					{
-						"id": "icon",
-						"capabilities": [ "onoff" ]
-					},
-					{
-						"id": "sensor",
-						"capabilities": [
-							"meter_power",
-							"measure_power",
-							"measure_current",
-							"measure_voltage"
-						]
-					},
-					{
-						"id": "toggle",
-						"capabilities": [ "onoff" ]
-					}
-				]
-			},
             "settings": [
                 {
                     "id": "auto_switch_off",
