@@ -18,7 +18,7 @@
 			"large": "/assets/images/large.png",
 			"small": "/assets/images/small.png"
 		},
-		"version": "1.1.3",
+		"version": "1.1.4",
 		"compatibility": ">=1.3.1",
 		"author": {
 				"name": "Marco Ruiter",
@@ -375,6 +375,153 @@
 				}
 			]
 		},
+				{
+		"id": "009402",
+		"name": {
+			"en": "10 Year Smoke Detector and Siren",
+			"nl": "10 Year Smoke Detector and Siren"
+		},
+		"mobile": {
+			"components":[
+				{
+				"id": "icon",
+				"capabilities": ["onoff"]
+				},
+				{
+				"id": "toggle",
+				"capabilities": ["onoff"],
+				"options": { "showTitle": true }
+				},
+				{
+				"id": "battery",
+				"capabilities": ["measure_battery" ],
+				"options": { "showTitle": true }
+				},
+				{
+				"id": "sensor",
+				"capabilities": [ "alarm_smoke", "alarm_tamper", "alarm_battery" ]
+				}
+			]
+		},
+		"zwave": {
+			"manufacturerId": [340],
+			"productTypeId": [4],
+			"productId": [4],
+			"learnmode": {
+			"instruction": {
+				"en": "To include the device start the inclusion on your controller and then hit the little button on the wireless module for 1 second",
+				"nl": "Om het apparaat op te nemen start het inclusion proces op uw controller en druk dan de kleine knop op de draadloze module gedurende 1 seconde"
+				}
+			},
+			"associationGroups": [ 1, 2, 3 ],
+			"associationGroupsOptions": {
+				"1": {
+					"hint": {
+					"en": "Z-Wave Plus Lifeline",
+					"nl": "Z-Wave Plus Lifeline"
+						}
+					},
+				"2": {
+					"hint": {
+					"en": "Alarm Reports. All devices in this group will receive Alarm notifications (Smoke , Battery Low, Tamper)",
+					"nl": "Alarmrapporten. Alle apparaten in deze groep ontvangen alarmmeldingen (Rook, Lage Accu, Sabotage"
+						}
+					},
+				"3": {
+					"hint": {
+					"en": "Switching Command. All devices in this group will receive a BASIC SET command on Smoke Alarms. Configuration parameter 3 and 4 will define when ON and when OFF is sent.",
+					"nl": "Switching Command. Alle apparaten in deze groep krijgen een BASIC SET commando op smoke alarms. Configuratieparameters 3 en 4 zullen bepalen wanneer ON en wanneer OFF is verzonden."
+						}
+					}
+				}
+			},
+			"defaultConfiguration": [
+				{
+				"id": 1,
+				"size": 1,
+				"value": 10
+				},
+				{
+				"id": 2,
+				"size": 1,
+				"value": 8
+				},
+				{
+				"id": 3,
+				"size": 1,
+				"value": 99
+				},
+				{
+				"id": 3,
+				"size": 1,
+				"value": 0
+				}
+			],
+			"class": "other",
+			"capabilities": [ "onoff","alarm_smoke","alarm_tamper","measure_battery","alarm_battery" ],
+			"images": {
+				"large": "/drivers/009402/assets/images/large.jpg",
+				"small": "/drivers/009402/assets/images/small.jpg"
+				},
+			"settings": [
+				{
+				"id": 1,
+				"value": 10,
+				"label": {
+					"en": "Siren alarm sequence interval",
+					"nl": "Siren alarm sequence interval"
+				},
+				"hint": {
+					"en": "The additional siren is creating a different acoustic signal differentiate from the smoke alarm. This sound is partly on and partly off. This parameter defines the total length of the interval in seconds.",
+					"nl": "De extra sirene zorgt voor een ander akoestisch signaal dat onderscheidt van het rookalarm. Dit geluid is gedeeltelijk aan en gedeeltelijk af. Deze parameter definieert de totale lengte van het interval in seconden."
+				},
+				"_size": 1,
+				"type": "number"
+				},
+				{
+				"id": 2,
+				"value": 8,
+				"label": {
+					"en": "Siren alarm tone length",
+					"nl": "Siren alarm toon lengte"
+				},
+				"hint": {
+					"en": "The additional siren is creating a different acoustic signal differentiate from the smoke alarm. This sound is partly on and partly off. This parameter defines the total length of the sound versus silence within this interval. Please make sure this value is always smaller (shorter time) than parameter 1 that defines the whole sequence.",
+					"nl": "De extra sirene zorgt voor een ander akoestisch signaal dat onderscheidt van het rookalarm. Dit geluid is gedeeltelijk aan en gedeeltelijk af. Deze parameter bepaalt de totale lengte van het geluid versus stilte binnen dit interval. Zorg ervoor dat deze waarde altijd kleiner is (kortere tijd) dan parameter 1 die de hele volgorde definieert."
+				},
+				"_size": 1,
+				"type": "number"
+				},
+				{
+				"id": 3,
+				"value": true,
+				"label": {
+					"en": "Value of On-Command",
+					"nl": "Waarde van On-Commando"
+				},
+				"hint": {
+					"en": "This value is sent as BASIC Set to Association Group 3 when an Smoke Alarm occurs. If 255 can not be entered in your gateway use -1.",
+					"nl": "Deze waarde wordt verzonden als BASIC Set to Association Group 3 als er een rookmelder optreedt. Als 255 niet in uw gateway kan worden ingevoerd, gebruikt u -1."
+				},
+				"_size": 1,
+				"type": "checkbox"
+				},
+				{
+				"id": 4,
+				"value": true,
+				"label": {
+					"en": "Value of Off-Command",
+					"nl": "Waarde van Off-Commando"
+				},
+				"hint": {
+					"en": "This value is sent as BASIC Set to Association Group 3 when an Smoke Alarm is cleared. If 255 can not be entered in your gateway use -1.",
+					"nl": "Deze waarde wordt verzonden als BASIC Set to Association Group 3 als een rookmelder is gewist. Als 255 niet in uw gateway kan worden ingevoerd, gebruikt u -1."
+				},
+				"_size": 1,
+				"type": "checkbox"
+				}
+			]
+		},
 		{
 			"id": "010101",
 			"name": {
@@ -412,6 +559,242 @@
 				"small": "/drivers/010101/assets/images/small.jpg"
 			}
 		},
+		{
+            "id": "009006",
+            "name": {
+                "en": "Wall Plug Switch Indoor",
+                "nl": "Wall Plug Switch Indoor"
+            },
+            "zwave": {
+                "manufacturerId": 100,
+                "productTypeId": 12289,
+                "productId": 0,
+                "learnmode": {
+                    "image": "/drivers/009006/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Press button three times",
+                        "nl": "Druk driemaal op knop",
+                        "de": "Drücken Sie die Taste dreimal"
+                    }
+                },
+                "associationGroups": [1,1,1]
+            },
+            "class": "socket",
+            "capabilities": ["onoff"],
+            "images": {
+                "large": "/drivers/009006/assets/images/large.png",
+                "small": "/drivers/009006/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "switch_off_after",
+                    "type": "number",
+                    "attr": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "value": 0,
+                    "label": {
+                        "en": "Auto switch off after",
+                        "nl": "Automatisch uitschakelen na"
+                    },
+                    "hint": {
+                        "en": "If not zero, automatically switch off after a user defined time in seconds.",
+                        "nl": "Indien niet nul, automatisch uitschakelen na de ingestelde tijd in seconden."
+                    }
+                },
+                {
+                    "id": "switch_by_buttons",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Switch by buttons",
+                        "nl": "Schakel door knoppen"
+                    },
+                    "value": "1",
+                    "hint": {
+                        "en": "If disabled, the local operations by buttons will not switch the load, but only send commands to On/Off association group.",
+                        "nl": "Indien uitgeschakeld zullen de knoppen niet meer schakelen maar alleen een aan/uit commando versturen naar de associatie groep."
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "No",
+                                "nl": "Nee"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "By single press and hold",
+                                "nl": "Door enkel drukken en vasthouden"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "By double press and press-hold",
+                                "nl": "Door dubbel drukken en vasthouden"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "button_down_press",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "What to do on button Down press",
+                        "nl": "Wat te doen by drukken op uitschakelen"
+                    },
+                    "value": "0",
+                    "hint": {
+                        "en": "Defines how to interpret button Down press. Depends on 'Switch by buttons' parameter. If not Disabled this parameter will affect the action selected by the latter parameter.",
+                        "nl": "Bepaalt hoe het drukken op uitschakelen wordt afgehandeld. Is afhankelijk van 'Schakelen door knopppen' parameter. Indien deze niet is uitgeschakeld bepaald deze parameter welke actie wordt ondernomen bij het uitschakelen."
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Switch off",
+                                "nl": "Uitschakelen"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Switch On if load is Off, else switch Off",
+                                "nl": "Inschakelen indien uitgeschakeld, anders uitschakelen"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "Switch on",
+                                "nl": "Inschakelen"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+		        {
+            "id": "009105",
+            "name": {
+                "en": "Wall Plug Switch Outdoor",
+                "nl": "Wall Plug Switch Indoor"
+            },
+            "zwave": {
+                "manufacturerId": 100,
+                "productTypeId": 0,
+                "productId": 0,
+                "learnmode": {
+                    "image": "/drivers/009105/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Press button three times",
+                        "nl": "Druk driemaal op knop",
+                        "de": "Drücken Sie die Taste dreimal"
+                    }
+                },
+                "associationGroups": [1,1,1]
+            },
+            "class": "socket",
+            "capabilities": ["onoff"],
+            "images": {
+                "large": "/drivers/009105/assets/images/large.png",
+                "small": "/drivers/009105/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "switch_off_after",
+                    "type": "number",
+                    "attr": {
+                        "min": 0,
+                        "max": 65535
+                    },
+                    "value": 0,
+                    "label": {
+                        "en": "Auto switch off after",
+                        "nl": "Automatisch uitschakelen na"
+                    },
+                    "hint": {
+                        "en": "If not zero, automatically switch off after a user defined time in seconds.",
+                        "nl": "Indien niet nul, automatisch uitschakelen na de ingestelde tijd in seconden."
+                    }
+                },
+                {
+                    "id": "switch_by_buttons",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Switch by buttons",
+                        "nl": "Schakel door knoppen"
+                    },
+                    "value": "1",
+                    "hint": {
+                        "en": "If disabled, the local operations by buttons will not switch the load, but only send commands to On/Off association group.",
+                        "nl": "Indien uitgeschakeld zullen de knoppen niet meer schakelen maar alleen een aan/uit commando versturen naar de associatie groep."
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "No",
+                                "nl": "Nee"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "By single press and hold",
+                                "nl": "Door enkel drukken en vasthouden"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "By double press and press-hold",
+                                "nl": "Door dubbel drukken en vasthouden"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "button_down_press",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "What to do on button Down press",
+                        "nl": "Wat te doen by drukken op uitschakelen"
+                    },
+                    "value": "0",
+                    "hint": {
+                        "en": "Defines how to interpret button Down press. Depends on 'Switch by buttons' parameter. If not Disabled this parameter will affect the action selected by the latter parameter.",
+                        "nl": "Bepaalt hoe het drukken op uitschakelen wordt afgehandeld. Is afhankelijk van 'Schakelen door knopppen' parameter. Indien deze niet is uitgeschakeld bepaald deze parameter welke actie wordt ondernomen bij het uitschakelen."
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Switch off",
+                                "nl": "Uitschakelen"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Switch On if load is Off, else switch Off",
+                                "nl": "Inschakelen indien uitgeschakeld, anders uitschakelen"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "Switch on",
+                                "nl": "Inschakelen"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
 		{
 			"id": "123610",
 			"name": { "en": "Switch 68G" },
@@ -926,6 +1309,380 @@
 		]
 		},
 		{
+		"id": "009204",
+		"name": {
+			"en": "Keyfob",
+			"nl": "Sleutelhanger afstandsbediening"
+		},
+		"zwave": {
+			"manufacturerId": 277,
+			"productTypeId": 256,
+			"productId": 259,
+			"wakeUpInterval": 1800,
+			"learnmode": {
+				"image": "/drivers/009204/assets/learnmode.svg",
+				"instruction": {
+					"en": "Activate inclusion on the device by pressing any one of the four buttons for one second",
+					"nl": "Om pairing te activeren, druk langer een seconde op een van de knoppen van de afstandsbediening."
+				}
+			},
+			"associationGroups": [
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		"class": "zwavecontroller",
+		"capabilities": [
+			"measure_battery"
+		],
+		"images": {
+			"large": "/drivers/009204/assets/images/large.png",
+			"small": "/drivers/009204/assets/images/small.png"
+		},
+		"settings": [{
+			"id": "button_1_and_3_pair_mode",
+			"type": "dropdown",
+			"label": {
+				"en": "Button 1 and 3 pair mode"
+			},
+			"value": "0",
+			"hint": {
+				"en": "The parameter determines the behaviour of buttons 1 and 3."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Seperately, button 1 works with control group A, button 3 with control group C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. "
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Pair without double clicks, button A/C are Up/Down. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B and D"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(2) Pair with double clicks. button A/C are Up/Down. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B,double click with group D"
+				}
+			}]
+		}, {
+			"id": "button_2_and_4_pair_mode",
+			"type": "dropdown",
+			"label": {
+				"en": "Button 2 and 4 pair mode"
+			},
+			"value": "0",
+			"hint": {
+				"en": "The parameter determines the behaviour of buttons 2 and 4."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Seperately, button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. "
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Pair without double clicks, button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B and D"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(2) Pair with double clicks. button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B,double click with group D"
+				}
+			}]
+		}, {
+			"id": "command_to_control_group_a",
+			"type": "dropdown",
+			"label": {
+				"en": "Command to Control Group A"
+			},
+			"value": "8",
+			"hint": {
+				"en": "Defines the command to be sent to devices of control group A when the related button is pressed."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Disabled"
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(3) Switch On/Off only (send Basic Set)"
+				}
+			}, {
+				"id": "3",
+				"label": {
+					"en": "(3) Switch All"
+				}
+			}, {
+				"id": "4",
+				"label": {
+					"en": "(4) Send Scenes"
+				}
+			}, {
+				"id": "5",
+				"label": {
+					"en": "(5) Send Preconfigured Scenes"
+				}
+			}, {
+				"id": "7",
+				"label": {
+					"en": "(7) Control DoorLock"
+				}
+			}, {
+				"id": "8",
+				"label": {
+					"en": "(8) Central Scene to Gateway (Default)"
+				}
+			}]
+		}, {
+			"id": "command_to_control_group_b",
+			"type": "dropdown",
+			"label": {
+				"en": "Command to Control Group B"
+			},
+			"value": "8",
+			"hint": {
+				"en": "Defines the command to be sent to devices of control group B when the related button is pressed."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Disabled"
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(3) Switch On/Off only (send Basic Set)"
+				}
+			}, {
+				"id": "3",
+				"label": {
+					"en": "(3) Switch All"
+				}
+			}, {
+				"id": "4",
+				"label": {
+					"en": "(4) Send Scenes"
+				}
+			}, {
+				"id": "5",
+				"label": {
+					"en": "(5) Send Preconfigured Scenes"
+				}
+			}, {
+				"id": "7",
+				"label": {
+					"en": "(7) Control DoorLock"
+				}
+			}, {
+				"id": "8",
+				"label": {
+					"en": "(8) Central Scene to Gateway (Default)"
+				}
+			}]
+		}, {
+			"id": "command_to_control_group_c",
+			"type": "dropdown",
+			"label": {
+				"en": "Command to Control Group C"
+			},
+			"value": "8",
+			"hint": {
+				"en": "Defines the command to be sent to devices of control group C when the related button is pressed."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Disabled"
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(3) Switch On/Off only (send Basic Set)"
+				}
+			}, {
+				"id": "3",
+				"label": {
+					"en": "(3) Switch All"
+				}
+			}, {
+				"id": "4",
+				"label": {
+					"en": "(4) Send Scenes"
+				}
+			}, {
+				"id": "5",
+				"label": {
+					"en": "(5) Send Preconfigured Scenes"
+				}
+			}, {
+				"id": "7",
+				"label": {
+					"en": "(7) Control DoorLock"
+				}
+			}, {
+				"id": "8",
+				"label": {
+					"en": "(8) Central Scene to Gateway (Default)"
+				}
+			}]
+		}, {
+			"id": "command_to_control_group_d",
+			"type": "dropdown",
+			"label": {
+				"en": "Command to Control Group D"
+			},
+			"value": "8",
+			"hint": {
+				"en": "Defines the command to be sent to devices of control group D when the related button is pressed."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Disabled"
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(3) Switch On/Off only (send Basic Set)"
+				}
+			}, {
+				"id": "3",
+				"label": {
+					"en": "(3) Switch All"
+				}
+			}, {
+				"id": "4",
+				"label": {
+					"en": "(4) Send Scenes"
+				}
+			}, {
+				"id": "5",
+				"label": {
+					"en": "(5) Send Preconfigured Scenes"
+				}
+			}, {
+				"id": "7",
+				"label": {
+					"en": "(7) Control DoorLock"
+				}
+			}, {
+				"id": "8",
+				"label": {
+					"en": "(8) Central Scene to Gateway (Default)"
+				}
+			}]
+		}, {
+			"id": "send_the_following_switch_all_commands",
+			"type": "dropdown",
+			"label": {
+				"en": "Switch All commands"
+			},
+			"value": "1",
+			"hint": {
+				"en": "Send the following Switch All commands."
+			},
+			"values": [{
+				"id": "1",
+				"label": {
+					"en": "(1) Switch off only. (Default)"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(2) Switch on only."
+				}
+
+			}, {
+				"id": "255",
+				"label": {
+					"en": "(255) Switch all on and off"
+				}
+			}]
+		}, {
+			"id": "invert_buttons",
+			"type": "checkbox",
+			"label": {
+				"en": "Invert buttons"
+			},
+			"value": false,
+			"hint": {
+				"en": "Invert the behaviour of the buttons."
+			}
+
+		}, {
+			"id": "blocks_wakeup_even_when_wakeup_interval_is_set",
+			"type": "dropdown",
+			"label": {
+				"en": "Blocks wakeup even when wakeup interval is set."
+			},
+			"value": "1",
+			"hint": {
+				"en": "If device wakes up and no controller nearby, several unsuccessful attempts will drain battery."
+			},
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) Wakeup is blocked"
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) Wakeup is possible if configured accordingly. (Default)"
+				}
+			}]
+		}, {
+			"id": "send_unsolicited_battery_report_on_wake_up",
+			"type": "dropdown",
+			"label": {
+				"en": "Send unsolicited Battery Report on Wake Up "
+			},
+			"value": "1",
+			"values": [{
+				"id": "0",
+				"label": {
+					"en": "(0) No."
+				}
+			}, {
+				"id": "1",
+				"label": {
+					"en": "(1) To same node as wake up notification. (Default)"
+				}
+			}, {
+				"id": "2",
+				"label": {
+					"en": "(2) Broadcast to neighbours."
+				}
+			}]
+		}]
+		},
+		{
 			"id": "012501",
 			"name": {
 				"en": "Strike Lock Control"
@@ -981,157 +1738,7 @@
 						]
 				}
 			]
-		},
-
-		{
-		"id": "009402",
-		"name": {
-			"en": "10 Year Smoke Detector and Siren",
-			"nl": "10 Year Smoke Detector and Siren"
-		},
-		"mobile": {
-			"components":[
-				{
-				"id": "icon",
-				"capabilities": ["onoff"]
-				},
-				{
-				"id": "toggle",
-				"capabilities": ["onoff"],
-				"options": { "showTitle": true }
-				},
-				{
-				"id": "battery",
-				"capabilities": ["measure_battery" ],
-				"options": { "showTitle": true }
-				},
-				{
-				"id": "sensor",
-				"capabilities": [ "alarm_smoke", "alarm_tamper", "alarm_battery" ]
-				}
-			]
-		},
-		"zwave": {
-			"manufacturerId": [340],
-			"productTypeId": [4],
-			"productId": [4],
-			"learnmode": {
-			"instruction": {
-				"en": "To include the device start the inclusion on your controller and then hit the little button on the wireless module for 1 second",
-				"nl": "Om het apparaat op te nemen start het inclusion proces op uw controller en druk dan de kleine knop op de draadloze module gedurende 1 seconde"
-				}
-			},
-			"associationGroups": [ 1, 2, 3 ],
-			"associationGroupsOptions": {
-				"1": {
-					"hint": {
-					"en": "Z-Wave Plus Lifeline",
-					"nl": "Z-Wave Plus Lifeline"
-						}
-					},
-				"2": {
-					"hint": {
-					"en": "Alarm Reports. All devices in this group will receive Alarm notifications (Smoke , Battery Low, Tamper)",
-					"nl": "Alarmrapporten. Alle apparaten in deze groep ontvangen alarmmeldingen (Rook, Lage Accu, Sabotage"
-						}
-					},
-				"3": {
-					"hint": {
-					"en": "Switching Command. All devices in this group will receive a BASIC SET command on Smoke Alarms. Configuration parameter 3 and 4 will define when ON and when OFF is sent.",
-					"nl": "Switching Command. Alle apparaten in deze groep krijgen een BASIC SET commando op smoke alarms. Configuratieparameters 3 en 4 zullen bepalen wanneer ON en wanneer OFF is verzonden."
-						}
-					}
-				}
-			},
-			"defaultConfiguration": [
-				{
-				"id": 1,
-				"size": 1,
-				"value": 10
-				},
-				{
-				"id": 2,
-				"size": 1,
-				"value": 8
-				},
-				{
-				"id": 3,
-				"size": 1,
-				"value": 99
-				},
-				{
-				"id": 3,
-				"size": 1,
-				"value": 0
-				}
-			],
-			"class": "other",
-			"capabilities": [ "onoff","alarm_smoke","alarm_tamper","measure_battery","alarm_battery" ],
-			"images": {
-				"large": "/drivers/009402/assets/images/large.jpg",
-				"small": "/drivers/009402/assets/images/small.jpg"
-				},
-			"settings": [
-				{
-				"id": 1,
-				"value": 10,
-				"label": {
-					"en": "Siren alarm sequence interval",
-					"nl": "Siren alarm sequence interval"
-				},
-				"hint": {
-					"en": "The additional siren is creating a different acoustic signal differentiate from the smoke alarm. This sound is partly on and partly off. This parameter defines the total length of the interval in seconds.",
-					"nl": "De extra sirene zorgt voor een ander akoestisch signaal dat onderscheidt van het rookalarm. Dit geluid is gedeeltelijk aan en gedeeltelijk af. Deze parameter definieert de totale lengte van het interval in seconden."
-				},
-				"_size": 1,
-				"type": "number"
-				},
-				{
-				"id": 2,
-				"value": 8,
-				"label": {
-					"en": "Siren alarm tone length",
-					"nl": "Siren alarm toon lengte"
-				},
-				"hint": {
-					"en": "The additional siren is creating a different acoustic signal differentiate from the smoke alarm. This sound is partly on and partly off. This parameter defines the total length of the sound versus silence within this interval. Please make sure this value is always smaller (shorter time) than parameter 1 that defines the whole sequence.",
-					"nl": "De extra sirene zorgt voor een ander akoestisch signaal dat onderscheidt van het rookalarm. Dit geluid is gedeeltelijk aan en gedeeltelijk af. Deze parameter bepaalt de totale lengte van het geluid versus stilte binnen dit interval. Zorg ervoor dat deze waarde altijd kleiner is (kortere tijd) dan parameter 1 die de hele volgorde definieert."
-				},
-				"_size": 1,
-				"type": "number"
-				},
-				{
-				"id": 3,
-				"value": true,
-				"label": {
-					"en": "Value of On-Command",
-					"nl": "Waarde van On-Commando"
-				},
-				"hint": {
-					"en": "This value is sent as BASIC Set to Association Group 3 when an Smoke Alarm occurs. If 255 can not be entered in your gateway use -1.",
-					"nl": "Deze waarde wordt verzonden als BASIC Set to Association Group 3 als er een rookmelder optreedt. Als 255 niet in uw gateway kan worden ingevoerd, gebruikt u -1."
-				},
-				"_size": 1,
-				"type": "checkbox"
-				},
-				{
-				"id": 4,
-				"value": true,
-				"label": {
-					"en": "Value of Off-Command",
-					"nl": "Waarde van Off-Commando"
-				},
-				"hint": {
-					"en": "This value is sent as BASIC Set to Association Group 3 when an Smoke Alarm is cleared. If 255 can not be entered in your gateway use -1.",
-					"nl": "Deze waarde wordt verzonden als BASIC Set to Association Group 3 als een rookmelder is gewist. Als 255 niet in uw gateway kan worden ingevoerd, gebruikt u -1."
-				},
-				"_size": 1,
-				"type": "checkbox"
-				}
-			]
 		}
-
-
 		],
 		"flow" : {
 		"actions": [
@@ -1432,7 +2039,107 @@
 						"filter": "driver_id=009402"
 					}
 				]
-			}
+			},
+			{
+			"id": "009204_btn1_single",
+			"title": {
+				"en": "Button 1 single press",
+				"nl": "Een maal gedrukt op knop 1"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_btn1_double",
+			"title": {
+				"en": "Button 1 double press",
+				"nl": "Twee maal gedrukt op knop 1"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_btn2_single",
+			"title": {
+				"en": "Button 2 single press",
+				"nl": "Een maal gedrukt op knop 2"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_btn2_double",
+			"title": {
+				"en": "Button 2 double press",
+				"nl": "Twee maal gedrukt op knop 2"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_btn3_single",
+			"title": {
+				"en": "Button 3 single press",
+				"nl": "Een maal gedrukt op knop 3"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_btn3_double",
+			"title": {
+				"en": "Button 3 double press",
+				"nl": "Twee maal gedrukt op knop 3"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=W009204"
+			}]
+			}, {
+			"id": "009204_btn4_single",
+			"title": {
+				"en": "Button 4 single press",
+				"nl": "Een maal gedrukt op knop 4"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_btn4_double",
+			"title": {
+				"en": "Button 4 double press",
+				"nl": "Twee maal gedrukt op knop 4"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+			}, {
+			"id": "009204_battery_alarm",
+			"title": {
+				"en": "The battery alarm turned on",
+				"nl": "De batterijwaarschuwing gaat aan"
+			},
+			"args": [{
+				"name": "device",
+				"type": "device",
+				"filter": "driver_id=009204"
+			}]
+		}
 		]
 	}
 }
