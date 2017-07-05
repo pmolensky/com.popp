@@ -19,12 +19,12 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
             	'command_report_parser': report => report['Value'] === 'on/enable'
 			},
   settings: {
-            "1": {
-				"index": 1,
+            "led_status": {
+				"index": 0,
 				"size": 1,
             },
-			"2": {
-				"index": 2,
+			"shutoff_behavior": {
+				"index": 1,
 				"size": 1,
             }
         }

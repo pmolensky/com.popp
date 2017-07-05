@@ -14,6 +14,7 @@ More devices still need to be writen in the app
 * 012501 - Strike Lock Control 
 ## Untested devices    
 * 005206 - Weather - Need help some reports dont get in  
+* 009501 - Secure Flow Stop – Valve Shut-Off    
 
     
 ## Unsupported devices ?    
@@ -42,6 +43,7 @@ c. check if effective and retry to the desired value
 009006 - Wall Plug Switch Indoor    
 009105 - Wall Plug Switch Outdoor   
 009204 - KFOB-C Remote Control   
+009501 - Secure Flow Stop – Valve Shut-Off   
     
 ### v 1.1.3   
 **added:**    
