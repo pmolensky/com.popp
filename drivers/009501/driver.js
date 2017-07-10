@@ -29,4 +29,5 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
             }
         }
 	}
+}
 );
