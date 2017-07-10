@@ -38,12 +38,13 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
   
-### v 1.1.4   
+### v 1.1.5   
 **added:**    
-009006 - Wall Plug Switch Indoor    
-009105 - Wall Plug Switch Outdoor   
-009204 - KFOB-C Remote Control   
-009501 - Secure Flow Stop – Valve Shut-Off   
+009006 - Wall Plug Switch Indoor   
+  
+### v 1.1.4   
+**fixed:**    
+Typo in the valve driver that crashed the PoPP app :(  
     
 ### v 1.1.3   
 **added:**    
