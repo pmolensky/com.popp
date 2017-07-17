@@ -38,6 +38,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
   
+### v 1.1.6     
+**fixed:**    
+Corrected ProductID on Keyfob and Valve because of wrong info in PoPP documentation    
+  
 ### v 1.1.5   
 **fixed:**    
 Typo in the valve driver that crashed the PoPP app :(  

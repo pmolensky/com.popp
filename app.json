@@ -18,7 +18,7 @@
 			"large": "/assets/images/large.jpg",
 			"small": "/assets/images/small.jpg"
 		},
-		"version": "1.1.5",
+		"version": "1.1.6",
 		"compatibility": ">=1.3.1",
 		"author": {
 				"name": "Marco Ruiter",
@@ -1422,8 +1422,8 @@
             },
             "zwave": {
                 "manufacturerId": 340,
-                "productTypeId": 5,
-                "productId": 1,
+                "productTypeId": 3,
+                "productId": 1298,
                 "learnmode": {
                     "image": "/drivers/009501/assets/learnmode.svg",
                     "instruction": {
@@ -1512,7 +1512,7 @@
 			"nl": "KFOB-C Remote Control"
 		},
 		"zwave": {
-			"manufacturerId": 277,
+			"manufacturerId": 340,
 			"productTypeId": 256,
 			"productId": 259,
 			"wakeUpInterval": 1800,
