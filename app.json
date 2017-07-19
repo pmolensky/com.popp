@@ -2301,7 +2301,7 @@
 			"args": [{
 				"name": "device",
 				"type": "device",
-				"filter": "driver_id=W009204"
+				"filter": "driver_id=009204"
 			}]
 			}, {
 			"id": "009204_btn4_single",

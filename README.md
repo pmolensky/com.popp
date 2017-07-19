@@ -40,7 +40,8 @@ c. check if effective and retry to the desired value
   
 ### v 1.1.6     
 **fixed:**    
-Corrected ProductID on Keyfob and Valve because of wrong info in PoPP documentation    
+Corrected ProductID on Keyfob and Valve because of wrong info in PoPP documentation  
+Fixed typo in the double click button 3 flow card      
   
 ### v 1.1.5   
 **fixed:**    
