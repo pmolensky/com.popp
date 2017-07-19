@@ -737,9 +737,9 @@
                 "nl": "Wall Plug Switch Outdoor"
             },
             "zwave": {
-                "manufacturerId": 100,
-                "productTypeId": 0,
-                "productId": 0,
+                "manufacturerId": [100 , 340],
+                "productTypeId": [ 0 , 3 ],
+                "productId": [ 0 , 1 ],
                 "learnmode": {
                     "image": "/drivers/009105/assets/learnmode.svg",
                     "instruction": {
