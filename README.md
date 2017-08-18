@@ -12,6 +12,7 @@ More devices still need to be writen in the app
 * 123610 - Switch 68G   
 * 009204 - KFOB-C Remote Control     
 * 012501 - Strike Lock Control 
+* 700168 - Z.Rain
 ## Untested devices    
 * 005206 - Weather - Need help some reports dont get in  
 * 009501 - Secure Flow Stop – Valve Shut-Off    
@@ -37,6 +38,10 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:    
+  
+### v 1.1.7
+**added:**    
+* 700168 - Z.Rain
   
 ### v 1.1.6     
 **fixed:**    
