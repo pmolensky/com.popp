@@ -1,5 +1,15 @@
-"use strict";
+'use strict';
 
-module.exports.init = function() {
-	Homey.log("com.popp running...");
+const Homey = require('homey');
+
+class PoPPZwave extends Homey.App {
+
+	onInit() {
+
+		this.log('PoPP Z-wave app is running...');
+
+	}
+
 }
+
+module.exports = PoPPZwave;

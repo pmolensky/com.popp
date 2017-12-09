@@ -1,0 +1,191 @@
+{
+    "id": "009105",
+    "name": {
+		"en": "Wall Plug Switch Outdoor",
+        "nl": "Wall Plug Switch Outdoordoor"
+        },
+        "zwave": {
+            "manufacturerId": [100, 340],
+            "productTypeId": [0 , 3],
+            "productId": [0 , 1],
+            "learnmode": {
+                "image": "/drivers/009105/assets/learnmode.svg",
+                "instruction": {
+                    "en": "Press button three times",
+                    "nl": "Druk driemaal op knop"
+            }
+        },
+        "associationGroups": [1,1]
+        },
+        "class": "socket",
+		"capabilities": [ "onoff" ],
+            "images": {
+                "large": "/drivers/009006/assets/images/large.png",
+                "small": "/drivers/009006/assets/images/small.png"
+        },
+        "settings": [
+			{
+                "id": "auto_switch_off",
+				"zwave": {
+					"index": 2,
+					"size": 2
+				},
+                "type": "number",
+                "attr": {
+                    "min": 0,
+                    "max": 65535
+                },
+                "value": 0,
+                "label": {
+                    "en": "Auto switch off after (0 - 65535 sec)",
+                    "nl": "Automatisch uitschakelen na (0 - 65535 sec)"
+                },
+                "hint": {
+                    "en": "If not zero, automatically switch off after a user defined time in seconds.",
+                    "nl": "Indien niet nul, automatisch uitschakelen na de ingestelde tijd in seconden."
+                }
+            },
+			{
+				"id": "led_indication_mode",
+				"zwave": {
+					"index": 1,
+					"size": 1
+				},
+				"type": "checkbox",
+				"label": {
+					"en": "LED Mode",
+					"nl": "LED Modus"
+				},
+				"value": true,
+				"hint": {
+					"en": "Led Switch Status indication. Default: enabled",
+					"nl": "Led Status Light indicatie. Standaard: ingeschakeld"
+				}
+			},
+			{
+				"id": "state_after_powerloss",
+				"zwave": {
+					"index": 5,
+					"size": 1
+				},
+				"type": "checkbox",
+				"label": {
+					"en": "Restore state after power loss",
+					"nl": "Herstel toestand bij spanningsuitval"
+				},
+				"value": true,
+				"hint": {
+					"en": "After power loss the relay will switch to last known state if enabled (checked) or remain off if disabled (unchecked).\nDefault: enabled = checked)",
+					"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval wanneer ingeschakeld (checked) of uit wanneer niet ingeschakeld (unchecked).\nStandaard: uitgeschakeld = unchecked)"
+				}
+			},
+			{
+				"id": "led_off_color",
+				"zwave": {
+					"index": 21,
+					"size": 1
+				},
+				"type": "dropdown",
+				"label": {
+					"en": "Color of Led when turned off",
+					"nl": "Kleur Led wanneer uitgeschakeld"
+				},
+				"value": "0",
+				"hint": {
+					"en": "Choose youre off color",
+					"nl": "Kies u kleur bij uitstand"
+				},
+				"values": [
+					{
+						"id": "0",
+						"label": {
+							"en": "Off (default)",
+							"nl": "Uit (standaard)"
+						}
+					},
+					{
+						"id": "1",
+						"label": {
+							"en": "Red",
+							"nl": "Rood"
+						}
+					},
+					{
+						"id": "2",
+						"label": {
+							"en": "Green",
+							"nl": "Groen"
+						}
+					},
+					{
+						"id": "3",
+						"label": {
+							"en": "Blue",
+							"nl": "Blauw"
+						}
+					},
+					{
+						"id": "4",
+						"label": {
+							"en": "Yellow",
+							"nl": "Geel"
+						}
+					}
+				]
+			},
+			{
+				"id": "led_on_color",
+				"zwave": {
+					"index": 22,
+					"size": 1
+				},
+				"type": "dropdown",
+				"label": {
+					"en": "Color of Led when turned On",
+					"nl": "Kleur Led wanneer Ingeschakeld"
+				},
+				"value": "3",
+				"hint": {
+					"en": "Choose youre On color",
+					"nl": "Kies u kleur wanneer Ingeschakeld"
+				},
+				"values": [
+					{
+						"id": "0",
+						"label": {
+							"en": "Off",
+							"nl": "Uit"
+						}
+					},
+					{
+						"id": "1",
+						"label": {
+							"en": "Red",
+							"nl": "Rood"
+						}
+					},
+					{
+					"id": "2",
+					"label": {
+						"en": "Green",
+						"nl": "Groen"
+						}
+					},
+					{
+					"id": "3",
+					"label": {
+						"en": "Blue (default)",
+						"nl": "Blauw (standaard)"
+						}
+					},
+					{
+					"id": "4",
+					"label": {
+						"en": "Yellow",
+						"nl": "Geel"
+					}
+				}
+			]
+		}
+	]
+}

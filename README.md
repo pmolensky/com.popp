@@ -1,15 +1,25 @@
 # PoPP Z-Wave Device support App for Homey @ Athom.com    
-More devices still need to be writen in the app    
+   
+Donations will be used for charity. Every 25 euros collected will be send to a different charity organization every time. I make this app for fun and don’t tend to make profit for my own.
+If you like the work. Please think of the people who you could please a bit by donating.
+Want the next donation to go to your favorite charity ? Don’t hesitate and tell me what it is.
     
 ## Supported devices    
-* 005107 - PoPP Solar Outside Siren    
-* 010101 - PoPP Thermostat Valve    
-* 123580 - PoPP Dimmer 67G    
-* 123610 - PoPP Switch 68G    
+* 005107 - Solar Outside Siren    
+* 004001 - Smoke Detector and Siren  
+* 009402 - 10 Year Smoke Detector and Siren 
+* 010101 - Thermostat Valve 
+* 009006 - Wall Plug Switch Indoor    
+* 009105 - Wall Plug Switch Outdoor   
+* 123580 - Dimmer 67G    
+* 123610 - Switch 68G   
+* 009204 - KFOB-C Remote Control     
+* 012501 - Strike Lock Control 
+* 700168 - Z.Rain
 ## Untested devices    
-* 004001 - PoPP Smoke Detector and Siren  
-* 005206 - PoPP Weather  
-    
+* 005206 - Weather - Need help some reports dont get in  
+* 009501 - Secure Flow Stop – Valve Shut-Off    
+   
 ## Unsupported devices ?    
 You are welcome to help , please send in you're git pull requests to add more devices to the list.    
     
@@ -30,7 +40,41 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:    
-
+  
+### v 2.0.0
+**updated:**    
+Rewrite to the new SDKv2 and Z-Wave Mesh Driver   
+  
+### v 1.1.7
+**added:**    
+* 700168 - Z.Rain
+  
+### v 1.1.6     
+**fixed:**    
+Corrected ProductID on Keyfob and Valve because of wrong info in PoPP documentation  
+Fixed typo in the double click button 3 flow card      
+  
+### v 1.1.5   
+**fixed:**    
+Typo in the valve driver that crashed the PoPP app :(  
+  
+### v 1.1.4   
+added:   
+009006 - Wall Plug Switch Indoor
+009105 - Wall Plug Switch Outdoor
+009204 - KFOB-C Remote Control
+009501 - Secure Flow Stop – Valve Shut-Off  
+    
+### v 1.1.3   
+**added:**    
+009402 - 10 Year Smoke Detector and Siren    
+**update:**   
+Added new manufacturerId for Z-Weather, seems like PoPP doesnt even take the trouble to flash there own firmware in the rebranded stuff anymore   
+  
+### v 1.1.2   
+**added:**    
+012501 - PoPP Strike Lock Control    
+  
 ### v 1.1.1   
 **added:**    
 004001 - PoPP Smoke Detector and Siren  
