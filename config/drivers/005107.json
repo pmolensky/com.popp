@@ -18,10 +18,16 @@
 			{
 			"id": "sensor",
 			"capabilities": [
+				"alarm_siren",
 				"measure_temperature",
 				"alarm_tamper",
 				"alarm_battery"
-				]
+				],
+			"options": {
+			"icons": {
+				"alarm_siren": "/drivers/005107/assets/alarm.svg"
+				}
+			}
 			}
 		]
 	},
@@ -34,7 +40,7 @@
 			"productTypeId": 4,
 			"productId": 2,
 			"learnmode": {
-				"image": "/drivers/005107/assets/wakeup.svg",
+				"image": "/drivers/005107/assets/learnmode.svg",
 				"instruction": {
 					"en": "1. Open the case and turn on the power switch 2. Remove the metal mounting plate from the device. 3. Turn your controller into inclusion mode with a short single click on the internal inclusion button.",
 					"nl": "1. Open de behuizing en zet de sirenen aan met de schakelaar 2. Verwijder de metalen montageplaat van het apparaat. 3. Zet uw controller in inclusion mode en geef een korte enkele klik op de interne knop bij de schakelaar voor inclusion."
@@ -61,6 +67,9 @@
 		},
 		"class": "other",
 		"capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature","alarm_battery" ],
+		"capabilitiesOptions": {
+			"onoff" : { "greyout" : false } 
+		},
 		"images": {
 			"large": "/drivers/005107/assets/images/large.jpg",
 			"small": "/drivers/005107/assets/images/small.jpg"

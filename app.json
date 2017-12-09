@@ -14,7 +14,7 @@
     "small": "/assets/images/small.jpg"
   },
   "version": "2.0.0",
-  "compatibility": ">=1.5.0",
+  "compatibility": ">=1.5.3",
   "tags": {
     "en": [
       "scene controller",
@@ -65,7 +65,39 @@
     "name": "Marco Ruiter",
     "email": "mruiter@tuxweb.nl"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Marco Ruiter",
+        "email": "mruiter@tuxweb.nl"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+    "paypal": {
+    "username": "MarcoRuiter",
+    "currency": "EUR"
+     }
+   }
+  },
   "capabilities": {
+    "alarm_siren": {
+      "type": "boolean",
+      "title": {
+        "en": "Siren",
+        "nl": "Sirene"
+      },
+      "units": {
+        "en": "Status"
+      },
+      "desc": {
+        "en": "Alarm",
+        "nl": "Alarm"
+      },
+      "getable": true,
+      "setable": false
+    },
     "measure_dewpoint": {
       "type": "number",
       "title": {
