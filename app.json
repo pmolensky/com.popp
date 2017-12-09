@@ -75,11 +75,11 @@
   },
   "contributing": {
     "donate": {
-    "paypal": {
-    "username": "MarcoRuiter",
-    "currency": "EUR"
-     }
-   }
+      "paypal": {
+        "username": "MarcoRuiter",
+        "currency": "EUR"
+      }
+    }
   },
   "capabilities": {
     "alarm_siren": {
@@ -330,10 +330,16 @@
           {
             "id": "sensor",
             "capabilities": [
+              "alarm_siren",
               "measure_temperature",
               "alarm_tamper",
               "alarm_battery"
-            ]
+            ],
+            "options": {
+              "icons": {
+                "alarm_siren": "/drivers/005107/assets/alarm.svg"
+              }
+            }
           }
         ]
       },
@@ -346,7 +352,7 @@
         "productTypeId": 4,
         "productId": 2,
         "learnmode": {
-          "image": "/drivers/005107/assets/wakeup.svg",
+          "image": "/drivers/005107/assets/learnmode.svg",
           "instruction": {
             "en": "1. Open the case and turn on the power switch 2. Remove the metal mounting plate from the device. 3. Turn your controller into inclusion mode with a short single click on the internal inclusion button.",
             "nl": "1. Open de behuizing en zet de sirenen aan met de schakelaar 2. Verwijder de metalen montageplaat van het apparaat. 3. Zet uw controller in inclusion mode en geef een korte enkele klik op de interne knop bij de schakelaar voor inclusion."
@@ -381,6 +387,11 @@
         "measure_temperature",
         "alarm_battery"
       ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "greyout": false
+        }
+      },
       "images": {
         "large": "/drivers/005107/assets/images/large.jpg",
         "small": "/drivers/005107/assets/images/small.jpg"
@@ -2258,6 +2269,39 @@
         ]
       }
     ],
-    "triggers": []
+    "triggers": [
+      {
+        "id": "alarm_battery",
+        "title": {
+          "en": "The battery alarm turned on",
+          "nl": "De batterijwaarschuwing gaat aan"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=005107"
+          }
+        ]
+      },
+      {
+        "id": "alarm_siren",
+        "title": {
+          "en": "Siren Alarm",
+          "nl": "Sirene Alarm"
+        },
+        "hint": {
+          "en": "This card will trigger when siren is activated.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de sirene actief is."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=005107"
+          }
+        ]
+      }
+    ]
   }
 }
