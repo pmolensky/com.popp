@@ -1,5 +1,5 @@
 [{
-		"id": "005107_alarm_state",
+		"id": "alarm_state",
 		"title": {
 			"en": "Change the alarm state",
 			"nl": "Verander de alarm toestand"

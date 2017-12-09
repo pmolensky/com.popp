@@ -46,7 +46,7 @@ class P005107 extends ZwaveDevice {
       if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
     };
 
-    let actionP005107_alarm_state = new Homey.FlowCardAction('005107_alarm_state');
+    let actionP005107_alarm_state = new Homey.FlowCardAction('alarm_state');
     actionP005107_alarm_state
       .register()
       .registerRunListener(P005107_alarm_state_run_listener);
