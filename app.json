@@ -1098,6 +1098,444 @@
       ]
     },
     {
+      "id": "009204",
+      "name": {
+        "en": "KFOB-C Remote Control",
+        "nl": "KFOB-C Remote Control"
+      },
+      "zwave": {
+        "manufacturerId": 340,
+        "productTypeId": 256,
+        "productId": 259,
+        "wakeUpInterval": 1800,
+        "learnmode": {
+          "image": "/drivers/009204/assets/learnmode.svg",
+          "instruction": {
+            "en": "Activate inclusion on the device by pressing any one of the four buttons for one second",
+            "nl": "Om pairing te activeren, druk langer een seconde op een van de knoppen van de afstandsbediening."
+          }
+        },
+        "associationGroups": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "class": "zwavecontroller",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/009204/assets/images/large.png",
+        "small": "/drivers/009204/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "button_1_and_3_pair_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Button 1 and 3 pair mode"
+          },
+          "value": "0",
+          "hint": {
+            "en": "The parameter determines the behaviour of buttons 1 and 3."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Seperately, button 1 works with control group A, button 3 with control group C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. "
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Pair without double clicks, button A/C are Up/Down. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B and D"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(2) Pair with double clicks. button A/C are Up/Down. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B,double click with group D"
+              }
+            }
+          ]
+        },
+        {
+          "id": "button_2_and_4_pair_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Button 2 and 4 pair mode"
+          },
+          "value": "0",
+          "hint": {
+            "en": "The parameter determines the behaviour of buttons 2 and 4."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Seperately, button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. "
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Pair without double clicks, button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B and D"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(2) Pair with double clicks. button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B,double click with group D"
+              }
+            }
+          ]
+        },
+        {
+          "id": "command_to_control_group_a",
+          "type": "dropdown",
+          "label": {
+            "en": "Command to Control Group A"
+          },
+          "value": "8",
+          "hint": {
+            "en": "Defines the command to be sent to devices of control group A when the related button is pressed."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(3) Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "(3) Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "(4) Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "(5) Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "(7) Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "(8) Central Scene to Gateway (Default)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "command_to_control_group_b",
+          "type": "dropdown",
+          "label": {
+            "en": "Command to Control Group B"
+          },
+          "value": "8",
+          "hint": {
+            "en": "Defines the command to be sent to devices of control group B when the related button is pressed."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(3) Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "(3) Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "(4) Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "(5) Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "(7) Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "(8) Central Scene to Gateway (Default)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "command_to_control_group_c",
+          "type": "dropdown",
+          "label": {
+            "en": "Command to Control Group C"
+          },
+          "value": "8",
+          "hint": {
+            "en": "Defines the command to be sent to devices of control group C when the related button is pressed."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(3) Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "(3) Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "(4) Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "(5) Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "(7) Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "(8) Central Scene to Gateway (Default)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "command_to_control_group_d",
+          "type": "dropdown",
+          "label": {
+            "en": "Command to Control Group D"
+          },
+          "value": "8",
+          "hint": {
+            "en": "Defines the command to be sent to devices of control group D when the related button is pressed."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(3) Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "(3) Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "(4) Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "(5) Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "(7) Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "(8) Central Scene to Gateway (Default)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "send_the_following_switch_all_commands",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch All commands"
+          },
+          "value": "1",
+          "hint": {
+            "en": "Send the following Switch All commands."
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Switch off only. (Default)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(2) Switch on only."
+              }
+            },
+            {
+              "id": "255",
+              "label": {
+                "en": "(255) Switch all on and off"
+              }
+            }
+          ]
+        },
+        {
+          "id": "invert_buttons",
+          "type": "checkbox",
+          "label": {
+            "en": "Invert buttons"
+          },
+          "value": false,
+          "hint": {
+            "en": "Invert the behaviour of the buttons."
+          }
+        },
+        {
+          "id": "blocks_wakeup_even_when_wakeup_interval_is_set",
+          "type": "dropdown",
+          "label": {
+            "en": "Blocks wakeup even when wakeup interval is set."
+          },
+          "value": "1",
+          "hint": {
+            "en": "If device wakes up and no controller nearby, several unsuccessful attempts will drain battery."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) Wakeup is blocked"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) Wakeup is possible if configured accordingly. (Default)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "send_unsolicited_battery_report_on_wake_up",
+          "type": "dropdown",
+          "label": {
+            "en": "Send unsolicited Battery Report on Wake Up "
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "(0) No."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "(1) To same node as wake up notification. (Default)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(2) Broadcast to neighbours."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "009402",
       "name": {
         "en": "10 Year Smoke Detector and Siren",
@@ -2231,7 +2669,7 @@
         ]
       },
       {
-        "id": "005107_alarm_state",
+        "id": "alarm_state",
         "title": {
           "en": "Change the alarm state",
           "nl": "Verander de alarm toestand"
@@ -2299,6 +2737,78 @@
             "name": "device",
             "type": "device",
             "filter": "driver_id=005107"
+          }
+        ]
+      },
+      {
+        "id": "RC_scene",
+        "title": {
+          "en": "Scene is activated",
+          "nl": "Scene is geactiveerd"
+        },
+        "hint": {
+          "en": "This card will only get triggered if the button and scene match the state of the dropdown fields.",
+          "nl": "Deze kaart wordt alleen geactiveerd wanneer de knop en scene overeenkomen met de toestand van de gekozen opties."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=009204"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Button 1",
+                  "nl": "Knop 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Button 2",
+                  "nl": "Knop 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Button 3",
+                  "nl": "Knop 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Button 4",
+                  "nl": "Knop 4"
+                }
+              }
+            ]
+          },
+          {
+            "name": "scene",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Key Pressed 1 time",
+                "label": {
+                  "en": "Pressed 1x",
+                  "nl": "1x ingedrukt"
+                }
+              },
+              {
+                "id": "Key Pressed 2 times",
+                "label": {
+                  "en": "Pressed 2x",
+                  "nl": "2x ingedrukt"
+                }
+              }
+            ]
           }
         ]
       }
