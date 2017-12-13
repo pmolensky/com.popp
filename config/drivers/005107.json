@@ -66,7 +66,7 @@
 		]
 		},
 		"class": "other",
-		"capabilities": [ "onoff","alarm_tamper","measure_battery","measure_temperature","alarm_battery" ],
+		"capabilities": [ "onoff", "alarm_siren", "alarm_tamper","measure_battery","measure_temperature","alarm_battery" ],
 		"capabilitiesOptions": {
 			"onoff" : { "greyout" : false } 
 		},

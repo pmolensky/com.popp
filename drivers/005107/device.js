@@ -7,11 +7,28 @@ class P005107 extends ZwaveDevice {
 	onMeshInit() {
 		this.enableDebug();
 		this.printNode();
-		this.registerCapability('onoff', 'SWITCH_BINARY');
-		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
-		this.registerCapability('alarm_tamper', 'SENSOR_BINARY');	
-		this.registerCapability('alarm_battery', 'BATTERY');
-		this.registerCapability('measure_battery', 'BATTERY');
+		//this.registerCapability('onoff', 'SWITCH_BINARY');
+		this.registerCapability('onoff', 'SWITCH_BINARY', {
+			get: 'SWITCH_BINARY_GET',
+			set: 'SWITCH_BINARY_SET',
+			setParserV1: value => ({
+				'Switch Value': (value) ? 'on/enable' : 'off/disable',
+			}),
+			report: 'SWITCH_BINARY_REPORT',
+			reportParser: report => {
+				if (report && report.hasOwnProperty('Value')) {
+					if (report.Value === 'on/enable') {
+						this.emit('SirenTriggerOn');
+						return true;
+					}
+					else if (report.Value === 'off/disable') {
+						this.emit('SirenTriggerOff');
+						return false;
+					}
+				}
+				return null;
+			},
+		});
 		this.registerCapability('alarm_siren', 'NOTIFICATION', {
 			get: 'NOTIFICATION_GET',
 			getOpts: {
@@ -33,16 +50,21 @@ class P005107 extends ZwaveDevice {
 			return null;
 		}
 		});
+		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
+		this.registerCapability('alarm_tamper', 'SENSOR_BINARY');	
+		this.registerCapability('alarm_battery', 'BATTERY');
+		this.registerCapability('measure_battery', 'BATTERY');
+
 
 		
 	//===== CONTROL Binary Switch
     // define FlowCardAction to set the Switch
     let P005107_alarm_state_run_listener = async (args) => {
-      //this.log('FlowCardAction Set LED level for: ', args.alarm_state);
+      this.log('FlowCardAction Set LED level for: ', args.alarm_state);
       let result = await args.device.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY.SWITCH_BINARY_SET({
         'Switch Value': args.alarm_state
       });
-      //this.log("outcome: ", result)
+      this.log("outcome: ", result)
       if (result !== 'TRANSMIT_COMPLETE_OK') throw new Error(result);
     };
 
@@ -61,7 +83,7 @@ class P005107 extends ZwaveDevice {
 
       // Handle Emergency notification
       this.on('SirenTrigger', async () => {
-        //this.log('SirenTrigger');
+        this.log('SirenTrigger');
         try {
           await SirenFlowTrigger.trigger(this, {}, {});
         } catch (err) {

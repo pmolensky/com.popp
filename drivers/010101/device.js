@@ -12,7 +12,5 @@ class P010101 extends ZwaveDevice {
 		this.registerCapability('alarm_battery', 'BATTERY');
 		this.registerCapability('measure_battery', 'BATTERY');
 	}
-
 }
-
 module.exports = P010101;
