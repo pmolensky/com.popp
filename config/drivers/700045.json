@@ -1,0 +1,117 @@
+{
+  "name": {
+    "en": "Z-Wave Keypad"
+  },
+  "zwave": {
+    "manufacturerId": [
+      340
+    ],
+    "productTypeId": [
+      5
+    ],
+    "productId": [
+      2
+    ],
+    "learnmode": {
+      "instruction": {
+        "en": "Turn into Management Mode (remove cover), hit button 1 and confirm with * (Star Key)"
+      }
+    },
+    "associationGroups": [
+      1,
+      2,
+      3
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Door Lock Control"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Ring Button Control"
+        }
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": 1,
+      "value": 0,
+      "label": {
+        "en": "Door Lock Automatic Secure Timeout"
+      },
+      "hint": {
+        "en": "After this time a CLOSE command is sent to the controlled door lock. On default no CLOSE command is sent assuming that the strike lock has its own timeout set "
+      },
+      "_size": 1,
+      "type": "number"
+    },
+    {
+      "id": 2,
+      "value": 3,
+      "label": {
+        "en": "Ring Button Press Basic Command OFF Timeout"
+      },
+      "hint": {
+        "en": "After this time the Door Bell will receive an OF command regardless of the actuall button is pressed or not "
+      },
+      "_size": 1,
+      "type": "number"
+    },
+    {
+      "id": 3,
+      "value": true,
+      "label": {
+        "en": "Ring Button ON Command"
+      },
+      "hint": {
+        "en": "This value is sent into Association Group 3 when the door bell button is pressed. "
+      },
+      "_size": 1,
+      "type": "checkbox"
+    },
+    {
+      "id": 4,
+      "value": true,
+      "label": {
+        "en": "Ring Button OFF Command"
+      },
+      "hint": {
+        "en": "This value is sent into Association Group 3 when the door bell button is released or the timeout has reached. "
+      },
+      "_size": 1,
+      "type": "checkbox"
+    },
+    {
+      "id": 5,
+      "value": true,
+      "label": {
+        "en": "Central Scene ID for User Codes"
+      },
+      "hint": {
+        "en": "This parameter defines if different user codes shall cause individual or similar scene ID sent to the main controller. "
+      },
+      "_size": 1,
+      "type": "checkbox"
+    },
+    {
+      "id": 6,
+      "value": true,
+      "label": {
+        "en": "Buzzer Confirmation"
+      },
+      "hint": {
+        "en": "This parameter defines if the internal buzzer shall be used to confirm button presses."
+      },
+      "_size": 1,
+      "type": "checkbox"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": {
+    "en": "Z-Wave CO Detector"
+  },
+  "zwave": {
+    "manufacturerId": [
+      340
+    ],
+    "productTypeId": [
+      4
+    ],
+    "productId": [
+      3
+    ],
+    "learnmode": {
+      "instruction": {
+        "en": "Pressing the button 'Inclusion Button' for one second will include the device. If the button is pressed for at least 2 seconds the inclusion will be done without the Security Command Class. "
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Switching Command when Alarm "
+        }
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": 1,
+      "value": 99,
+      "label": {
+        "en": "Value of On-Command "
+      },
+      "hint": {
+        "en": ""
+      },
+      "_size": 1,
+      "type": "number"
+    },
+    {
+      "id": 2,
+      "value": 0,
+      "label": {
+        "en": "Value of Off-Command "
+      },
+      "hint": {
+        "en": ""
+      },
+      "_size": 1,
+      "type": "number"
+    }
+  ]
+}
