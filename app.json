@@ -302,6 +302,7 @@
       ]
     },
     {
+      "id": "004407",
       "name": {
         "en": "Z-Wave CO Detector",
         "nl": "Z-Wave CO Detector"
@@ -2241,6 +2242,7 @@
       ]
     },
     {
+      "id": "700045",
       "name": {
         "en": "Z-Wave Keypad",
         "nl": "Z-Wave Keypad"
