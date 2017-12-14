@@ -61,8 +61,8 @@
     "dim"
   ],
   "images": {
-    "large": "/drivers/123580/assets/images/large.png",
-    "small": "/drivers/123580/assets/images/small.png"
+    "large": "/drivers/123580/assets/images/large.jpg",
+    "small": "/drivers/123580/assets/images/small.jpg"
   },
   "settings": [{
       "id": 1,
