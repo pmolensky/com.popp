@@ -303,7 +303,8 @@
     },
     {
       "name": {
-        "en": "Z-Wave CO Detector"
+        "en": "Z-Wave CO Detector",
+        "nl": "Z-Wave CO Detector"
       },
       "zwave": {
         "manufacturerId": [
@@ -316,8 +317,17 @@
           3
         ],
         "learnmode": {
+          "image": "/drivers/004407/assets/learnmode.svg",
           "instruction": {
-            "en": "Pressing the button 'Inclusion Button' for one second will include the device. If the button is pressed for at least 2 seconds the inclusion will be done without the Security Command Class. "
+            "en": "Pressing the button 'Inclusion Button' for one second will include the device. If the button is pressed for at least 2 seconds the inclusion will be done without the Security Command Class",
+            "nl": "Als u gedurende één seconde op de knop 'Opnameknop' drukt, wordt het apparaat opgenomen. Als de knop minstens 2 seconden wordt ingedrukt, zal de opname worden uitgevoerd zonder de Security Command Class"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/004407/assets/learnmode.svg",
+          "instruction": {
+            "en": "Pressing the button 'Inclusion Button' for one second will include the device. If the button is pressed for at least 2 seconds the inclusion will be done without the Security Command Class",
+            "nl": "Als u gedurende één seconde op de knop 'Opnameknop' drukt, wordt het apparaat opgenomen. Als de knop minstens 2 seconden wordt ingedrukt, zal de opname worden uitgevoerd zonder de Security Command Class"
           }
         },
         "associationGroups": [
@@ -327,22 +337,35 @@
         "associationGroupsOptions": {
           "1": {
             "hint": {
-              "en": "Z-Wave Plus Lifeline"
+              "en": "Z-Wave Plus Lifeline",
+              "nl": "Z-Wave Plus Lifeline"
             }
           },
           "2": {
             "hint": {
-              "en": "Switching Command when Alarm "
+              "en": "Switching Command when Alarm",
+              "nl": "Switching Command when Alarm"
             }
           }
         }
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_co2",
+        "alarm_tamper",
+        "measure_battery",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/004407/assets/images/large.png",
+        "small": "/drivers/004407/assets/images/small.png"
       },
       "settings": [
         {
           "id": 1,
           "value": 99,
           "label": {
-            "en": "Value of On-Command "
+            "en": "Value van On-Commando (0-255)"
           },
           "hint": {
             "en": ""
@@ -354,7 +377,8 @@
           "id": 2,
           "value": 0,
           "label": {
-            "en": "Value of Off-Command "
+            "en": "Value of Off-Command (0-255)",
+            "nl": "Waarde van Off-Commando (0-255)"
           },
           "hint": {
             "en": ""

@@ -5,20 +5,25 @@ If you like the work. Please think of the people who you could please a bit by d
 Want the next donation to go to your favorite charity ? Don’t hesitate and tell me what it is.
     
 ## Supported devices    
-* 005107 - Solar Outside Siren    
 * 004001 - Smoke Detector and Siren  
-* 009402 - 10 Year Smoke Detector and Siren 
-* 010101 - Thermostat Valve 
+* 004001 - CO2 Sensor  
+* 005107 - Solar Outside Siren  
+* 005206 - Z-Weather  
+* 700168 - Z-Rain
 * 009006 - Wall Plug Switch Indoor    
-* 009105 - Wall Plug Switch Outdoor   
-* 123580 - Dimmer 67G    
-* 123610 - Switch 68G   
+* 009105 - Wall Plug Switch Outdoor 
 * 009204 - KFOB-C Remote Control     
-* 012501 - Strike Lock Control 
-* 700168 - Z.Rain
+* 009402 - 10 Year Smoke Detector and Siren 
+* 009501 - Secure Flow Stop – Valve Shut-Off   
+* 010101 - Thermostat Valve 
+* 012501 - Strike Lock Control   
+* 123580 - Dimmer 67G   
+* 123610 - Switch 68G    
+    
 ## Untested devices    
 * 005206 - Weather - Need help some reports dont get in  
-* 009501 - Secure Flow Stop – Valve Shut-Off    
+* 004001 - CO2 Sensor - Please confirm if its working when you have it    
+* 009204 - KFOB-C Remote Control - Please confirm if its working when you have it 
    
 ## Unsupported devices ?    
 You are welcome to help , please send in you're git pull requests to add more devices to the list.    
@@ -40,7 +45,11 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:    
-  
+
+### v 2.0.1
+**updated:**    
+Added support for the keypad and co2 sensor, please test    
+    
 ### v 2.0.0
 **updated:**    
 Rewrite to the new SDKv2 and Z-Wave Mesh Driver   

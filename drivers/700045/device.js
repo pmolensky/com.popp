@@ -4,15 +4,15 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P700045 extends ZwaveDevice {
-	onMeshInit() {
-		this.enableDebug();
-		this.printNode();
-		this.registerCapability('alarm_contact', 'SENSOR_BINARY');	
-		this.registerCapability('alarm_tamper', 'NOTIFICATION');
-		this.registerCapability('measure_battery', 'BATTERY');
-		this.registerCapability('alarm_battery', 'BATTERY');
-		
-	// define and register FlowCardTriggers
+  onMeshInit() {
+    this.enableDebug();
+    this.printNode();
+    this.registerCapability('alarm_contact', 'SENSOR_BINARY');
+    this.registerCapability('alarm_tamper', 'NOTIFICATION');
+    this.registerCapability('measure_battery', 'BATTERY');
+    this.registerCapability('alarm_battery', 'BATTERY');
+
+    // define and register FlowCardTriggers
     let triggerRC_scene = new Homey.FlowCardTriggerDevice('RC_scene');
     triggerRC_scene
       .register()
@@ -20,7 +20,6 @@ class P700045 extends ZwaveDevice {
         //this.log(args, state);
         return Promise.resolve(args.button === state.button && args.scene === state.scene);
       });
-
 
     // register a report listener (SDK2 style not yet operational)
     this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
@@ -40,7 +39,6 @@ class P700045 extends ZwaveDevice {
         }
       }
     });
-		
-	}
+  }
 }
 module.exports = P700045;

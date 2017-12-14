@@ -15,8 +15,6 @@ class P009204 extends ZwaveDevice {
         getOnOnline: true,
       }
     });
-
-
     // define and register FlowCardTriggers
     let triggerRC_scene = new Homey.FlowCardTriggerDevice('RC_scene');
     triggerRC_scene
@@ -25,7 +23,6 @@ class P009204 extends ZwaveDevice {
         //this.log(args, state);
         return Promise.resolve(args.button === state.button && args.scene === state.scene);
       });
-
 
     // register a report listener (SDK2 style not yet operational)
     this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
@@ -45,9 +42,6 @@ class P009204 extends ZwaveDevice {
         }
       }
     });
-
-
-
   }
 }
 module.exports = P009204;

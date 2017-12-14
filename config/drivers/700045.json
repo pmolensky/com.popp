@@ -1,7 +1,7 @@
 {
   "name": {
     "en": "Z-Wave Keypad",
-	"nl": "Z-Wave Keypad"
+    "nl": "Z-Wave Keypad"
   },
   "mobile": {
     "components": [{
@@ -26,7 +26,7 @@
         }
       }
     ]
-  },  
+  },
   "zwave": {
     "manufacturerId": [
       340
@@ -38,17 +38,17 @@
       2
     ],
     "learnmode": {
-	"image": "/drivers/700045/assets/learnmode.svg",
+      "image": "/drivers/700045/assets/learnmode.svg",
       "instruction": {
         "en": "Turn into Management Mode (remove cover), hit button 1 and confirm with * (Star Key)",
-		"nl": "Zet de keypad in Magaement Mode (verwijder cover), druk toets 1 en bevestig met * (Ster Kop)"
+        "nl": "Zet de keypad in Magaement Mode (verwijder cover), druk toets 1 en bevestig met * (Ster Kop)"
       }
     },
     "unlearnmode": {
-	"image": "/drivers/700045/assets/learnmode.svg",
+      "image": "/drivers/700045/assets/learnmode.svg",
       "instruction": {
         "en": "Turn into Management Mode (remove cover), hit button 1 and confirm with * (Star Key)",
-		"nl": "Zet de keypad in Magaement Mode (verwijder cover), druk toets 1 en bevestig met * (Ster Kop)"
+        "nl": "Zet de keypad in Magaement Mode (verwijder cover), druk toets 1 en bevestig met * (Ster Kop)"
       }
     },
     "associationGroups": [
@@ -85,17 +85,16 @@
     "large": "/drivers/700045/assets/images/large.jpg",
     "small": "/drivers/700045/assets/images/small.jpg"
   },
-  "settings": [
-    {
+  "settings": [{
       "id": 1,
       "value": 0,
       "label": {
         "en": "Door Lock Automatic Secure Timeout (0-127 seconds)",
-		"nl": "Deurvergrendeling automatische vergrendeling time-out (0-127 seconden)"
+        "nl": "Deurvergrendeling automatische vergrendeling time-out (0-127 seconden)"
       },
       "hint": {
         "en": "After this time a CLOSE command is sent to the controlled door lock. On default no CLOSE command is sent assuming that the strike lock has its own timeout set",
-		"nl": "Na deze tijd wordt een CLOSE-opdracht naar het gecontroleerde deurslot verzonden. Standaard wordt er geen CLOSE-opdracht verzonden, ervan uitgaande dat de strike-lock zijn eigen time-out heeft ingesteld"
+        "nl": "Na deze tijd wordt een CLOSE-opdracht naar het gecontroleerde deurslot verzonden. Standaard wordt er geen CLOSE-opdracht verzonden, ervan uitgaande dat de strike-lock zijn eigen time-out heeft ingesteld"
       },
       "_size": 1,
       "type": "number"
@@ -105,11 +104,11 @@
       "value": 3,
       "label": {
         "en": "Ring Button Press Basic Command OFF Timeout (3-127 seconds)",
-		"nl": "Deurbel signaal time-out (0-127 seconden)"
+        "nl": "Deurbel signaal time-out (0-127 seconden)"
       },
       "hint": {
         "en": "After this time the Door Bell will receive an OF command regardless of the actuall button is pressed or not",
-		"nl": "Na deze tijd ontvangt de deurbel een OFF-commando, ongeacht of de actuall-knop is ingedrukt of niet"
+        "nl": "Na deze tijd ontvangt de deurbel een OFF-commando, ongeacht of de actuall-knop is ingedrukt of niet"
       },
       "_size": 1,
       "type": "number"
@@ -119,11 +118,11 @@
       "value": true,
       "label": {
         "en": "Ring Button ON Command",
-		"nl": "Deurbell Knop ON commando"
+        "nl": "Deurbell Knop ON commando"
       },
       "hint": {
         "en": "This value is sent into Association Group 3 when the door bell button is pressed (0-255)",
-		"nl": "Deze waarde wordt naar Associatiegroep 3 verzonden wanneer op de belknop wordt gedrukt (0-255)"
+        "nl": "Deze waarde wordt naar Associatiegroep 3 verzonden wanneer op de belknop wordt gedrukt (0-255)"
       },
       "_size": 1,
       "type": "number"
@@ -136,7 +135,7 @@
       },
       "hint": {
         "en": "This value is sent into Association Group 3 when the door bell button is released or the timeout has reached (0-255)",
-		"nl": "Deze waarde wordt naar Associatiegroep 3 verzonden wanneer op de belknop wordt losgelaten (0-255)"
+        "nl": "Deze waarde wordt naar Associatiegroep 3 verzonden wanneer op de belknop wordt losgelaten (0-255)"
       },
       "_size": 1,
       "type": "number"
@@ -146,11 +145,11 @@
       "value": true,
       "label": {
         "en": "Central Scene ID for User Codes",
-		"nl": "Central Scene ID voor gebruikerscodes"
+        "nl": "Central Scene ID voor gebruikerscodes"
       },
       "hint": {
         "en": "This parameter defines if different user codes shall cause individual or similar scene ID sent to the main controller",
-		"nl": "Deze parameter bepaalt of verschillende gebruikerscodes individuele of soortgelijke scene-ID's naar de hoofdcontroller moeten sturen"
+        "nl": "Deze parameter bepaalt of verschillende gebruikerscodes individuele of soortgelijke scene-ID's naar de hoofdcontroller moeten sturen"
       },
       "_size": 1,
       "type": "checkbox"
@@ -160,11 +159,11 @@
       "value": true,
       "label": {
         "en": "Buzzer Confirmation",
-		"nl": "Buzzer confirmatie"
+        "nl": "Buzzer confirmatie"
       },
       "hint": {
         "en": "This parameter defines if the internal buzzer shall be used to confirm button presses",
-		"nl": "Deze parameter bepaalt of de interne zoemer moet worden gebruikt om het indrukken van de knoppen te bevestigen"
+        "nl": "Deze parameter bepaalt of de interne zoemer moet worden gebruikt om het indrukken van de knoppen te bevestigen"
       },
       "_size": 1,
       "type": "checkbox"

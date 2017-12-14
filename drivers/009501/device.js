@@ -9,7 +9,5 @@ class P009501 extends ZwaveDevice {
 		// this.printNode();
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 	}
-
 }
-
 module.exports = P009501;

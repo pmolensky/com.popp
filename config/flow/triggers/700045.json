@@ -1,182 +1,182 @@
 [{
-  "id": "RC_scene",
-  "title": {
-    "en": "A user verified itself",
-    "nl": "Een gebruiker is gevalideerd"
+    "id": "RC_scene",
+    "title": {
+      "en": "A user verified itself",
+      "nl": "Een gebruiker is gevalideerd"
+    },
+    "hint": {
+      "en": "This card triggers when a user validates. In the main settings of the device you can choose if this is done with the Global User Code or individual users",
+      "nl": "Deze kaart wordt geactiveerd wanneer een gebruiker valideert. In de hoofdinstellingen van het apparaat kunt u kiezen of dit wordt gedaan met de globale gebruiker code of met individuele gebruikers"
+    },
+    "args": [{
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=700045"
+      },
+      {
+        "name": "button",
+        "type": "dropdown",
+        "values": [{
+            "id": "0",
+            "label": {
+              "en": "A User",
+              "nl": "Een gebruiker"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "User 1",
+              "nl": "Gebruiker 1"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "User 2",
+              "nl": "Gebruiker 2"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "User 3",
+              "nl": "Gebruiker 3"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "User 4",
+              "nl": "Gebruiker 4"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "User 5",
+              "nl": "Gebruiker 5"
+            }
+          },
+          {
+            "id": "6",
+            "label": {
+              "en": "User 6",
+              "nl": "Gebruiker 6"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "User 7",
+              "nl": "Gebruiker 7"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "User 8",
+              "nl": "Gebruiker 8"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "User 9",
+              "nl": "Gebruiker 9"
+            }
+          },
+          {
+            "id": "10",
+            "label": {
+              "en": "User 10",
+              "nl": "Gebruiker 10"
+            }
+          },
+          {
+            "id": "11",
+            "label": {
+              "en": "User 11",
+              "nl": "Gebruiker 11"
+            }
+          },
+          {
+            "id": "12",
+            "label": {
+              "en": "User 12",
+              "nl": "Gebruiker 12"
+            }
+          },
+          {
+            "id": "13",
+            "label": {
+              "en": "User 13",
+              "nl": "Gebruiker 13"
+            }
+          },
+          {
+            "id": "14",
+            "label": {
+              "en": "User 14",
+              "nl": "Gebruiker 14"
+            }
+          },
+          {
+            "id": "15",
+            "label": {
+              "en": "User 15",
+              "nl": "Gebruiker 15"
+            }
+          },
+          {
+            "id": "16",
+            "label": {
+              "en": "User 16",
+              "nl": "Gebruiker 16"
+            }
+          },
+          {
+            "id": "17",
+            "label": {
+              "en": "User 17",
+              "nl": "Gebruiker 17"
+            }
+          },
+          {
+            "id": "18",
+            "label": {
+              "en": "User 18",
+              "nl": "Gebruiker 18"
+            }
+          },
+          {
+            "id": "19",
+            "label": {
+              "en": "User 19",
+              "nl": "Gebruiker 19"
+            }
+          },
+          {
+            "id": "20",
+            "label": {
+              "en": "User 20",
+              "nl": "Gebruiker 20"
+            }
+          }
+        ]
+      }
+    ]
   },
-  "hint": {
-    "en": "This card triggers when a user validates. In the main settings of the device you can choose if this is done with the Global User Code or individual users",
-    "nl": "Deze kaart wordt geactiveerd wanneer een gebruiker valideert. In de hoofdinstellingen van het apparaat kunt u kiezen of dit wordt gedaan met de globale gebruiker code of met individuele gebruikers"
-  },
-  "args": [{
+  {
+    "id": "alarm_battery",
+    "title": {
+      "en": "The battery alarm turned on",
+      "nl": "De batterijwaarschuwing gaat aan"
+    },
+    "args": [{
       "name": "device",
       "type": "device",
       "filter": "driver_id=700045"
-    },
-    {
-      "name": "button",
-      "type": "dropdown",
-      "values": [{
-          "id": "0",
-          "label": {
-            "en": "A User",
-            "nl": "Een gebruiker"
-          }
-        },
-        {
-          "id": "1",
-          "label": {
-            "en": "User 1",
-            "nl": "Gebruiker 1"
-          }
-        },
-        {
-          "id": "2",
-          "label": {
-            "en": "User 2",
-            "nl": "Gebruiker 2"
-          }
-        },
-        {
-          "id": "3",
-          "label": {
-            "en": "User 3",
-            "nl": "Gebruiker 3"
-          }
-        },
-        {
-          "id": "4",
-          "label": {
-            "en": "User 4",
-            "nl": "Gebruiker 4"
-          }
-        },
-        {
-          "id": "5",
-          "label": {
-            "en": "User 5",
-            "nl": "Gebruiker 5"
-          }
-        },
-        {
-          "id": "6",
-          "label": {
-            "en": "User 6",
-            "nl": "Gebruiker 6"
-          }
-        },
-        {
-          "id": "7",
-          "label": {
-            "en": "User 7",
-            "nl": "Gebruiker 7"
-          }
-        },
-        {
-          "id": "8",
-          "label": {
-            "en": "User 8",
-            "nl": "Gebruiker 8"
-          }
-        },
-        {
-          "id": "9",
-          "label": {
-            "en": "User 9",
-            "nl": "Gebruiker 9"
-          }
-        },
-        {
-          "id": "10",
-          "label": {
-            "en": "User 10",
-            "nl": "Gebruiker 10"
-          }
-        },
-        {
-          "id": "11",
-          "label": {
-            "en": "User 11",
-            "nl": "Gebruiker 11"
-          }
-        },
-        {
-          "id": "12",
-          "label": {
-            "en": "User 12",
-            "nl": "Gebruiker 12"
-          }
-        },
-        {
-          "id": "13",
-          "label": {
-            "en": "User 13",
-            "nl": "Gebruiker 13"
-          }
-        },
-        {
-          "id": "14",
-          "label": {
-            "en": "User 14",
-            "nl": "Gebruiker 14"
-          }
-        },
-        {
-          "id": "15",
-          "label": {
-            "en": "User 15",
-            "nl": "Gebruiker 15"
-          }
-        },
-        {
-          "id": "16",
-          "label": {
-            "en": "User 16",
-            "nl": "Gebruiker 16"
-          }
-        },
-        {
-          "id": "17",
-          "label": {
-            "en": "User 17",
-            "nl": "Gebruiker 17"
-          }
-        },
-        {
-          "id": "18",
-          "label": {
-            "en": "User 18",
-            "nl": "Gebruiker 18"
-          }
-        },
-        {
-          "id": "19",
-          "label": {
-            "en": "User 19",
-            "nl": "Gebruiker 19"
-          }
-        },
-        {
-          "id": "20",
-          "label": {
-            "en": "User 20",
-            "nl": "Gebruiker 20"
-          }
-        }
-      ]
-    }
-  ]
-},
-{
-	"id": "alarm_battery",
-	"title": {
-		"en": "The battery alarm turned on",
-		"nl": "De batterijwaarschuwing gaat aan"
-	},
-	"args": [{
-		"name": "device",
-		"type": "device",
-		"filter": "driver_id=700045"
-	}]
-}
+    }]
+  }
 ]

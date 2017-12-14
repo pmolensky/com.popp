@@ -58,8 +58,7 @@
     "large": "/drivers/009204/assets/images/large.png",
     "small": "/drivers/009204/assets/images/small.png"
   },
-  "settings": [
-    {
+  "settings": [{
       "id": 1,
       "value": 1,
       "label": {
@@ -180,5 +179,5 @@
       "type": "number"
     }
   ]
-  
+
 }
