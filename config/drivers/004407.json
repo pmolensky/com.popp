@@ -1,8 +1,8 @@
 {
   "id": "004407",
   "name": {
-    "en": "Z-Wave CO Detector",
-    "nl": "Z-Wave CO Detector"
+    "en": "CO2 Detector",
+    "nl": "CO2 Detector"
   },
   "zwave": {
     "manufacturerId": [
