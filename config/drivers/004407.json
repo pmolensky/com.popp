@@ -55,8 +55,8 @@
     "measure_temperature"
   ],
   "images": {
-    "large": "/drivers/004407/assets/images/large.png",
-    "small": "/drivers/004407/assets/images/small.png"
+    "large": "/drivers/004407/assets/images/large.jpg",
+    "small": "/drivers/004407/assets/images/small.jpg"
   },
   "settings": [{
       "id": 1,

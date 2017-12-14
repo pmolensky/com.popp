@@ -358,8 +358,8 @@
         "measure_temperature"
       ],
       "images": {
-        "large": "/drivers/004407/assets/images/large.png",
-        "small": "/drivers/004407/assets/images/small.png"
+        "large": "/drivers/004407/assets/images/large.jpg",
+        "small": "/drivers/004407/assets/images/small.jpg"
       },
       "settings": [
         {
@@ -2365,7 +2365,7 @@
         },
         {
           "id": 3,
-          "value": true,
+          "value": 255,
           "label": {
             "en": "Ring Button ON Command",
             "nl": "Deurbell Knop ON commando"
@@ -2379,7 +2379,7 @@
         },
         {
           "id": 4,
-          "value": true,
+          "value": 0,
           "label": {
             "en": "Ring Button OFF Command"
           },

@@ -116,7 +116,7 @@
     },
     {
       "id": 3,
-      "value": true,
+      "value": 255,
       "label": {
         "en": "Ring Button ON Command",
         "nl": "Deurbell Knop ON commando"
@@ -130,7 +130,7 @@
     },
     {
       "id": 4,
-      "value": true,
+      "value": 0,
       "label": {
         "en": "Ring Button OFF Command"
       },
