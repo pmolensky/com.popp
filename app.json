@@ -788,8 +788,8 @@
     {
       "id": "009006",
       "name": {
-        "en": "Wall Plug Switch Indoor",
-        "nl": "Wall Plug Switch Indoor"
+        "en": "Switch Indoor",
+        "nl": "Switch Indoor"
       },
       "zwave": {
         "manufacturerId": 100,
@@ -984,8 +984,8 @@
     {
       "id": "009105",
       "name": {
-        "en": "Wall Plug Switch Outdoor",
-        "nl": "Wall Plug Switch Outdoordoor"
+        "en": "Switch Outdoor",
+        "nl": "Switch Outdoor"
       },
       "zwave": {
         "manufacturerId": [

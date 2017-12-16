@@ -1,8 +1,8 @@
 {
   "id": "009105",
   "name": {
-    "en": "Wall Plug Switch Outdoor",
-    "nl": "Wall Plug Switch Outdoordoor"
+    "en": "Switch Outdoor",
+    "nl": "Switch Outdoor"
   },
   "zwave": {
     "manufacturerId": [100, 340],
