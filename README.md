@@ -45,11 +45,17 @@ b. change the setting to another value with above steps
 c. check if effective and retry to the desired value    
 
 ## Change Log:    
-
+   
+### v 2.0.2
+**updated:**    
+Added support for notification of door open/close on strike control   
+Added more device id's to the 68G that users reported in    
+Updated to the latest mesh-driver     
+   
 ### v 2.0.1
 **updated:**    
 Added support for the keypad and co2 sensor, please test    
-    
+     
 ### v 2.0.0
 **updated:**    
 Rewrite to the new SDKv2 and Z-Wave Mesh Driver   
