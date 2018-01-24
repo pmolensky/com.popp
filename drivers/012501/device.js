@@ -8,6 +8,7 @@ class P012501 extends ZwaveDevice {
 		this.enableDebug();
 		this.printNode();
 		this.registerCapability('locked', 'DOOR_LOCK');
+		this.registerCapability('alarm_contact', 'NOTIFICATION');
 		this.registerCapability('measure_battery', 'BATTERY');
 		this.registerCapability('alarm_battery', 'BATTERY');
 	}
