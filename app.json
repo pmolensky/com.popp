@@ -1193,14 +1193,19 @@
         "nl": "KFOB-C Remote Control"
       },
       "zwave": {
-        "manufacturerId": 340,
+        "manufacturerId": [
+          340,
+          277
+        ],
         "productTypeId": [
           256,
-          1
+          1,
+          2
         ],
         "productId": [
           259,
-          769
+          769,
+          2
         ],
         "learnmode": {
           "image": "/drivers/009204/assets/learnmode.svg",
