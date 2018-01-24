@@ -2090,8 +2090,14 @@
       },
       "zwave": {
         "manufacturerId": 340,
-        "productTypeId": 514,
-        "productId": 1297,
+        "productTypeId": [
+          514,
+          4352
+        ],
+        "productId": [
+          1297,
+          1
+        ],
         "learnmode": {
           "image": "/drivers/123610/assets/learnmode.svg",
           "instruction": {
