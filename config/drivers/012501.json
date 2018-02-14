@@ -14,6 +14,14 @@
     "measure_battery",
     "alarm_battery"
   ],
+  "capabilitiesOptions": {
+		"alarm_contact": {
+			"title": {
+				"en": "Door open (Contact Alarm)",
+				"nl": "Deur open (Contact alarm)"
+			}
+		}
+	},
   "zwave": {
     "manufacturerId": 340,
     "productTypeId": 5,

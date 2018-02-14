@@ -22,7 +22,7 @@ class P005206 extends ZwaveDevice {
               }
               return null;
             }
-          },
+          });
       this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
       this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
       this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL');
@@ -40,8 +40,8 @@ class P005206 extends ZwaveDevice {
                   if (report['Sensor Type'] === 'Atmospheric pressure (version 2)') return report['Sensor Value (Parsed)'];
                 }
                 return null;
-              },
-            },
+              }
+            });
       this.registerCapability('measure_dewpoint', 'SENSOR_MULTILEVEL', {
                 get: 'SENSOR_MULTILEVEL_GET',
                 getParser: () => ({
@@ -56,8 +56,8 @@ class P005206 extends ZwaveDevice {
                     if (report['Sensor Type'] === 'Dew point (version 2)') return report['Sensor Value (Parsed)'];
                   }
                   return null;
-                },
-              },
+                }
+              });
       this.registerCapability('alarm_tamper', 'SENSOR_BINARY');
       this.registerCapability('measure_battery', 'BATTERY');
   }

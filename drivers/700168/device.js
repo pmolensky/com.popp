@@ -25,8 +25,9 @@ class P700168 extends ZwaveDevice {
           }
           return null;
         },
-      },
-    this.registerCapability('measure_battery', 'BATTERY'); this.registerCapability('alarm_battery', 'BATTERY');
+      });
+    this.registerCapability('measure_battery', 'BATTERY');
+    this.registerCapability('alarm_battery', 'BATTERY');
     }
   }
   module.exports = P700168;

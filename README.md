@@ -46,6 +46,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
    
+### v 2.0.3
+**fixed:**    
+Typo that made the Z-Weather driver crash   
+   
 ### v 2.0.2
 **updated:**    
 Added support for notification of door open/close on strike control   
