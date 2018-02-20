@@ -9,13 +9,9 @@ class P005206 extends ZwaveDevice {
       // this.printNode();
       this.registerCapability('measure_wind_strenght', 'METER_WIND', {
 				get: 'METER_GET',
-				getParser: () => ({
-					return {
-						'Properties1': {
-						'Rate Type': '2'
-						},
-					}
-				}),
+				getOpts: {
+					getOnStart: true,
+				},
 				report: 'METER_REPORT',
 				reportParser: report => {
 					if (report.hasOwnProperty('Properties1')
@@ -28,7 +24,7 @@ class P005206 extends ZwaveDevice {
 						}
 					return null;
 				}
-          });
+			});
       this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
       this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
       this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL');
