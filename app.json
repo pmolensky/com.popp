@@ -134,24 +134,6 @@
       "getable": true,
       "setable": false
     },
-    "measure_pressure": {
-      "type": "number",
-      "title": {
-        "en": "Pressure in hPa",
-        "nl": "Luchtdruk in hPa"
-      },
-      "units": {
-        "en": "hPa"
-      },
-      "desc": {
-        "en": "Pressure in hPa",
-        "nl": "Luchtdruk in hPa"
-      },
-      "chartType": "stepLine",
-      "decimals": 2,
-      "getable": true,
-      "setable": false
-    },
     "alarm_rain": {
       "type": "number",
       "title": {
