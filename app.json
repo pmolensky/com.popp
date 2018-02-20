@@ -98,6 +98,24 @@
       "getable": true,
       "setable": false
     },
+    "measure_wind_strenght": {
+      "type": "number",
+      "title": {
+        "en": "Wind Strenght",
+        "nl": "Windkracht"
+      },
+      "units": {
+        "en": "m/s"
+      },
+      "desc": {
+        "en": "Meters per Second",
+        "nl": "meters per seconden"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false
+    },
     "measure_dewpoint": {
       "type": "number",
       "title": {
@@ -112,7 +130,25 @@
         "nl": "Celius (C)"
       },
       "chartType": "stepLine",
-      "decimals": 1,
+      "decimals": 2,
+      "getable": true,
+      "setable": false
+    },
+    "measure_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Pressure in hPa",
+        "nl": "Luchtdruk in hPa"
+      },
+      "units": {
+        "en": "hPa"
+      },
+      "desc": {
+        "en": "Pressure in hPa",
+        "nl": "Luchtdruk in hPa"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
       "getable": true,
       "setable": false
     },
