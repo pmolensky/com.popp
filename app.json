@@ -13,7 +13,7 @@
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
   },
-  "version": "2.0.3",
+  "version": "2.0.4",
   "compatibility": ">=1.5.3",
   "tags": {
     "en": [
@@ -76,11 +76,14 @@
   "contributing": {
     "donate": {
       "paypal": {
-        "username": "MarcoRuiter",
-        "currency": "EUR"
+        "username": "MarcoRuiter"
       }
     }
   },
+  "bugs": {
+	"url": "https://github.com/mruiter/com.popp/issues"
+  },
+  "athomForumDiscussionId": 1801,
   "capabilities": {
     "alarm_siren": {
       "type": "boolean",

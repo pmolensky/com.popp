@@ -46,6 +46,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
    
+### v 2.0.4   
+**update:**     
+Added the new forum and issue links for the new appstore layout 
+       
 ### v 2.0.3
 **fixed:**    
 Typo that made the Z-Weather driver crash   
