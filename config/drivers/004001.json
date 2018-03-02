@@ -43,22 +43,25 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline"
+          "en": "Z-Wave Plus Lifeline",
+          "nl": "Z-Wave Plus Lifeline"
         }
       },
       "2": {
         "hint": {
-          "en": "Alarm Reports"
+          "en": "Alarm Reports",
+          "nl": "Alarm Reports"
         }
       },
       "3": {
         "hint": {
-          "en": "Switch Command when Alarm"
+          "en": "Switch Command when Alarm",
+          "nl": "Switch Command when Alarm"
         }
       }
     }
   },
-  "class": "other",
+  "class": "sensor",
   "capabilities": ["onoff", "alarm_smoke", "alarm_tamper", "measure_battery", "alarm_battery"],
   "images": {
     "large": "/drivers/004001/assets/images/large.jpg",

@@ -63,10 +63,11 @@
       "value": 99,
       "label": {
         "en": "Value of On-Command (0-255)",
-        "en": "Value van On-Commando (0-255)"
+        "nl": "Value van On-Commando (0-255)"
       },
       "hint": {
-        "en": ""
+        "en": "Value of On-Command (0-255)",
+        "nl": "Value van On-Commando (0-255)"
       },
       "_size": 1,
       "type": "number"
@@ -79,7 +80,8 @@
         "nl": "Waarde van Off-Commando (0-255)"
       },
       "hint": {
-        "en": ""
+        "en": "Value of Off-Command (0-255)",
+        "nl": "Waarde van Off-Commando (0-255)"
       },
       "_size": 1,
       "type": "number"

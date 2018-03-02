@@ -82,7 +82,7 @@
       "value": 0
     }
   ],
-  "class": "other",
+  "class": "sensor",
   "capabilities": ["onoff", "alarm_smoke", "alarm_tamper", "measure_battery", "alarm_battery"],
   "images": {
     "large": "/drivers/009402/assets/images/large.jpg",
