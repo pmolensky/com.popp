@@ -87,7 +87,7 @@
     "small": "/drivers/700045/assets/images/small.jpg"
   },
   "settings": [{
-      "id": 1,
+      "id": "1",
       "value": 0,
       "label": {
         "en": "Door Lock Automatic Secure Timeout (0-127 seconds)",
@@ -101,7 +101,7 @@
       "type": "number"
     },
     {
-      "id": 2,
+      "id": "2",
       "value": 3,
       "label": {
         "en": "Ring Button Press Basic Command OFF Timeout (3-127 seconds)",
@@ -115,7 +115,7 @@
       "type": "number"
     },
     {
-      "id": 3,
+      "id": "3",
       "value": 255,
       "label": {
         "en": "Ring Button ON Command",
@@ -129,7 +129,7 @@
       "type": "number"
     },
     {
-      "id": 4,
+      "id": "4",
       "value": 0,
       "label": {
         "en": "Ring Button OFF Command"
@@ -142,7 +142,7 @@
       "type": "number"
     },
     {
-      "id": 5,
+      "id": "5",
       "value": true,
       "label": {
         "en": "Central Scene ID for User Codes",
@@ -156,7 +156,7 @@
       "type": "checkbox"
     },
     {
-      "id": 6,
+      "id": "6",
       "value": true,
       "label": {
         "en": "Buzzer Confirmation",

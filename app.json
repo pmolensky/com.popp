@@ -224,22 +224,25 @@
         "associationGroupsOptions": {
           "1": {
             "hint": {
-              "en": "Z-Wave Plus Lifeline"
+              "en": "Z-Wave Plus Lifeline",
+              "nl": "Z-Wave Plus Lifeline"
             }
           },
           "2": {
             "hint": {
-              "en": "Alarm Reports"
+              "en": "Alarm Reports",
+              "nl": "Alarm Reports"
             }
           },
           "3": {
             "hint": {
-              "en": "Switch Command when Alarm"
+              "en": "Switch Command when Alarm",
+              "nl": "Switch Command when Alarm"
             }
           }
         }
       },
-      "class": "other",
+      "class": "sensor",
       "capabilities": [
         "onoff",
         "alarm_smoke",
@@ -253,7 +256,7 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "zwave": {
             "index": 1,
             "size": 1
@@ -270,7 +273,7 @@
           "type": "number"
         },
         {
-          "id": 2,
+          "id": "2",
           "zwave": {
             "index": 2,
             "size": 1
@@ -287,7 +290,7 @@
           "type": "number"
         },
         {
-          "id": 3,
+          "id": "3",
           "zwave": {
             "index": 3,
             "size": 1
@@ -304,7 +307,7 @@
           "type": "number"
         },
         {
-          "id": 4,
+          "id": "4",
           "zwave": {
             "index": 4,
             "size": 2
@@ -384,26 +387,29 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "value": 99,
           "label": {
-            "en": "Value van On-Commando (0-255)"
+            "en": "Value of On-Command (0-255)",
+            "nl": "Value van On-Commando (0-255)"
           },
           "hint": {
-            "en": ""
+            "en": "Value of On-Command (0-255)",
+            "nl": "Value van On-Commando (0-255)"
           },
           "_size": 1,
           "type": "number"
         },
         {
-          "id": 2,
+          "id": "2",
           "value": 0,
           "label": {
             "en": "Value of Off-Command (0-255)",
             "nl": "Waarde van Off-Commando (0-255)"
           },
           "hint": {
-            "en": ""
+            "en": "Value of Off-Command (0-255)",
+            "nl": "Waarde van Off-Commando (0-255)"
           },
           "_size": 1,
           "type": "number"
@@ -1280,7 +1286,7 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "value": 1,
           "label": {
             "en": "Button 1 and 3 pair mode"
@@ -1292,7 +1298,7 @@
           "type": "number"
         },
         {
-          "id": 11,
+          "id": "11",
           "value": 8,
           "label": {
             "en": "Command to Control Group A"
@@ -1304,7 +1310,7 @@
           "type": "number"
         },
         {
-          "id": 12,
+          "id": "12",
           "value": 8,
           "label": {
             "en": "Command to Control Group B"
@@ -1316,7 +1322,7 @@
           "type": "number"
         },
         {
-          "id": 13,
+          "id": "13",
           "value": 8,
           "label": {
             "en": "Command to Control Group C"
@@ -1328,7 +1334,7 @@
           "type": "number"
         },
         {
-          "id": 14,
+          "id": "14",
           "value": 8,
           "label": {
             "en": "Command to Control Group D"
@@ -1340,7 +1346,7 @@
           "type": "number"
         },
         {
-          "id": 2,
+          "id": "2",
           "value": 1,
           "label": {
             "en": "Button 2 and 4 pair mode "
@@ -1352,7 +1358,7 @@
           "type": "number"
         },
         {
-          "id": 21,
+          "id": "21",
           "value": 1,
           "label": {
             "en": "Send the following Switch All commands "
@@ -1364,7 +1370,7 @@
           "type": "number"
         },
         {
-          "id": 22,
+          "id": "22",
           "value": true,
           "label": {
             "en": "Invert buttons"
@@ -1376,7 +1382,7 @@
           "type": "checkbox"
         },
         {
-          "id": 25,
+          "id": "25",
           "value": true,
           "label": {
             "en": "Blocks wakeup even when wakeup interval is set"
@@ -1388,7 +1394,7 @@
           "type": "checkbox"
         },
         {
-          "id": 30,
+          "id": "30",
           "value": 0,
           "label": {
             "en": "Send unsolicited Battery Report on Wake Up"
@@ -1507,7 +1513,7 @@
           "value": 0
         }
       ],
-      "class": "other",
+      "class": "sensor",
       "capabilities": [
         "onoff",
         "alarm_smoke",
@@ -1521,7 +1527,7 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "zwave": {
             "index": 1,
             "size": 1
@@ -1539,7 +1545,7 @@
           "type": "number"
         },
         {
-          "id": 2,
+          "id": "2",
           "zwave": {
             "index": 2,
             "size": 1
@@ -1557,7 +1563,7 @@
           "type": "number"
         },
         {
-          "id": 3,
+          "id": "3",
           "zwave": {
             "index": 3,
             "size": 1
@@ -1575,7 +1581,7 @@
           "type": "checkbox"
         },
         {
-          "id": 4,
+          "id": "4",
           "zwave": {
             "index": 4,
             "size": 1
@@ -1743,7 +1749,8 @@
     {
       "id": "012501",
       "name": {
-        "en": "Strike Lock Control"
+        "en": "Strike Lock Control",
+        "nl": "Strike Lock Control"
       },
       "images": {
         "large": "/drivers/012501/assets/images/large.jpg",
@@ -1835,37 +1842,37 @@
         ],
         "defaultConfiguration": [
           {
-            "id": 1,
+            "id": "1",
             "size": 1,
             "value": 3
           },
           {
-            "id": 2,
+            "id": "2",
             "size": 2,
             "value": 0
           },
           {
-            "id": 3,
+            "id": "3",
             "size": 1,
             "value": 0
           },
           {
-            "id": 4,
+            "id": "4",
             "size": 1,
             "value": 1
           },
           {
-            "id": 5,
+            "id": "5",
             "size": 1,
             "value": 30
           },
           {
-            "id": 6,
+            "id": "6",
             "size": 1,
             "value": 3
           },
           {
-            "id": 7,
+            "id": "7",
             "size": 1,
             "value": 0
           }
@@ -1882,7 +1889,7 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "zwave": {
             "index": 1,
             "size": 1
@@ -1929,7 +1936,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": "2",
           "zwave": {
             "index": 2,
             "size": 2
@@ -1950,7 +1957,7 @@
           }
         },
         {
-          "id": 3,
+          "id": "3",
           "zwave": {
             "index": 3,
             "size": 1
@@ -1997,7 +2004,7 @@
           ]
         },
         {
-          "id": 4,
+          "id": "4",
           "zwave": {
             "index": 4,
             "size": 1
@@ -2030,7 +2037,7 @@
           ]
         },
         {
-          "id": 5,
+          "id": "5",
           "zwave": {
             "index": 5,
             "size": 1
@@ -2051,7 +2058,7 @@
           }
         },
         {
-          "id": 6,
+          "id": "6",
           "zwave": {
             "index": 6,
             "size": 1
@@ -2072,7 +2079,7 @@
           }
         },
         {
-          "id": 7,
+          "id": "7",
           "zwave": {
             "index": 7,
             "size": 1
@@ -2149,7 +2156,7 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "zwave": {
             "index": 1,
             "size": 1
@@ -2196,7 +2203,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": "2",
           "zwave": {
             "index": 2,
             "size": 2
@@ -2217,7 +2224,7 @@
           }
         },
         {
-          "id": 3,
+          "id": "3",
           "zwave": {
             "index": 3,
             "size": 1
@@ -2264,7 +2271,7 @@
           ]
         },
         {
-          "id": 5,
+          "id": "5",
           "zwave": {
             "index": 5,
             "size": 1
@@ -2377,7 +2384,7 @@
       },
       "settings": [
         {
-          "id": 1,
+          "id": "1",
           "value": 0,
           "label": {
             "en": "Door Lock Automatic Secure Timeout (0-127 seconds)",
@@ -2391,7 +2398,7 @@
           "type": "number"
         },
         {
-          "id": 2,
+          "id": "2",
           "value": 3,
           "label": {
             "en": "Ring Button Press Basic Command OFF Timeout (3-127 seconds)",
@@ -2405,7 +2412,7 @@
           "type": "number"
         },
         {
-          "id": 3,
+          "id": "3",
           "value": 255,
           "label": {
             "en": "Ring Button ON Command",
@@ -2419,7 +2426,7 @@
           "type": "number"
         },
         {
-          "id": 4,
+          "id": "4",
           "value": 0,
           "label": {
             "en": "Ring Button OFF Command"
@@ -2432,7 +2439,7 @@
           "type": "number"
         },
         {
-          "id": 5,
+          "id": "5",
           "value": true,
           "label": {
             "en": "Central Scene ID for User Codes",
@@ -2446,7 +2453,7 @@
           "type": "checkbox"
         },
         {
-          "id": 6,
+          "id": "6",
           "value": true,
           "label": {
             "en": "Buzzer Confirmation",

@@ -27,7 +27,7 @@
     "small": "/drivers/123610/assets/images/small.jpg"
   },
   "settings": [{
-      "id": 1,
+      "id": "1",
       "zwave": {
         "index": 1,
         "size": 1
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "zwave": {
         "index": 2,
         "size": 2
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "zwave": {
         "index": 3,
         "size": 1
@@ -140,7 +140,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "zwave": {
         "index": 5,
         "size": 1

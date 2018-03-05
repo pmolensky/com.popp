@@ -1,7 +1,8 @@
 {
   "id": "012501",
   "name": {
-    "en": "Strike Lock Control"
+    "en": "Strike Lock Control",
+    "nl": "Strike Lock Control"
   },
   "images": {
     "large": "/drivers/012501/assets/images/large.jpg",

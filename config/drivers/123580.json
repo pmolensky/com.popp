@@ -19,37 +19,37 @@
       2
     ],
     "defaultConfiguration": [{
-        "id": 1,
+        "id": "1",
         "size": 1,
         "value": 3
       },
       {
-        "id": 2,
+        "id": "2",
         "size": 2,
         "value": 0
       },
       {
-        "id": 3,
+        "id": "3",
         "size": 1,
         "value": 0
       },
       {
-        "id": 4,
+        "id": "4",
         "size": 1,
         "value": 1
       },
       {
-        "id": 5,
+        "id": "5",
         "size": 1,
         "value": 30
       },
       {
-        "id": 6,
+        "id": "6",
         "size": 1,
         "value": 3
       },
       {
-        "id": 7,
+        "id": "7",
         "size": 1,
         "value": 0
       }
@@ -65,7 +65,7 @@
     "small": "/drivers/123580/assets/images/small.jpg"
   },
   "settings": [{
-      "id": 1,
+      "id": "1",
       "zwave": {
         "index": 1,
         "size": 1
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "zwave": {
         "index": 2,
         "size": 2
@@ -132,7 +132,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "zwave": {
         "index": 3,
         "size": 1
@@ -178,7 +178,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "zwave": {
         "index": 4,
         "size": 1
@@ -210,7 +210,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "zwave": {
         "index": 5,
         "size": 1
@@ -231,7 +231,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "zwave": {
         "index": 6,
         "size": 1
@@ -252,7 +252,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "zwave": {
         "index": 7,
         "size": 1

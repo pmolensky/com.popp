@@ -68,7 +68,7 @@
     "small": "/drivers/004001/assets/images/small.jpg"
   },
   "settings": [{
-      "id": 1,
+      "id": "1",
       "zwave": {
         "index": 1,
         "size": 1
@@ -85,7 +85,7 @@
       "type": "number"
     },
     {
-      "id": 2,
+      "id": "2",
       "zwave": {
         "index": 2,
         "size": 1
@@ -102,7 +102,7 @@
       "type": "number"
     },
     {
-      "id": 3,
+      "id": "3",
       "zwave": {
         "index": 3,
         "size": 1
@@ -119,7 +119,7 @@
       "type": "number"
     },
     {
-      "id": 4,
+      "id": "4",
       "zwave": {
         "index": 4,
         "size": 2
