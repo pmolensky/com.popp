@@ -4,9 +4,7 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P700168 extends ZwaveDevice {
-  onMeshInit() {
-    this.enableDebug();
-    this.printNode();
+  async nMeshInit() {
     this.registerCapability('alarm_rain', 'BASIC');
     this.registerCapability('meter_rain', 'METER');
     this.registerCapability('measure_rain', 'SENSOR_MULTILEVEL', {

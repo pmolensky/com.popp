@@ -182,7 +182,8 @@
       "id": "siren_temp_correction",
       "zwave": {
         "index": 2,
-        "size": 1
+        "size": 1,
+        "signed": false
       },
       "value": 0,
       "type": "number",
@@ -203,7 +204,8 @@
       "id": "siren_report_unsolicited",
       "zwave": {
         "index": 3,
-        "size": 1
+        "size": 1,
+        "signed": false
       },
       "value": 10,
       "label": {
@@ -224,7 +226,8 @@
       "id": "siren_unsolicited_time",
       "zwave": {
         "index": 4,
-        "size": 2
+        "size": 2,
+        "signed": false
       },
       "value": 15,
       "label": {

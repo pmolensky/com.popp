@@ -150,7 +150,8 @@
       "id": "heavy_rain",
       "zwave": {
         "index": 5,
-        "size": 1
+        "size": 1,
+        "signed": false
       },
       "value": 255,
       "type": "number",

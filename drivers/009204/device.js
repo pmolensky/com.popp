@@ -7,14 +7,9 @@ class P009204 extends ZwaveDevice {
   async onMeshInit() {
     let PreviousSequenceNo = 'empty';
 
-    //this.enableDebug();
-    //this.printNode();
     this.registerCapability('alarm_battery', 'BATTERY');
-    this.registerCapability('measure_battery', 'BATTERY', {
-      getOpts: {
-        getOnOnline: true,
-      }
-    });
+    this.registerCapability('measure_battery', 'BATTERY');
+
     // define and register FlowCardTriggers
     let triggerRC_scene = new Homey.FlowCardTriggerDevice('RC_scene');
     triggerRC_scene

@@ -4,7 +4,7 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P004407 extends ZwaveDevice {
-	onMeshInit() {
+	async onMeshInit() {
 		this.enableDebug();
 		this.printNode();
 		this.registerCapability('alarm_co2', 'NOTIFICATION');

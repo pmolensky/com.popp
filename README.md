@@ -46,6 +46,10 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
    
+### v 2.0.5   
+**update:**     
+Code cleanup / Update to latest mesh driver   
+   
 ### v 2.0.4   
 **update:**     
 Added the new forum and issue links for the new appstore layout 

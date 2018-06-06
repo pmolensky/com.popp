@@ -4,10 +4,7 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P005107 extends ZwaveDevice {
-  onMeshInit() {
-    this.enableDebug();
-    this.printNode();
-    //this.registerCapability('onoff', 'SWITCH_BINARY');
+  async onMeshInit() {
     this.registerCapability('onoff', 'SWITCH_BINARY', {
       get: 'SWITCH_BINARY_GET',
       set: 'SWITCH_BINARY_SET',
@@ -30,9 +27,6 @@ class P005107 extends ZwaveDevice {
     });
     this.registerCapability('alarm_siren', 'NOTIFICATION', {
       get: 'NOTIFICATION_GET',
-      getOpts: {
-        getOnOnline: true,
-      },
       getParser: () => ({
         'V1 Alarm Type': 0,
         'Notification Type': 'Siren',
@@ -51,8 +45,9 @@ class P005107 extends ZwaveDevice {
     });
     this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
     this.registerCapability('alarm_tamper', 'SENSOR_BINARY');
-    this.registerCapability('alarm_battery', 'BATTERY');
     this.registerCapability('measure_battery', 'BATTERY');
+    this.registerCapability('alarm_battery', 'BATTERY');
+
 
 
 
@@ -82,7 +77,7 @@ class P005107 extends ZwaveDevice {
 
       // Handle Emergency notification
       this.on('SirenTrigger', async () => {
-        this.log('SirenTrigger');
+        //this.log('SirenTrigger');
         try {
           await SirenFlowTrigger.trigger(this, {}, {});
         } catch (err) {

@@ -76,7 +76,8 @@
       "id": "2",
       "zwave": {
         "index": 2,
-        "size": 2
+        "size": 2,
+        "signed": false
       },
       "type": "number",
       "label": {

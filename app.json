@@ -13,7 +13,7 @@
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
   },
-  "version": "2.0.4",
+  "version": "2.0.5",
   "compatibility": ">=1.5.3",
   "tags": {
     "en": [
@@ -201,15 +201,9 @@
         ]
       },
       "zwave": {
-        "manufacturerId": [
-          340
-        ],
-        "productTypeId": [
-          256
-        ],
-        "productId": [
-          513
-        ],
+        "manufacturerId": 340,
+        "productTypeId": 256,
+        "productId": 513,
         "learnmode": {
           "instruction": {
             "en": "To Include, hit the little button on the wireless module for 1 second",
@@ -332,15 +326,9 @@
         "nl": "CO2 Detector"
       },
       "zwave": {
-        "manufacturerId": [
-          340
-        ],
-        "productTypeId": [
-          4
-        ],
-        "productId": [
-          3
-        ],
+        "manufacturerId": 340,
+        "productTypeId": 4,
+        "productId": 3,
         "learnmode": {
           "image": "/drivers/004407/assets/learnmode.svg",
           "instruction": {
@@ -618,7 +606,8 @@
           "id": "siren_temp_correction",
           "zwave": {
             "index": 2,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "value": 0,
           "type": "number",
@@ -639,7 +628,8 @@
           "id": "siren_report_unsolicited",
           "zwave": {
             "index": 3,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "value": 10,
           "label": {
@@ -660,7 +650,8 @@
           "id": "siren_unsolicited_time",
           "zwave": {
             "index": 4,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "value": 15,
           "label": {
@@ -738,12 +729,8 @@
           340,
           277
         ],
-        "productTypeId": [
-          256
-        ],
-        "productId": [
-          1024
-        ],
+        "productTypeId": 256,
+        "productId": 1024,
         "learnmode": {
           "instruction": {
             "en": "Push the button 3 times within 1.5 seconds. If the LED is not blinking after releasing the button, Z-Weather has not enough energy and must be charged for several hours in bright sunlight.",
@@ -847,7 +834,8 @@
           "id": "auto_switch_off",
           "zwave": {
             "index": 2,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "type": "number",
           "attr": {
@@ -1052,7 +1040,8 @@
           "id": "auto_switch_off",
           "zwave": {
             "index": 2,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "type": "number",
           "attr": {
@@ -1842,37 +1831,37 @@
         ],
         "defaultConfiguration": [
           {
-            "id": "1",
+            "id": 1,
             "size": 1,
             "value": 3
           },
           {
-            "id": "2",
+            "id": 2,
             "size": 2,
             "value": 0
           },
           {
-            "id": "3",
+            "id": 3,
             "size": 1,
             "value": 0
           },
           {
-            "id": "4",
+            "id": 4,
             "size": 1,
             "value": 1
           },
           {
-            "id": "5",
+            "id": 5,
             "size": 1,
             "value": 30
           },
           {
-            "id": "6",
+            "id": 6,
             "size": 1,
             "value": 3
           },
           {
-            "id": "7",
+            "id": 7,
             "size": 1,
             "value": 0
           }
@@ -1939,7 +1928,8 @@
           "id": "2",
           "zwave": {
             "index": 2,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "type": "number",
           "label": {
@@ -2040,7 +2030,8 @@
           "id": "5",
           "zwave": {
             "index": 5,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "type": "number",
           "label": {
@@ -2061,7 +2052,8 @@
           "id": "6",
           "zwave": {
             "index": 6,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "type": "number",
           "label": {
@@ -2206,7 +2198,8 @@
           "id": "2",
           "zwave": {
             "index": 2,
-            "size": 2
+            "size": 2,
+            "signed": false
           },
           "type": "number",
           "label": {
@@ -2633,7 +2626,8 @@
           "id": "heavy_rain",
           "zwave": {
             "index": 5,
-            "size": 1
+            "size": 1,
+            "signed": false
           },
           "value": 255,
           "type": "number",

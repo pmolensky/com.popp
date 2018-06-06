@@ -5,15 +5,9 @@
     "nl": "CO2 Detector"
   },
   "zwave": {
-    "manufacturerId": [
-      340
-    ],
-    "productTypeId": [
-      4
-    ],
-    "productId": [
-      3
-    ],
+    "manufacturerId": 340,
+    "productTypeId": 4,
+    "productId": 3,
     "learnmode": {
       "image": "/drivers/004407/assets/learnmode.svg",
       "instruction": {

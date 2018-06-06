@@ -27,7 +27,8 @@
       "id": "auto_switch_off",
       "zwave": {
         "index": 2,
-        "size": 2
+        "size": 2,
+        "signed": false
       },
       "type": "number",
       "attr": {

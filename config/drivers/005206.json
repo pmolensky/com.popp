@@ -43,8 +43,8 @@
   },
   "zwave": {
     "manufacturerId": [340, 277],
-    "productTypeId": [256],
-    "productId": [1024],
+    "productTypeId": 256,
+    "productId": 1024,
     "learnmode": {
       "instruction": {
         "en": "Push the button 3 times within 1.5 seconds. If the LED is not blinking after releasing the button, Z-Weather has not enough energy and must be charged for several hours in bright sunlight.",
