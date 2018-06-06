@@ -4,7 +4,7 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P009204 extends ZwaveDevice {
-  async onMeshInit() {
+  onMeshInit() {
     let PreviousSequenceNo = 'empty';
 
     this.registerCapability('alarm_battery', 'BATTERY');

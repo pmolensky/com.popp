@@ -4,7 +4,9 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P005107 extends ZwaveDevice {
-  async onMeshInit() {
+  onMeshInit() {
+	this.enableDebug();
+    this.printNode();
     this.registerCapability('onoff', 'SWITCH_BINARY', {
       get: 'SWITCH_BINARY_GET',
       set: 'SWITCH_BINARY_SET',
@@ -15,9 +17,11 @@ class P005107 extends ZwaveDevice {
       reportParser: report => {
         if (report && report.hasOwnProperty('Value')) {
           if (report.Value === 'on/enable') {
+			this.log('LogSirenOn');
             this.emit('SirenTriggerOn');
             return true;
           } else if (report.Value === 'off/disable') {
+			this.log('LogSirenOff');
             this.emit('SirenTriggerOff');
             return false;
           }

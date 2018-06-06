@@ -4,7 +4,7 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P009105 extends ZwaveDevice {
-	async onMeshInit() {
+	onMeshInit() {
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 	}
 }

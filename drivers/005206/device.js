@@ -4,7 +4,7 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class P005206 extends ZwaveDevice {
-  async onMeshInit() {
+  onMeshInit() {
       this.registerCapability('measure_wind_strenght', 'METER_WIND', {
 				get: 'METER_GET',
 				report: 'METER_REPORT',
