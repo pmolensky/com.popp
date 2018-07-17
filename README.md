@@ -46,6 +46,11 @@ c. check if effective and retry to the desired value
 
 ## Change Log:    
    
+### v 2.0.6   
+**fixed:**     
+Keypad usage crashed the app. Fixed thanks to Paul Molensky     
+Update to latest mesh driver           
+   
 ### v 2.0.5   
 **update:**     
 Code cleanup / Update to latest mesh driver   
