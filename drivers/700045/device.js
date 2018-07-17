@@ -25,6 +25,7 @@ class P700045 extends ZwaveDevice {
         rawReport.Properties1.hasOwnProperty('Key Attributes') &&
         rawReport.hasOwnProperty('Scene Number') &&
         rawReport.hasOwnProperty('Sequence Number')) {
+        if (typeof PreviousSequenceNo === "undefined") { var PreviousSequenceNo = 0; }
         if (rawReport['Sequence Number'] !== PreviousSequenceNo) {
           const remoteValue = {
             button: rawReport['Scene Number'].toString(),
