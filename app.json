@@ -2796,7 +2796,7 @@
         ]
       },
       {
-        "id": "RC_scene",
+        "id": "user_validated",
         "title": {
           "en": "A user verified itself",
           "nl": "Een gebruiker is gevalideerd"
@@ -2964,6 +2964,62 @@
               }
             ]
           }
+        ]
+      },
+      {
+        "id": "code_invalid",
+        "title": {
+          "en": "A user entered an invalid code",
+          "nl": "Een gebruiker voerde een ongeldige code in"
+        },
+        "hint": {
+          "en": "This card triggers when a user enters an invalid code",
+          "nl": "Deze kaart wordt geactiveerd wanneer een gebruiker een verkeerde code geeft"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=700045"
+          }
+        ]
+      },
+      {
+        "id": "ring_button",
+        "title": {
+          "en": "A user pressed the ring button",
+          "nl": "Een gebruiker drukte op de deurbel"
+        },
+        "hint": {
+          "en": "This card triggers when a user presses the doorbell button",
+          "nl": "Deze kaart wordt geactiveerd wanneer een gebruiker op de knop \"deurbel\" drukt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=700045"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "21",
+                "label": {
+                  "en": "Key Pressed 1 time(s)",
+                  "nl": "Knop 1x ingedrukt"
+                }
+              },
+              {
+                "id": "22",
+                "label": {
+                  "en": "Key Pressed 2 times",
+                  "nl": "Knop 2x ingedrukt"
+                }
+              }
+            ]
+          }    
         ]
       },
       {
